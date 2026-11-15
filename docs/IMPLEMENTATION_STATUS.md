@@ -114,7 +114,7 @@ Local test sessions (`scripts/dev-session.mjs`) write only to the local `.wrangl
 | **Legacy migration** | Read-only inventory, hash manifest, reconciliation tools, admin import ledger | ✅ | Tested on synthetic fixtures. |
 | | Actual export, import and reconciliation of the legacy archive | ⬜ | No access. See [MIGRATION.md](MIGRATION.md). |
 | **Infrastructure** | dev, staging and production configs in `wrangler.jsonc` | ✅ staging / 🔑 production | The staging D1 ID is set. The production ID is still a placeholder. |
-| | Deployment | ✅ staging / ⬜ production | Staging is live at https://1776-forge-staging.otiseduncan.workers.dev. Production has not been created.
+| | Deployment | ✅ staging / ⬜ production | Staging is live at https://1776-forge-staging.otiseduncan.workers.dev. Production has not been created. |
 
 ## External setup required (owner's Cloudflare and Google accounts)
 
