@@ -3,6 +3,7 @@
 //
 //   node scripts/editorial/import-legacy.mjs --source-root "C:\Users\<you>\Documents" --target local
 //   node scripts/editorial/import-legacy.mjs --source-root "..." --target staging      (NEW staging D1/R2 only)
+//   node scripts/editorial/import-legacy.mjs --source-root "..." --target production --confirm-production
 //   add --dry-run to print the plan without writing anything.
 //
 // Safety:
@@ -10,7 +11,8 @@
 //   legacy-inventory.json and refused on any mismatch. Nothing from those folders is written into git.
 // * Every story is created as a nonpublic DRAFT. Placeholders are marked needs_manuscript and cannot be published.
 // * Inserts use INSERT OR IGNORE with stable IDs, so re-running never duplicates records or overwrites edits.
-// * There is deliberately no production target.
+// * Production (the NEW forge-db / forge-documents only) requires --confirm-production. The import only adds
+//   rows; its one UPDATE fills a missing author on imported drafts once an owner account exists.
 import { readFileSync, writeFileSync, existsSync, mkdtempSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, basename, dirname } from "node:path";
@@ -21,7 +23,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const TARGETS = {
   local: { d1: ["--local"], r2Bucket: "forge-documents-dev", r2: ["--local"] },
-  staging: { d1: ["--env", "staging", "--remote"], r2Bucket: "forge-documents-staging", r2: ["--remote"] },
+  staging: { d1: ["--env", "staging", "--remote"], r2Bucket: "forge-documents-staging", r2: ["--env", "staging", "--remote"] },
+  production: { d1: ["--env", "production", "--remote"], r2Bucket: "forge-documents", r2: ["--env", "production", "--remote"] },
 };
 
 export const sha256 = (buf) => createHash("sha256").update(buf).digest("hex");
@@ -184,6 +187,8 @@ export function planToSql(inv, plan, now = new Date().toISOString()) {
     });
     out.push(`INSERT INTO audit_events(id,actor_id,action,subject_type,subject_id,details_json,created_at) SELECT ${sql(stableId("audit-article", s.ref))}, NULL, ${sql(s.decision === "import" ? "article.imported" : "article.placeholder_created")}, 'article', ${sql(s.id)}, ${sql(JSON.stringify({ ref: s.ref, manuscript_state: s.manuscript_state || "imported" }))}, ${sql(now)} WHERE NOT EXISTS (SELECT 1 FROM audit_events WHERE id = ${sql(stableId("audit-article", s.ref))});`);
   }
+  // Imported drafts created before any owner signed in have no author; attach them to the owner on a later run.
+  out.push(`UPDATE articles SET author_id = ${owner} WHERE legacy_ref IS NOT NULL AND author_id IS NULL AND status = 'draft' AND EXISTS ${owner};`);
   return out.join("\n") + "\n";
 }
 
@@ -200,7 +205,11 @@ async function main() {
   const target = opt("--target");
   const dry = args.includes("--dry-run");
   if (!sourceRoot || !TARGETS[target]) {
-    console.error("Usage: node scripts/editorial/import-legacy.mjs --source-root <dir> --target local|staging [--dry-run]");
+    console.error("Usage: node scripts/editorial/import-legacy.mjs --source-root <dir> --target local|staging|production [--dry-run] [--confirm-production]");
+    process.exit(2);
+  }
+  if (target === "production" && !dry && !args.includes("--confirm-production")) {
+    console.error("Production import requires --confirm-production.");
     process.exit(2);
   }
   const inv = JSON.parse(readFileSync(join(HERE, "legacy-inventory.json"), "utf8"));
@@ -216,7 +225,7 @@ async function main() {
   const dir = mkdtempSync(join(tmpdir(), "forge-import-"));
   const file = join(dir, "import.sql");
   writeFileSync(file, planToSql(inv, plan));
-  for (const d of plan.docs) run("npx", ["wrangler", "r2", "object", "put", `${t.r2Bucket}/${d.key}`, "--file", JSON.stringify(d.path), "--content-type", "application/pdf", ...t.r2, ...(target === "staging" ? ["--env", "staging"] : [])]);
+  for (const d of plan.docs) run("npx", ["wrangler", "r2", "object", "put", `${t.r2Bucket}/${d.key}`, "--file", JSON.stringify(d.path), "--content-type", "application/pdf", ...t.r2]);
   run("npx", ["wrangler", "d1", "execute", "DB", ...t.d1, "--file", JSON.stringify(file), "--yes"]);
   console.log(JSON.stringify(summary, null, 2));
 }

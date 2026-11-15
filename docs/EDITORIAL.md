@@ -115,7 +115,10 @@ Guards:
 
 ### Results
 
-Run on local and on staging, 2026-11-15:
+Run on local, on staging and on production (new `forge-db` / `forge-documents`), 2026-11-15:
+- **Production:** 7 records with all 7 PDF hashes matching on public download, 25 drafts (4 needs evidence, 21 placeholders), 0 published, integrity check clean.
+- **Backup:** a database export was taken before the import.
+- **Authors:** the production drafts have no author yet, because no owner had signed in. Re-run the import with `--target production --confirm-production` after the owner's first sign-in to attach them. It only fills missing authors on imported drafts.
 
 | # | Lead | Result | Notes |
 |---|---|---|---|

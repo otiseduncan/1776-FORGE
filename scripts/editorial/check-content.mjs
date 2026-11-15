@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 // Editorial integrity check against a FORGE database (read-only).
-//   node scripts/editorial/check-content.mjs --target local|staging
+//   node scripts/editorial/check-content.mjs --target local|staging|production
 // Reports duplicate slugs, /records/… links in story bodies that point at missing records, citations and
 // attachments that reference missing records, covers without an image row, records without an original
 // file, and published stories that are still placeholders or flagged.
 import { spawnSync } from "node:child_process";
 
-const TARGETS = { local: ["--local"], staging: ["--env", "staging", "--remote"] };
+const TARGETS = { local: ["--local"], staging: ["--env", "staging", "--remote"], production: ["--env", "production", "--remote"] };
 const target = process.argv[process.argv.indexOf("--target") + 1];
-if (!TARGETS[target]) { console.error("Usage: node scripts/editorial/check-content.mjs --target local|staging"); process.exit(2); }
+if (!TARGETS[target]) { console.error("Usage: node scripts/editorial/check-content.mjs --target local|staging|production"); process.exit(2); }
 
 function query(sql) {
   const r = spawnSync("npx", ["wrangler", "d1", "execute", "DB", ...TARGETS[target], "--json", "--command", JSON.stringify(sql)], { encoding: "utf8", shell: process.platform === "win32" });
