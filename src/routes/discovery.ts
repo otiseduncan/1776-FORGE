@@ -1,6 +1,7 @@
 import type { Router } from "../lib/context.ts";
 import { HttpError, json } from "../lib/http.ts";
 import { cleanQuery, likePattern } from "../lib/validate.ts";
+import { LIST_FIELDS, FROM, shape } from "./news.ts";
 
 const SEARCH_TYPES = ["records", "news", "law", "resources", "community", "map", "meetings"] as const;
 
@@ -30,8 +31,8 @@ export function registerDiscovery(r: Router): void {
 
   r.get("/api/home", async (c) => {
     const [featured, latest, records, discussions, resources, law, jurisdictions, stats, mapStats] = await Promise.all([
-      c.db.prepare(`SELECT a.id, a.slug, a.title, a.summary, a.kind, a.published_at, u.display_name AS author, ac.name AS category_name FROM articles a LEFT JOIN users u ON u.id = a.author_id LEFT JOIN article_categories ac ON ac.id = a.category_id WHERE a.status='published' AND a.featured = 1 ORDER BY a.published_at DESC LIMIT 3`).all(),
-      c.db.prepare(`SELECT a.id, a.slug, a.title, a.summary, a.kind, a.published_at, u.display_name AS author, ac.name AS category_name FROM articles a LEFT JOIN users u ON u.id = a.author_id LEFT JOIN article_categories ac ON ac.id = a.category_id WHERE a.status='published' ORDER BY a.published_at DESC LIMIT 6`).all(),
+      c.db.prepare(`SELECT ${LIST_FIELDS} ${FROM} WHERE a.status='published' AND a.featured = 1 ORDER BY a.published_at DESC LIMIT 3`).all<Record<string, unknown>>(),
+      c.db.prepare(`SELECT ${LIST_FIELDS} ${FROM} WHERE a.status='published' ORDER BY a.featured DESC, a.published_at DESC, COALESCE(a.original_published_at, a.published_at) DESC LIMIT 7`).all<Record<string, unknown>>(),
       c.db.prepare(`SELECT d.id, d.title, d.record_date, d.verification_state, dc.name AS category_name, j.name AS jurisdiction_name FROM documents d LEFT JOIN document_categories dc ON dc.id = d.category_id LEFT JOIN jurisdictions j ON j.id = d.jurisdiction_id WHERE d.visibility='public' ORDER BY d.created_at DESC LIMIT 6`).all(),
       c.db.prepare(`SELECT d.id, d.title, substr(d.body,1,200) AS excerpt, d.comment_count, d.last_activity_at, u.display_name AS author, fc.name AS category_name FROM discussions d JOIN users u ON u.id = d.created_by LEFT JOIN forum_categories fc ON fc.id = d.category_id WHERE d.moderation_state='visible' ORDER BY d.last_activity_at DESC LIMIT 5`).all(),
       c.db.prepare(`SELECT id, name, url, description, level, status FROM resource_links WHERE status != 'disabled' ORDER BY CASE status WHEN 'verified' THEN 0 ELSE 1 END, CASE level WHEN 'federal' THEN 1 WHEN 'state' THEN 2 ELSE 3 END, name LIMIT 6`).all(),
@@ -40,6 +41,6 @@ export function registerDiscovery(r: Router): void {
       c.db.prepare(`SELECT (SELECT COUNT(*) FROM documents WHERE visibility='public') AS records, (SELECT COUNT(*) FROM documents WHERE visibility='public' AND verification_state='verified') AS verified_records, (SELECT COUNT(*) FROM articles WHERE status='published') AS articles, (SELECT COUNT(*) FROM discussions WHERE moderation_state='visible') AS discussions, (SELECT COUNT(*) FROM legal_authorities) AS legal, (SELECT COUNT(*) FROM resource_links WHERE status != 'disabled') AS resources, (SELECT COUNT(*) FROM meetings) AS meetings`).first(),
       c.db.prepare(`SELECT kind, condition_state, COUNT(*) AS n FROM map_features WHERE verification_state != 'rejected' GROUP BY kind, condition_state`).all(),
     ]);
-    return json({ featured: featured.results, latest: latest.results, records: records.results, discussions: discussions.results, resources: resources.results, law: law.results, jurisdictions: jurisdictions.results, stats, map: mapStats.results }, 200, { "cache-control": "public, max-age=30" });
+    return json({ featured: featured.results.map(shape), latest: latest.results.map(shape), records: records.results, discussions: discussions.results, resources: resources.results, law: law.results, jurisdictions: jurisdictions.results, stats, map: mapStats.results }, 200, { "cache-control": "public, max-age=30" });
   });
 }

@@ -13,21 +13,21 @@ export const ARTICLE_KINDS = ["investigation", "report", "update", "explainer", 
 export const MANUSCRIPT_STATES = ["original", "imported", "needs_manuscript", "needs_evidence"] as const;
 const WORDS_SQL = "(LENGTH(TRIM(a.body)) - LENGTH(REPLACE(REPLACE(TRIM(a.body), ' ', ''), char(10), '')) + 1)";
 
-const LIST_FIELDS = `a.id, a.slug, a.title, a.summary, a.excerpt, a.kind, a.category_id, ac.name AS category_name, a.featured, a.video_url, a.published_at, a.updated_at,
+export const LIST_FIELDS = `a.id, a.slug, a.title, a.summary, a.excerpt, a.kind, a.category_id, ac.name AS category_name, a.featured, a.video_url, a.published_at, a.updated_at,
   a.status, a.jurisdiction_id, j.name AS jurisdiction_name, a.byline, a.original_publisher, a.original_published_at, a.manuscript_state,
   a.series_id, s.title AS series_title, s.slug AS series_slug, a.series_order,
   a.hero_media_id, m.alt_text AS hero_alt, m.is_illustration AS hero_is_illustration,
   u.id AS author_id, u.display_name AS author, u.avatar_url AS author_avatar, ${WORDS_SQL} AS word_count,
   (SELECT COUNT(*) FROM article_corrections cr WHERE cr.article_id = a.id) AS corrections,
   (SELECT GROUP_CONCAT(t.name, '|') FROM article_tags at JOIN tags t ON t.id = at.tag_id WHERE at.article_id = a.id) AS tags`;
-const FROM = `FROM articles a LEFT JOIN users u ON u.id = a.author_id LEFT JOIN article_categories ac ON ac.id = a.category_id
+export const FROM = `FROM articles a LEFT JOIN users u ON u.id = a.author_id LEFT JOIN article_categories ac ON ac.id = a.category_id
   LEFT JOIN jurisdictions j ON j.id = a.jurisdiction_id LEFT JOIN article_series s ON s.id = a.series_id LEFT JOIN media_assets m ON m.id = a.hero_media_id`;
 
 export function readingMinutes(words: number): number {
   return Math.max(1, Math.round(words / 230));
 }
 
-function shape(row: Record<string, unknown>): Record<string, unknown> {
+export function shape(row: Record<string, unknown>): Record<string, unknown> {
   const words = Number(row.word_count) || 0;
   return {
     ...row,

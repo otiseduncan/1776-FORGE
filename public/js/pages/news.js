@@ -28,14 +28,16 @@ export function storyCard(a) {
     h("div.card-foot", h("span", a.byline ? `By ${a.byline}` : ""), h("span", [date(storyDate(a)), readTime(a)].filter(Boolean).join(" · "))));
 }
 
-function leadStory(a) {
+export function leadStory(a) {
   return h("article.lead-story",
-    a.hero_url ? heroImg(a, "lead-media") : h("div.lead-media.lead-media-plain", { "aria-hidden": "true" }, icon("news", 48)),
+    a.hero_url ? heroImg(a, "lead-media") : h("div.lead-media.lead-media-plain", { "aria-hidden": "true" },
+      h("div.lead-plate", h("span.plate-kicker", label("kind", a.kind)), h("strong", a.series_title || a.category_name || "1776 FORGE"), h("span.plate-rule"), h("span.plate-foot", "1776 FORGE · Debate the issue. Bring the documents."))),
     h("div.lead-body",
       h("div.kicker", label("kind", a.kind), a.series_title ? h("span", "· " + a.series_title) : null),
       h("h2", h("a", { href: `/news/${a.slug}` }, a.title)),
       (a.summary || a.excerpt) && h("p.lede-dark", a.summary || a.excerpt),
-      h("div.small.muted", [a.byline && `By ${a.byline}`, date(storyDate(a)), readTime(a)].filter(Boolean).join(" · "))));
+      h("div.small.muted", [a.byline && `By ${a.byline}`, date(storyDate(a)), readTime(a)].filter(Boolean).join(" · ")),
+      h("div.btn-row", { style: { marginTop: "16px" } }, h("a.btn.btn-red.btn-sm", { href: `/news/${a.slug}` }, "Read the story", icon("arrow", 16)))));
 }
 
 export async function newsIndex({ view, query }) {

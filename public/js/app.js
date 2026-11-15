@@ -167,6 +167,7 @@ function renderAccount() {
   });
   menu.addEventListener("click", () => menu.classList.remove("open"));
   slot.append(h("div.account-menu",
+    can("article.draft") ? h("a.btn.btn-gold.btn-sm.desk-link", { href: "/workspace/articles", "aria-label": "Newsroom desk: manage your articles" }, icon("edit", 16), h("span.desk-label", "Newsroom desk")) : null,
     unread ? h("a.icon-btn", { href: "/notifications", "aria-label": `${unread} unread notifications`, style: { marginRight: "8px" } }, icon("bell", 18), h("span.count", String(unread))) : null,
     btn, menu));
   slot.style.display = "flex";

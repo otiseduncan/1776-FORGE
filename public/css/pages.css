@@ -188,3 +188,47 @@ dl.standards dd { margin: 4px 0 0; color: var(--text); max-width: 72ch; }
 .pick-list { list-style: none; margin: var(--sp-2) 0 0; padding: 0; display: grid; gap: 6px; max-height: 320px; overflow: auto; }
 .pick-list li { display: flex; gap: var(--sp-2); justify-content: space-between; align-items: center; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; font-size: var(--fs-sm); }
 .inventory-flag { font: 700 0.68rem/1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 6px; border-radius: 4px; background: var(--warning-bg, #fff4d6); color: var(--warning, #8a5a00); }
+
+/* Homepage front page and lead plate (used when a story has no cover image yet) */
+.front-page { padding-top: var(--sp-6); }
+.front-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); flex-wrap: wrap; margin-bottom: var(--sp-5); }
+.front-head h2 { margin: 6px 0 0; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.front-grid { margin-top: var(--sp-5); }
+.lead-media-plain { min-height: 260px; }
+.lead-plate { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; padding: var(--sp-6); height: 100%; width: 100%; box-sizing: border-box; border-left: 6px solid var(--red-600, #b22234); }
+.lead-plate .plate-kicker { font: 700 0.75rem/1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-500, #d6aa52); }
+.lead-plate strong { font: 700 clamp(1.5rem, 3vw, 2.4rem)/1.1 var(--font-display); color: #fff; }
+.lead-plate .plate-rule { width: 72px; height: 3px; background: var(--gold-500, #d6aa52); }
+.lead-plate .plate-foot { font-size: 0.85rem; color: #c3cedc; }
+@media (max-width: 760px) { .lead-media-plain { min-height: 180px; } .lead-plate { padding: var(--sp-5); } }
+
+/* Header newsroom-desk shortcut and environment strip */
+.desk-link { margin-right: 10px; white-space: nowrap; }
+@media (max-width: 560px) { .desk-link .desk-label { display: none; } }
+.env-strip { background: #7a4b00; color: #fff; text-align: center; font: 600 0.85rem/1.4 var(--font-body); padding: 6px 16px; }
+.env-strip a { color: #fff; text-decoration: underline; }
+.env-strip.local { background: #3b3f46; }
+
+/* Newsroom desk */
+.desk-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--sp-3); }
+.desk-tile { display: block; text-decoration: none; padding: var(--sp-4); border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); border-top: 5px solid var(--border); }
+.desk-tile strong { display: block; font: 700 2rem/1 var(--font-display); color: var(--heading); }
+.desk-tile span { display: block; margin-top: 6px; font-weight: 600; color: var(--text); }
+.desk-tile small { display: block; margin-top: 4px; color: var(--muted, #6b7280); }
+.desk-tile[aria-current="true"] { outline: 3px solid var(--focus, #2563eb); outline-offset: 2px; }
+.desk-tile.published { border-top-color: #1f7a3a; }
+.desk-tile.review { border-top-color: #b7791f; }
+.desk-tile.draft { border-top-color: #4a5a70; }
+.desk-tile.placeholder { border-top-color: #9b2c2c; }
+.desk-tile.archived { border-top-color: #9ca3af; }
+.desk-group { margin-top: var(--sp-5); }
+.desk-group h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 var(--sp-2); }
+.desk-group > p { margin: 0 0 var(--sp-3); }
+.state-pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font: 700 0.72rem/1.4 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
+.state-pill.published { background: #1f7a3a; }
+.state-pill.review { background: #b7791f; }
+.state-pill.draft { background: #4a5a70; }
+.state-pill.placeholder { background: #9b2c2c; }
+.state-pill.archived { background: #6b7280; }
+.site-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: var(--radius); font-weight: 600; border: 1px solid var(--border); background: var(--surface-2); }
+.site-badge.production { border-color: #1f7a3a; }

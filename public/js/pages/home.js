@@ -4,14 +4,7 @@ import { date, label, n, plural, ago } from "../core/format.js";
 import { sectionHead, empty, verificationBadge, resourceStatusBadge, setTitle, errorBox } from "../core/ui.js";
 import { createMap, featureStyle } from "../core/map.js";
 import { user, signInUrl, session } from "../core/session.js";
-
-function storyCard(a, lead = false) {
-  return h(`article.card.interactive${lead ? ".lead" : ".card-accent"}`,
-    h("div.kicker", label("kind", a.kind), a.category_name && h("span", "· " + a.category_name)),
-    h("h3", h("a", { href: `/news/${a.slug}` }, a.title)),
-    a.summary && h("p", a.summary),
-    h("div.card-foot", h("span", a.author ? `By ${a.author}` : ""), h("span", date(a.published_at))));
-}
+import { storyCard, leadStory } from "./news.js";
 
 export async function home({ view }) {
   setTitle();
@@ -27,7 +20,23 @@ export async function home({ view }) {
       h("source", { type: "image/webp", srcset: "/assets/brand/forge-banner-800.webp 800w, /assets/brand/forge-banner-1200.webp 1200w, /assets/brand/forge-banner-1672.webp 1672w", sizes: "(max-width: 1400px) 100vw, 1400px" }),
       h("img", { src: "/assets/brand/forge-banner.jpg", width: 1672, height: 467, alt: "1776 FORGE — Fellowship for Open Records and Government Examination. A bald eagle before the American flag and the Constitution's “We the People” and the Bill of Rights.", fetchpriority: "high" })))));
 
-  // 2. Hero with records search
+  // 2. Front page — the newsroom leads the site: the featured investigation, then the latest reporting.
+  const featured = data?.featured || [];
+  const latest = (data?.latest || []).filter((a) => !featured.some((f) => f.id === a.id));
+  const stories = [...featured, ...latest];
+  const front = h("section.section.front-page", { "aria-labelledby": "front-title" }, h("div.container",
+    h("div.front-head",
+      h("div", h("div.eyebrow", "1776 FORGE Newsroom"), h("h2#front-title", "Latest investigations")),
+      h("div.btn-row", h("a.btn.btn-ghost.btn-sm", { href: "/news/series" }, "Series"), h("a.btn.btn-gold.btn-sm", { href: "/news" }, "All reporting", icon("arrow", 16))))));
+  if (stories.length) {
+    front.firstChild.append(leadStory(stories[0]));
+    if (stories.length > 1) front.firstChild.append(h("div.grid.grid-3.front-grid", stories.slice(1, 7).map(storyCard)));
+  } else {
+    front.firstChild.append(empty({ iconName: "news", title: "No stories are published yet", text: "Investigations appear here after editorial review, with sources and corrections attached.", actions: [h("a.btn.btn-ghost", { href: "/standards" }, "Read our editorial standards")] }));
+  }
+  view.append(front);
+
+  // 3. Hero with records search
   const q = h("input.input", { type: "search", name: "q", placeholder: "Search records, reporting, laws, meetings…", "aria-label": "Search 1776 FORGE", autocomplete: "off" });
   view.append(h("section.hero-band",
     h("div.container.hero-grid",
@@ -50,20 +59,6 @@ export async function home({ view }) {
     h("a.pillar", { href: "/records" }, icon("doc", 22), h("strong", "Public Records"), h("span.count", `${n(s.records || 0)} records · ${n(s.verified_records || 0)} verified`), h("p", "Federal, state, county and municipal records with provenance and integrity checks.")),
     h("a.pillar", { href: "/map" }, icon("map", 22), h("strong", "Interactive Map"), h("span.count", plural((data?.map || []).reduce((t, x) => t + x.n, 0), "mapped feature")), h("p", "Roads, public projects and moderated community problem reports.")),
     h("a.pillar", { href: "/community" }, icon("users", 22), h("strong", "Community"), h("span.count", plural(s.discussions || 0, "discussion")), h("p", "A free forum for informed questions and civil disagreement.")))));
-
-  // 4–5. Featured investigations and latest reporting
-  const featured = data?.featured || [];
-  const latest = (data?.latest || []).filter((a) => !featured.some((f) => f.id === a.id));
-  const news = h("section.section", h("div.container",
-    sectionHead("Featured investigations", "Long-form reporting built on primary sources.", h("a.btn.btn-ghost.btn-sm", { href: "/news" }, "All reporting", icon("arrow", 16)))));
-  if (featured.length || latest.length) {
-    const lead = featured[0] || latest[0];
-    const rest = [...featured.slice(1), ...latest.filter((a) => a.id !== lead.id)].slice(0, 4);
-    news.firstChild.append(h("div.story-lead", storyCard(lead, true), h("div.grid", rest.map((a) => storyCard(a)))));
-  } else {
-    news.firstChild.append(empty({ iconName: "news", title: "The newsroom is open — no stories are published yet", text: "This is a new platform. Investigations appear here only after editorial review, with sources and corrections attached. Nothing has been imported or invented.", actions: [h("a.btn.btn-ghost", { href: "/standards" }, "Read our editorial standards")] }));
-  }
-  view.append(news);
 
   // 6. Records + search
   const records = data?.records || [];
