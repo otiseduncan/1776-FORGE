@@ -91,9 +91,9 @@ export async function relatedContent(c: Ctx, type: string, id: string) {
 
 export async function citationsFor(c: Ctx, type: string, id: string) {
   const rows = await c.db.prepare(
-    `SELECT ci.id, ci.label, ci.url, ci.document_id, ci.pinpoint, ci.note, d.title AS document_title
+    `SELECT ci.id, ci.label, ci.url, ci.document_id, ci.pinpoint, ci.note, ci.verified_at, ci.created_by, d.title AS document_title, d.original_sha256 AS document_sha256
        FROM citations ci LEFT JOIN documents d ON d.id = ci.document_id
-      WHERE ci.subject_type = ? AND ci.subject_id = ? ORDER BY ci.created_at`,
+      WHERE ci.subject_type = ? AND ci.subject_id = ? ORDER BY ci.sort_order, ci.created_at`,
   ).bind(type, id).all();
   return rows.results;
 }

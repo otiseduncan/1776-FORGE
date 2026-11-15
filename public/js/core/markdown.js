@@ -1,5 +1,6 @@
 // Safe Markdown subset → DOM nodes. Supports headings (##, ###), paragraphs, bullet and numbered
-// lists, blockquotes, **bold**, *italic*, `code` and [links](https://…). No raw HTML is ever parsed.
+// lists, blockquotes, tables, horizontal rules, images from the FORGE media library, **bold**, *italic*, `code`
+// and [links](https://…). No raw HTML is ever parsed.
 import { h } from "./dom.js";
 
 function inline(text) {
@@ -22,6 +23,12 @@ function inline(text) {
   return out;
 }
 
+const splitRow = (line) => line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+const isTableSep = (line) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$/.test(line || "");
+const isRule = (line) => /^\s*(-{3,}|\*{3,})\s*$/.test(line);
+const BLOCK_START = /^(#{2,4}\s|>|\s*[-*]\s|\s*\d+[.)]\s|!\[)/;
+const MEDIA_IMAGE = /^!\[([^\]]*)\]\((\/api\/media\/[a-z0-9-]+\/file)\)\s*$/i;
+
 export function renderMarkdown(src) {
   const root = h("div.prose");
   const lines = String(src || "").replace(/\r\n?/g, "\n").split("\n");
@@ -30,7 +37,24 @@ export function renderMarkdown(src) {
     const line = lines[i];
     if (!line.trim()) { i++; continue; }
     let m;
-    if ((m = /^(#{2,4})\s+(.*)$/.exec(line))) {
+    if (isRule(line)) {
+      root.append(h("hr"));
+      i++;
+    } else if ((m = MEDIA_IMAGE.exec(line))) {
+      // Only images from the FORGE media library render; anything else stays as text.
+      root.append(h("figure.inline-figure", h("img", { src: m[2], alt: m[1], loading: "lazy", decoding: "async" }), m[1] ? h("figcaption", m[1]) : null));
+      i++;
+    } else if (line.includes("|") && isTableSep(lines[i + 1])) {
+      const head = splitRow(line);
+      const align = splitRow(lines[i + 1]).map((c) => (c.endsWith(":") ? "right" : null));
+      i += 2;
+      const rows = [];
+      while (i < lines.length && lines[i].includes("|") && lines[i].trim()) { rows.push(splitRow(lines[i])); i++; }
+      const cell = (tag, c, k, extra = {}) => h(tag, { ...extra, style: align[k] ? { textAlign: align[k] } : undefined }, inline(c));
+      root.append(h("div.table-wrap", h("table.data",
+        h("thead", h("tr", head.map((c, k) => cell("th", c, k, { scope: "col" })))),
+        h("tbody", rows.map((r) => h("tr", r.map((c, k) => cell("td", c, k))))))));
+    } else if ((m = /^(#{2,4})\s+(.*)$/.exec(line))) {
       root.append(h(m[1].length === 2 ? "h2" : m[1].length === 3 ? "h3" : "h4", inline(m[2])));
       i++;
     } else if (/^\s*[-*]\s+/.test(line)) {
@@ -47,7 +71,7 @@ export function renderMarkdown(src) {
       root.append(h("blockquote", inline(parts.join(" "))));
     } else {
       const parts = [];
-      while (i < lines.length && lines[i].trim() && !/^(#{2,4}\s|>|\s*[-*]\s|\s*\d+[.)]\s)/.test(lines[i])) { parts.push(lines[i].trim()); i++; }
+      while (i < lines.length && lines[i].trim() && !BLOCK_START.test(lines[i]) && !isRule(lines[i]) && !(lines[i].includes("|") && isTableSep(lines[i + 1]))) { parts.push(lines[i].trim()); i++; }
       root.append(h("p", inline(parts.join(" "))));
     }
   }

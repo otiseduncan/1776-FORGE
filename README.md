@@ -82,4 +82,5 @@ Both commands run `npm run verify` first. They fail until the placeholder D1 IDs
 
 - [docs/BLUEPRINT.md](docs/BLUEPRINT.md): product requirements and design system.
 - [docs/IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md): feature-by-feature status, external setup and the gap report.
+- [docs/EDITORIAL.md](docs/EDITORIAL.md): the newsroom, the editorial workflow, the legacy reporting inventory and the import tools.
 - [docs/MIGRATION.md](docs/MIGRATION.md): the read-only legacy archive inventory and reconciliation procedure.

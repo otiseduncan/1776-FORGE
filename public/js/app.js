@@ -6,6 +6,8 @@ import { avatar, errorBox, setTitle } from "./core/ui.js";
 const routes = [
   ["/", () => import("./pages/home.js").then((m) => m.home)],
   ["/news", () => import("./pages/news.js").then((m) => m.newsIndex)],
+  ["/news/series", () => import("./pages/news.js").then((m) => m.seriesIndex)],
+  ["/news/series/:slug", () => import("./pages/news.js").then((m) => m.seriesPage)],
   ["/news/:slug", () => import("./pages/news.js").then((m) => m.article)],
   ["/authors/:id", () => import("./pages/account.js").then((m) => m.profile)],
   ["/records", () => import("./pages/records.js").then((m) => m.recordsIndex)],

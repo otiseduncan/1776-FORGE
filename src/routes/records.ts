@@ -30,7 +30,7 @@ export function sniffMime(bytes: Uint8Array, declared: string): string | null {
   return null;
 }
 
-export async function readUpload(c: Ctx, allowed: readonly string[], maxBytes: number): Promise<{ bytes: Uint8Array; mime: string; filename: string; sha256: string }> {
+export async function readUpload(c: Ctx, allowed: readonly string[], maxBytes: number): Promise<{ bytes: Uint8Array; mime: string; filename: string; sha256: string; form: FormData }> {
   const type = c.req.headers.get("content-type") || "";
   if (!type.includes("multipart/form-data")) throw new HttpError(415, "Upload must be multipart/form-data");
   const len = Number(c.req.headers.get("content-length") || 0);
@@ -44,7 +44,7 @@ export async function readUpload(c: Ctx, allowed: readonly string[], maxBytes: n
   const bytes = new Uint8Array(await blob.arrayBuffer());
   const mime = sniffMime(bytes, blob.type);
   if (!mime || !allowed.includes(mime)) throw new HttpError(415, `Unsupported file type. Allowed: ${allowed.join(", ")}`);
-  return { bytes, mime, filename: safeFilename(blob.name || "upload"), sha256: await sha256Hex(bytes) };
+  return { bytes, mime, filename: safeFilename(blob.name || "upload"), sha256: await sha256Hex(bytes), form };
 }
 
 const DOC_SELECT = `SELECT d.id, d.title, d.document_type, d.category_id, dc.name AS category_name, d.summary, d.record_date, d.published_date,

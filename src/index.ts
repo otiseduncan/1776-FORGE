@@ -12,6 +12,7 @@ import { registerResources, runLinkChecks } from "./routes/resources.ts";
 import { registerCivic } from "./routes/civic.ts";
 import { registerAdmin } from "./routes/admin.ts";
 import { registerDiscovery } from "./routes/discovery.ts";
+import { registerEditorial, pageMetaFor, injectMeta, sitemap, robots } from "./routes/editorial.ts";
 
 const router = new Router();
 router.get("/api/health", (c) => json({ ok: true, databaseConfigured: !!c.env.DB, storageConfigured: !!c.env.DOCS, environment: c.env.APP_ENV || "development" }));
@@ -26,6 +27,7 @@ registerResources(router);
 registerCivic(router);
 registerAdmin(router);
 registerDiscovery(router);
+registerEditorial(router);
 
 const API_SECURITY_HEADERS: Record<string, string> = {
   "x-content-type-options": "nosniff",
@@ -54,10 +56,27 @@ export async function handleApi(request: Request, env: Env, exec?: ExecutionCont
   return new Response(request.method === "HEAD" ? null : res.body, { status: res.status, statusText: res.statusText, headers });
 }
 
+/** Serve the SPA shell with story-specific title, canonical URL and Open Graph tags so shared links get cards. */
+async function renderShell(request: Request, env: Env, url: URL): Promise<Response> {
+  const shell = await env.ASSETS.fetch(new Request(new URL("/", url), { headers: request.headers }));
+  let meta = null;
+  try { meta = await pageMetaFor(env, url); } catch (err) { console.error("page meta failed", err); }
+  if (!meta || !shell.ok || !(shell.headers.get("content-type") || "").includes("text/html")) return shell;
+  const headers = new Headers(shell.headers);
+  headers.delete("content-length");
+  headers.delete("etag");
+  headers.set("cache-control", "public, max-age=0, must-revalidate");
+  if (meta.noindex) headers.set("x-robots-tag", "noindex");
+  return new Response(request.method === "HEAD" ? null : injectMeta(await shell.text(), meta), { status: 200, headers });
+}
+
 export default {
   async fetch(request: Request, env: Env, exec: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname.startsWith("/api/")) return handleApi(request, env, exec);
+    if (url.pathname === "/sitemap.xml") return sitemap(env, url.origin);
+    if (url.pathname === "/robots.txt") return robots(url.origin, env);
+    if (url.pathname.startsWith("/news/") && (request.method === "GET" || request.method === "HEAD")) return renderShell(request, env, url);
     return env.ASSETS.fetch(request);
   },
 
