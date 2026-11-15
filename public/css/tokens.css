@@ -1,0 +1,143 @@
+/* 1776 FORGE design tokens — sampled from the approved FORGE banner artwork
+   (deep navy flag field, brilliant red stripes, metallic gold lettering, parchment, white). */
+:root {
+  /* Brand palette */
+  --navy-950: #0a1220;
+  --navy-900: #101b2d;   /* Midnight Navy */
+  --navy-850: #13223a;
+  --navy-800: #182b47;
+  --blue-700: #174477;   /* Patriot Blue */
+  --blue-600: #245a9b;   /* Royal Blue */
+  --blue-500: #2f6fbf;
+  --blue-100: #e3ecf8;
+  --red-700: #8e1b28;
+  --red-600: #b52535;    /* American Red */
+  --red-500: #cf3446;
+  --red-100: #f8e3e5;
+  --gold-800: #7a5a1f;   /* gold for text on light surfaces (AA) */
+  --gold-700: #9b7330;
+  --gold-500: #d6aa52;   /* Metallic Gold */
+  --gold-300: #f4cd79;   /* Bright Gold */
+  --gold-100: #fbf1da;
+  --parchment: #efe3c8;
+  --ivory: #faf8f2;      /* Warm Ivory */
+  --white: #ffffff;
+  --slate-700: #34445b;  /* Slate */
+  --slate-500: #5a6a80;
+  --slate-300: #b8c2d0;
+  --line: #e4ddcd;
+
+  /* Map condition semantics (always paired with a text label and line pattern) */
+  --cond-green: #2e8a4f;
+  --cond-yellow: #d9a21b;
+  --cond-red: #c0392b;
+  --cond-gray: #7b8794;
+
+  /* Semantic surfaces — light */
+  --bg: var(--ivory);
+  --surface: var(--white);
+  --surface-2: #f4efe3;
+  --surface-sunk: #efe9db;
+  --text: #1b2638;
+  --text-muted: #4f5e74;
+  --heading: var(--navy-900);
+  --border: var(--line);
+  --border-strong: #cfc5ae;
+  --link: var(--blue-600);
+  --link-hover: var(--red-600);
+  --accent-text: var(--gold-800);
+  --focus: var(--gold-500);
+  --success: #23764a;
+  --success-bg: #e4f3ea;
+  --warning: #8a5a00;
+  --warning-bg: #fdf2d6;
+  --danger: var(--red-700);
+  --danger-bg: var(--red-100);
+  --info: var(--blue-700);
+  --info-bg: var(--blue-100);
+
+  /* Gradients */
+  --grad-navy: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 38%, var(--blue-700) 100%);
+  --grad-navy-soft: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 60%, #1d3a63 100%);
+  --grad-gold: linear-gradient(180deg, #fbe3a6 0%, var(--gold-300) 30%, var(--gold-500) 62%, #b98a36 100%);
+  --grad-gold-line: linear-gradient(90deg, transparent, var(--gold-500) 18%, var(--gold-300) 50%, var(--gold-500) 82%, transparent);
+  --grad-flag-line: linear-gradient(90deg, var(--red-600) 0 33.3%, var(--white) 33.3% 66.6%, var(--blue-600) 66.6% 100%);
+  --grad-parchment: linear-gradient(180deg, #fbf6ea 0%, #f3e7cd 100%);
+
+  /* Typography */
+  --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-brand: "Cinzel", "Trajan Pro", Georgia, serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-3xl: clamp(1.9rem, 1.4rem + 2vw, 2.75rem);
+  --fs-4xl: clamp(2.2rem, 1.5rem + 3vw, 3.6rem);
+
+  /* Space, radius, elevation */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(16, 27, 45, 0.06), 0 1px 1px rgba(16, 27, 45, 0.04);
+  --shadow-2: 0 2px 4px rgba(16, 27, 45, 0.06), 0 8px 24px -8px rgba(16, 27, 45, 0.16);
+  --shadow-3: 0 4px 8px rgba(16, 27, 45, 0.08), 0 24px 48px -16px rgba(16, 27, 45, 0.28);
+  --shadow-gold: 0 0 0 1px rgba(214, 170, 82, 0.55), 0 10px 30px -12px rgba(214, 170, 82, 0.45);
+  --container: 1240px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 72px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 180ms;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1322;
+    --surface: #111d31;
+    --surface-2: #15243c;
+    --surface-sunk: #0d1829;
+    --text: #e8edf5;
+    --text-muted: #a6b3c6;
+    --heading: #f5f1e6;
+    --border: #233554;
+    --border-strong: #2f4669;
+    --link: #8fbaf0;
+    --link-hover: var(--gold-300);
+    --accent-text: var(--gold-300);
+    --success: #6fd39a; --success-bg: #12301f;
+    --warning: #f1c45e; --warning-bg: #33280c;
+    --danger: #ff8d98; --danger-bg: #3a141b;
+    --info: #9cc3f5; --info-bg: #142a47;
+    --grad-parchment: linear-gradient(180deg, #16243b 0%, #121e32 100%);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+    --shadow-3: 0 4px 8px rgba(0, 0, 0, 0.35), 0 24px 48px -16px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1322;
+  --surface: #111d31;
+  --surface-2: #15243c;
+  --surface-sunk: #0d1829;
+  --text: #e8edf5;
+  --text-muted: #a6b3c6;
+  --heading: #f5f1e6;
+  --border: #233554;
+  --border-strong: #2f4669;
+  --link: #8fbaf0;
+  --link-hover: var(--gold-300);
+  --accent-text: var(--gold-300);
+  --success: #6fd39a; --success-bg: #12301f;
+  --warning: #f1c45e; --warning-bg: #33280c;
+  --danger: #ff8d98; --danger-bg: #3a141b;
+  --info: #9cc3f5; --info-bg: #142a47;
+  --grad-parchment: linear-gradient(180deg, #16243b 0%, #121e32 100%);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-3: 0 4px 8px rgba(0, 0, 0, 0.35), 0 24px 48px -16px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}

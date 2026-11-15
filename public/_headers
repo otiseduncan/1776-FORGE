@@ -1,0 +1,13 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://lh3.googleusercontent.com; connect-src 'self'; frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com https://archive.org https://challenges.cloudflare.com; form-action 'self' https://accounts.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), camera=(), microphone=(), payment=(), usb=()
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/vendor/*
+  Cache-Control: public, max-age=2592000, immutable

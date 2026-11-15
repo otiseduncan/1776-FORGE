@@ -226,8 +226,10 @@ export function registerRecords(r: Router): void {
       "x-content-type-options": "nosniff",
       "cache-control": "public, max-age=3600",
       "x-forge-sha256": row.original_sha256 || "",
+      // Allow the record page on this origin to embed the PDF preview; nothing else may frame it.
+      "x-frame-options": "SAMEORIGIN",
+      "content-security-policy": row.mime_type?.startsWith("text/") ? "default-src 'none'; frame-ancestors 'self'" : "frame-ancestors 'self'",
     });
-    if (row.mime_type?.startsWith("text/")) headers.set("content-security-policy", "default-src 'none'");
     return new Response(obj.body, { headers });
   });
 

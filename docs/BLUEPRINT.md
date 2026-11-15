@@ -25,7 +25,7 @@ Public visitors read newsroom, archive, map, directory, forum. Free verified mem
 Cloudflare Workers + static assets; isolated D1 and R2; Google OIDC (PKCE/state/nonce) with secure, HttpOnly session cookies and server-side verification; no fabricated auth implementation. Avoid mixing editorial and community moderation permissions. Content links connect documents, map features, articles, votes, legal authorities, and discussions. Consider FTS5 and scheduled re-indexing only after migration audit.
 
 ## Current implementation status
-**Runnable starter, not feature-complete.** Public design shell, live OpenStreetMap base map, curated resource search and founding-document links work. Auth, commenting, dynamic archive, imported map features, publishing, Cloudflare account deployment, real D1 bindings, R2, indexing, and evidence migration remain unimplemented. Clearly mark such areas to visitors until completed.
+**Current status:** see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for the verified, feature-by-feature classification, external setup list and gap report. Areas awaiting data or configuration are labelled to visitors in the interface.
 
 ## Completion criteria
 No changes to legacy infrastructure; independently backed-up original files/rows, migration reconciliation, working Google sign-in, authorized member forum, moderated contributions, accessible map and imported layers, complete publishing pipeline, accurate source links, regression/security/accessibility tests, and staged Cloudflare release.
