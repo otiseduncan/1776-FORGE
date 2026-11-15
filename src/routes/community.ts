@@ -127,10 +127,11 @@ export function registerCommunity(r: Router): void {
     const context = d.context_id ? (await describeEntities(c, [{ type: String(d.context_type), id: String(d.context_id) }])).get(`${d.context_type}:${d.context_id}`) ?? null : null;
     const { created_by, ...disc } = d;
     return json({
-      discussion: { ...disc, author_id: created_by, context, is_own: user?.id === created_by },
+      discussion: { ...disc, author_id: created_by, context, is_own: user?.id === created_by,
+        removal_reason: d.moderation_state === "hidden" ? await removalReason(c, "discussion", c.params.id) : null },
       comments: rows.results.map((row) => publicComment(row, user?.id ?? null, isMod)),
       total: total?.n ?? 0, page, pageSize: size, following,
-      permissions: { comment: can(user, "community.post") && !d.locked, moderate: isMod },
+      permissions: { comment: can(user, "community.post") && !d.locked && d.moderation_state === "visible", moderate: isMod },
     });
   });
 

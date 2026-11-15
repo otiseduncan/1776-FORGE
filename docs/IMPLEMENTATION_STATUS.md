@@ -11,8 +11,8 @@ Last updated 2026-11-15 on branch `claude/1776-forge-audit-architecture-4270ca`.
 | Worker | `1776-forge-staging` on workers.dev; weekly link-check cron `0 6 * * 1`; observability logs on (100% sampling) | ✅ deployed, HTTPS verified |
 | D1 | `forge-db-staging` (`5f7bb9b8-117b-45e3-83ae-e37b1008e9af`) | ✅ new; 4 migrations applied; 38 tables, 26 resources, 41 legal authorities, 4 jurisdictions, 6 forum categories |
 | R2 | `forge-documents-staging` | ✅ new; a disposable object was put, read back with a matching SHA-256, then deleted |
-| Google OAuth | Dedicated Google Cloud project `forge-1776-app`, web client "1776 FORGE" with redirect `…/api/auth/google/callback` | 🔑 `GOOGLE_CLIENT_ID` is set. `GOOGLE_CLIENT_SECRET` must be entered by the owner. The consent screen is in Testing mode, so the owner account must be added as a test user. |
-| Owner bootstrap | `OWNER_EMAILS` Worker secret | 🔑 not set yet |
+| Google OAuth | Dedicated Google Cloud project `forge-1776-app`, web client "1776 FORGE" with redirect `…/api/auth/google/callback` | ✅ `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are set as Worker secrets. A real Google sign-in was verified. The consent screen is in **Testing** mode with one test user (the owner). Public sign-in needs the app published, and possibly Google verification. |
+| Owner bootstrap | `OWNER_EMAILS` Worker secret | ✅ set; the owner signed in and received the Owner role (18 capabilities) |
 | Turnstile | — | not configured (optional) |
 | Production | `1776-forge` / `forge-db` / `forge-documents` | ⬜ not created, not deployed |
 
@@ -45,21 +45,27 @@ No command was run against any of these. FORGE uses only the new resources liste
 | Search ("Fourteenth" → Fourteenth Amendment), records search empty state, forum reading with categories | ✅ |
 | Mobile (375 px): no overflow on 13 routes, menu drawer, map tiles | ✅ |
 | API: JSON 200s, JSON 404 for unknown API, 422 on short search, 401 on unauthenticated write, CSP/nosniff/DENY/Referrer/Permissions headers | ✅ |
-| Google sign-in, posting, threaded replies, workspace, publishing, civic entry, admin on staging | ⛔ **Blocked:** needs the client secret plus the owner test user. These flows passed locally and in integration tests, but not yet on staging. |
-| Defect found and fixed on staging | Signed-out Account, Notifications, Workspace and Admin pages had no `<h1>`. Fixed and redeployed (version `2d04b17b`). |
+| Google sign-in (PKCE, state, nonce), owner role, HttpOnly `__Host-` cookie not readable by JS | ✅ |
+| Forum: new discussion, top-level and nested replies, edit ("edited" shown), auto-follow, anonymous read without reply rights, POST without CSRF header → 403 | ✅ |
+| Newsroom: draft → publish in the UI, shown in public `/api/news` and rendered, then archived | ✅ |
+| Records: created in the workspace; PDF uploaded through the Worker to R2; stored SHA-256 matches; download byte-identical; `x-forge-sha256` header matches; integrity check "ok"; inline PDF preview | ✅ |
+| Civic: governing body, official with source, meeting with video, motion with a recorded vote, FY budget with CSV line items and totals | ✅ |
+| Admin: overview, moderation queue, map report pending → rejected with note → author notified, discussion removed with public reason → moderation log, users, audit log, imports page (no legacy data) | ✅ |
+| Defects found and fixed on staging | (1) Signed-out Account, Notifications, Workspace and Admin pages had no `<h1>` (fixed in `2d04b17b`). (2) A removed discussion did not show its public reason to moderators or the author, and moderators had no "Restore" button (fixed in `8cbcc944`, with a regression test). |
+| Test-data cleanup | All staging test records, civic entries, the map report and the stored PDF were deleted by ID. The R2 bucket is empty. The archived test article and the removed test discussion are not public. The 19 audit events were kept. |
 
-Local test sessions (`scripts/dev-session.mjs`) write only to the local `.wrangler` database and refuse `--remote`. Staging has no test users or sessions.
+Local test sessions (`scripts/dev-session.mjs`) write only to the local `.wrangler` database and refuse `--remote`. Staging has no test users or development sessions. The only account is the owner's real Google sign-in. The current deployed version is `8cbcc944`.
 
 ## How this was verified
 
 - `npm run check` passes: the TypeScript Worker type-checks and all 25 frontend modules pass a syntax check.
-- `npm test` passes: 54 integration tests (auth/OIDC, records, community, newsroom, map, law, civic, admin, links, legacy tooling). They run against the real Worker router, a D1-compatible SQLite shim and an in-memory R2.
+- `npm test` passes: 55 integration tests (auth/OIDC, records, community, newsroom, map, law, civic, admin, links, legacy tooling). They run against the real Worker router, a D1-compatible SQLite shim and an in-memory R2.
 - Browser checks ran on local `wrangler dev` with a local D1 at 1280 px, 768 px (tablet, dark mode) and 375 px (mobile). They covered every route in the route table:
   - no horizontal page overflow and no render errors;
   - no CSP violations;
   - map tiles fully loaded on desktop and mobile;
   - signed-in flows exercised through the UI: start a discussion, reply, nested reply, draft an article with live preview, workflow buttons, create a governing body and a meeting, and the source-required rejection.
-- **Not verified:** real Google sign-in, which needs an OAuth client; any remote Cloudflare resource; deployment; legacy migration.
+- **Not verified:** legacy archive migration (not in scope for staging), production resources, sign-in by Google accounts other than the listed test user.
 
 ## Legend
 
@@ -98,7 +104,7 @@ Local test sessions (`scripts/dev-session.mjs`) write only to the local `.wrangl
 | | Spam controls: per-user rate limit, duplicate-post block, link-heavy posts held for review | ✅ | |
 | | Turnstile on posts | 🔑 | Enforced only when `TURNSTILE_SECRET_KEY` is set. |
 | | Email notifications | ⬜ | In-app only. |
-| **Google SSO** | OIDC with PKCE, state, nonce, ID-token signature and claims verification, hashed sessions, CSRF, logout, revoke all, account deletion | ✅ (tests) / 🔑 (live) | Needs a Google OAuth client. |
+| **Google SSO** | OIDC with PKCE, state, nonce, ID-token signature and claims verification, hashed sessions, CSRF, logout, revoke all, account deletion | ✅ (tests + staging) | Live on staging in Testing mode. Publish the consent screen for public sign-in. |
 | | Roles: member, contributor, researcher, editor, admin, owner, plus server-side capabilities; owner bootstrap via `OWNER_EMAILS` | ✅ | No hardcoded admin. Role changes need a reason and are audited. |
 | **Newsroom** | Drafts, submit, second-editor review and publish, return with notes, featured, archive, categories, tags, video embeds, citations, related records, corrections, version history, author pages, discussions | ✅ | |
 | | Scheduled publishing, image uploads in articles | ⬜ | |

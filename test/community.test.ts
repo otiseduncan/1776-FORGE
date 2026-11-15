@@ -74,6 +74,25 @@ describe("community forum", () => {
     assert.equal((await app.call("GET", "/api/law/amendment-14")).body.discussions.length, 1);
   });
 
+  test("removed discussions show the public reason to visitors, author and moderators", async () => {
+    const app = createApp();
+    const { alice, bob, id } = await seedThread(app);
+    const mod = await app.user("editor");
+    assert.equal((await app.call("POST", "/api/moderation/actions", { user: mod, body: { target_type: "discussion", target_id: id, action: "hide", reason: "Off-topic (rule 4)" } })).status, 200);
+    for (const viewer of [undefined, bob, alice, mod]) {
+      const r = await app.call("GET", `/api/forum/discussions/${id}`, { user: viewer });
+      assert.equal(r.status, 200);
+      assert.equal(r.body.discussion.moderation_state, "hidden");
+      assert.equal(r.body.discussion.removal_reason, "Off-topic (rule 4)");
+      assert.notEqual(r.body.permissions?.comment, true, "no replies on removed discussions");
+    }
+    const restored = await app.call("POST", "/api/moderation/actions", { user: mod, body: { target_type: "discussion", target_id: id, action: "restore" } });
+    assert.equal(restored.status, 200);
+    const after = await app.call("GET", `/api/forum/discussions/${id}`, { user: alice });
+    assert.equal(after.body.discussion.removal_reason, null);
+    assert.equal(after.body.permissions.comment, true);
+  });
+
   test("moderation: reports, hide with public reason, transparency log, lock", async () => {
     const app = createApp();
     const { alice, bob, id } = await seedThread(app);

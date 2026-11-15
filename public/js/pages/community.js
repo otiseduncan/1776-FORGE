@@ -87,8 +87,9 @@ export async function thread({ view, params, query }) {
     meta: h("div.btn-row", d.locked ? h("span.badge", icon("lock", 12), "Locked") : null, d.moderation_state === "pending" ? h("span.badge.badge-pending", "Awaiting review") : null, d.context ? h("a.badge.badge-gold", { href: d.context.link }, "About: ", d.context.title.slice(0, 70)) : null),
   }));
   if (d.moderation_state === "hidden") {
-    view.append(h("div.container.section", notice(h("span", "This discussion was removed by moderators. ", d.removal_reason ? h("strong", `Reason: ${d.removal_reason}`) : null, " See the ", h("a", { href: "/community/moderation-log" }, "moderation log"), "."), "warning", "shield")));
-    return;
+    view.append(h("div.container", { style: { paddingTop: "24px" } }, notice(h("span", "This discussion was removed by moderators. ", d.removal_reason ? h("strong", `Reason: ${d.removal_reason}`) : null, " See the ", h("a", { href: "/community/moderation-log" }, "moderation log"), "."), "warning", "shield")));
+    // Visitors see only the notice; moderators (and the author) still see the content so it can be reviewed or restored.
+    if (!data.permissions?.moderate && !d.is_own) return;
   }
   const opener = h("article.comment", { style: { borderTop: "3px solid var(--blue-600)" } },
     h("div.comment-head", avatar({ display_name: d.author }, 32), h("a", { href: `/authors/${d.author_id}` }, h("strong", d.author)), roleTag(d.author_role), h("span", "· " + date(d.created_at))),
@@ -108,7 +109,7 @@ export async function thread({ view, params, query }) {
   const modTools = data.permissions.moderate ? h("section.panel", h("h3", icon("shield", 14), " Moderator tools"), h("div.btn-row",
     modButton("discussion", d.id, d.locked ? "unlock" : "lock", d.locked ? "Unlock" : "Lock"),
     modButton("discussion", d.id, d.pinned ? "unpin" : "pin", d.pinned ? "Unpin" : "Pin"),
-    modButton("discussion", d.id, "hide", "Remove discussion"))) : null;
+    d.moderation_state === "hidden" ? modButton("discussion", d.id, "restore", "Restore discussion") : modButton("discussion", d.id, "hide", "Remove discussion"))) : null;
 
   view.append(h("div.container.section", h("div.layout-sidebar",
     h("div.stack",
