@@ -2,6 +2,54 @@
 
 Last updated 2026-11-15 on branch `claude/1776-forge-audit-architecture-4270ca`.
 
+## Deployed staging environment
+
+**Live URL:** https://1776-forge-staging.otiseduncan.workers.dev
+
+| Item | Value | Status |
+|---|---|---|
+| Worker | `1776-forge-staging` on workers.dev; weekly link-check cron `0 6 * * 1`; observability logs on (100% sampling) | ✅ deployed, HTTPS verified |
+| D1 | `forge-db-staging` (`5f7bb9b8-117b-45e3-83ae-e37b1008e9af`) | ✅ new; 4 migrations applied; 38 tables, 26 resources, 41 legal authorities, 4 jurisdictions, 6 forum categories |
+| R2 | `forge-documents-staging` | ✅ new; a disposable object was put, read back with a matching SHA-256, then deleted |
+| Google OAuth | Dedicated Google Cloud project `forge-1776-app`, web client "1776 FORGE" with redirect `…/api/auth/google/callback` | 🔑 `GOOGLE_CLIENT_ID` is set. `GOOGLE_CLIENT_SECRET` must be entered by the owner. The consent screen is in Testing mode, so the owner account must be added as a test user. |
+| Owner bootstrap | `OWNER_EMAILS` Worker secret | 🔑 not set yet |
+| Turnstile | — | not configured (optional) |
+| Production | `1776-forge` / `forge-db` / `forge-documents` | ⬜ not created, not deployed |
+
+### Pre-existing Cloudflare resources (inventoried read-only, untouched)
+
+- **Workers:**
+  - `baldwin-minute-watch-community-preview`
+  - `baldwin-minute-watch-jones-preview`
+  - `baldwin-minute-watch-map`
+  - `baldwin-minute-watch-map-staging`
+  - `baldwin-minute-watch-v21`
+- **D1:**
+  - `baldwin-minute-watch-community-preview`
+  - `baldwin-minute-watch-reports-staging`
+  - `baldwin-minute-watch-reports`
+- **R2:** `baldwin-minute-watch-photos`, `bmw-v21-archive`.
+- **Zones and custom domains:** none on the account.
+
+No command was run against any of these. FORGE uses only the new resources listed above.
+
+### Staging verification (live HTTPS, real browser)
+
+| Check | Result |
+|---|---|
+| Homepage, approved banner and emblem artwork; 10 homepage sections; homepage map preview tiles | ✅ |
+| All header and footer navigation links (25 routes), SPA 404 page, missing-record 404 | ✅ No render errors, no overflow, no CSP violations |
+| Map: 12/12 tiles loaded, zoom control, layer toggles, sign-in prompt on "Report a problem" | ✅ |
+| Constitution: 28 amendment tiles, Bill of Rights page links to archives.gov, XVIII shown as repealed | ✅ |
+| Resources: 26 entries, text filter ("court" → 6), level filter (state → 9), external links use https + `noopener` | ✅ |
+| Search ("Fourteenth" → Fourteenth Amendment), records search empty state, forum reading with categories | ✅ |
+| Mobile (375 px): no overflow on 13 routes, menu drawer, map tiles | ✅ |
+| API: JSON 200s, JSON 404 for unknown API, 422 on short search, 401 on unauthenticated write, CSP/nosniff/DENY/Referrer/Permissions headers | ✅ |
+| Google sign-in, posting, threaded replies, workspace, publishing, civic entry, admin on staging | ⛔ **Blocked:** needs the client secret plus the owner test user. These flows passed locally and in integration tests, but not yet on staging. |
+| Defect found and fixed on staging | Signed-out Account, Notifications, Workspace and Admin pages had no `<h1>`. Fixed and redeployed (version `2d04b17b`). |
+
+Local test sessions (`scripts/dev-session.mjs`) write only to the local `.wrangler` database and refuse `--remote`. Staging has no test users or sessions.
+
 ## How this was verified
 
 - `npm run check` passes: the TypeScript Worker type-checks and all 25 frontend modules pass a syntax check.
@@ -65,8 +113,8 @@ Last updated 2026-11-15 on branch `claude/1776-forge-audit-architecture-4270ca`.
 | **Security** | CSP and security headers (`public/_headers` plus API headers), CSRF, Origin checks, SameSite cookies, XSS-safe DOM builder (no `innerHTML`), parameterized SQL, audit log | ✅ | |
 | **Legacy migration** | Read-only inventory, hash manifest, reconciliation tools, admin import ledger | ✅ | Tested on synthetic fixtures. |
 | | Actual export, import and reconciliation of the legacy archive | ⬜ | No access. See [MIGRATION.md](MIGRATION.md). |
-| **Infrastructure** | dev, staging and production configs in `wrangler.jsonc` | 🔑 | Staging and production D1 IDs are placeholders. |
-| | Deployment | ⬜ | **Not deployed anywhere.** |
+| **Infrastructure** | dev, staging and production configs in `wrangler.jsonc` | ✅ staging / 🔑 production | The staging D1 ID is set. The production ID is still a placeholder. |
+| | Deployment | ✅ staging / ⬜ production | Staging is live at https://1776-forge-staging.otiseduncan.workers.dev. Production has not been created.
 
 ## External setup required (owner's Cloudflare and Google accounts)
 

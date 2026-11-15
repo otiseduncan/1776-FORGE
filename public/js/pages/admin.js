@@ -18,7 +18,7 @@ export async function admin({ view, params, query }) {
   if (!def) { const { notFound } = await import("./static.js"); return notFound({ view }); }
   setTitle(def[1] + " · Administration");
   if (!def[3]()) {
-    view.append(h("div.container.section", empty({ iconName: "lock", title: user() ? "Administration requires an editor or administrator role" : "Sign in required", actions: user() ? null : h("a.btn.btn-gold", { href: "/signin?return=/admin" }, "Sign in") })));
+    view.append(pageHero({ eyebrow: "Administration", title: def[1] }), h("div.container.section", empty({ iconName: "lock", title: user() ? "Administration requires an editor or administrator role" : "Sign in required", actions: user() ? null : h("a.btn.btn-gold", { href: "/signin?return=/admin" }, "Sign in") })));
     return;
   }
   const content = h("div.stack");

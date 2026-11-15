@@ -46,7 +46,7 @@ export async function signin({ view, query }) {
 export async function account({ view, query }) {
   setTitle("Your account");
   const u = user();
-  if (!u) { view.append(h("div.container.section", h("div.auth-card", empty({ iconName: "user", title: "Sign in to manage your account", actions: h("a.btn.btn-gold", { href: "/signin?return=/account" }, "Sign in") })))); return; }
+  if (!u) { view.append(pageHero({ eyebrow: "Account", title: "Your account" }), h("div.container.section", h("div.auth-card", empty({ iconName: "user", title: "Sign in to manage your account", actions: h("a.btn.btn-gold", { href: "/signin?return=/account" }, "Sign in") })))); return; }
   view.append(pageHero({ eyebrow: "Account", title: u.display_name, lede: query.get("welcome") ? "Welcome to 1776 FORGE. Set the name other members will see." : null, meta: h("div.btn-row", roleTag(u.role) || h("span.role-tag", "Member"), h("a.btn.btn-ghost-light.btn-sm", { href: `/authors/${u.id}` }, "View public profile")) }));
   const profileForm = h("form.panel", h("h3", "Public profile"),
     h("div", { style: { display: "flex", gap: "14px", alignItems: "center", marginBottom: "16px" } }, avatar(u, 56), h("div.small.muted", "Your photo comes from your Google account.")),
@@ -82,7 +82,7 @@ function deleteDialog() {
 
 export async function notifications({ view }) {
   setTitle("Notifications");
-  if (!user()) { view.append(h("div.container.section", empty({ iconName: "bell", title: "Sign in to see notifications", actions: h("a.btn.btn-gold", { href: "/signin?return=/notifications" }, "Sign in") }))); return; }
+  if (!user()) { view.append(pageHero({ eyebrow: "Account", title: "Notifications" }), h("div.container.section", empty({ iconName: "bell", title: "Sign in to see notifications", actions: h("a.btn.btn-gold", { href: "/signin?return=/notifications" }, "Sign in") }))); return; }
   const data = await get("/api/notifications");
   const unread = data.items.filter((x) => !x.read_at);
   view.append(pageHero({ eyebrow: "Account", title: "Notifications", actions: unread.length ? h("button.btn.btn-ghost-light", { type: "button", onclick: async () => { await post("/api/notifications/read", {}); await loadSession(true); window.forgeNavigate("/notifications", { replace: true }); } }, icon("check", 16), "Mark all read") : null }));

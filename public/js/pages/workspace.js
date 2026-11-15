@@ -15,7 +15,7 @@ const SECTIONS = [
 
 function denied(view, text = "The contributor workspace is available to contributors, researchers and editors.") {
   setTitle("Workspace");
-  view.append(h("div.container.section", empty({ iconName: "lock", title: user() ? "You don't have workspace access" : "Sign in to use the workspace", text,
+  view.append(pageHero({ eyebrow: "Contributor workspace", title: "Workspace" }), h("div.container.section", empty({ iconName: "lock", title: user() ? "You don't have workspace access" : "Sign in to use the workspace", text,
     actions: user() ? h("a.btn.btn-ghost", { href: "/community" }, "Go to the community") : h("a.btn.btn-gold", { href: "/signin?return=/workspace" }, "Sign in") })));
 }
 

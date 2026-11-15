@@ -15,7 +15,7 @@
     "not_found_handling": "single-page-application"
   },
   "observability": { "enabled": true },
-  "vars": { "APP_ENV": "development", "OWNER_EMAILS": "" },
+  "vars": { "APP_ENV": "development" },
   // Local development: `npm run db:migrate:local` creates this database under .wrangler/ only.
   "d1_databases": [
     { "binding": "DB", "database_name": "forge-db-dev", "database_id": "00000000-0000-4000-8000-000000000001", "migrations_dir": "migrations" }
@@ -26,9 +26,11 @@
     "staging": {
       "name": "1776-forge-staging",
       "workers_dev": true,
-      "vars": { "APP_ENV": "staging", "OWNER_EMAILS": "" },
+      // OWNER_EMAILS and Google OAuth credentials are set as Worker secrets, never committed.
+      "vars": { "APP_ENV": "staging" },
+      "observability": { "enabled": true, "head_sampling_rate": 1 },
       "d1_databases": [
-        { "binding": "DB", "database_name": "forge-db-staging", "database_id": "REPLACE_WITH_NEW_STAGING_D1_ID", "migrations_dir": "migrations" }
+        { "binding": "DB", "database_name": "forge-db-staging", "database_id": "5f7bb9b8-117b-45e3-83ae-e37b1008e9af", "migrations_dir": "migrations" }
       ],
       "r2_buckets": [{ "binding": "DOCS", "bucket_name": "forge-documents-staging" }],
       "triggers": { "crons": ["0 6 * * 1"] }
