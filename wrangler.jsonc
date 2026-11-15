@@ -37,10 +37,11 @@
     },
     "production": {
       "name": "1776-forge",
-      "workers_dev": false,
-      "vars": { "APP_ENV": "production", "OWNER_EMAILS": "" },
+      "workers_dev": true,
+      // No custom domain yet: served on workers.dev. OWNER_EMAILS and Google OAuth credentials are Worker secrets.
+      "vars": { "APP_ENV": "production" },
       "d1_databases": [
-        { "binding": "DB", "database_name": "forge-db", "database_id": "REPLACE_WITH_NEW_PRODUCTION_D1_ID", "migrations_dir": "migrations" }
+        { "binding": "DB", "database_name": "forge-db", "database_id": "70520726-5e87-48e1-bf77-1b092bce0d59", "migrations_dir": "migrations" }
       ],
       "r2_buckets": [{ "binding": "DOCS", "bucket_name": "forge-documents" }],
       "triggers": { "crons": ["0 6 * * 1"] }
