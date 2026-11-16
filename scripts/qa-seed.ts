@@ -49,3 +49,14 @@ for(const d of snap.records.items){
   if(!upload.ok)throw Error(await upload.text());
 }
 console.log('All 7 public original PDFs copied to local R2 through the upload API. Remote data untouched.');
+for(const item of snap.articles){
+  const a=item.article;if(!a.hero_url)continue;
+  const r=await fetch(origin+a.hero_url);if(!r.ok)throw Error('Cover download failed');
+  const form=new FormData();form.set('file',new Blob([await r.arrayBuffer()],{type:r.headers.get('content-type')||'image/png'}),'cover.png');
+  form.set('alt_text',a.hero_alt||'Cover illustration supplied for this article.');form.set('is_illustration',String(a.hero_is_illustration));
+  form.set('caption',a.hero_caption||'Cover illustration.');form.set('credit',a.hero_credit||'');
+  const uploaded=await fetch('http://127.0.0.1:8798/api/media',{method:'POST',headers,body:form});if(!uploaded.ok)throw Error(await uploaded.text());
+  const media=await uploaded.json() as {id:string};
+  const saved=await fetch('http://127.0.0.1:8798/api/news/'+a.id,{method:'PATCH',headers:{...headers,'content-type':'application/json'},body:JSON.stringify({hero_media_id:media.id,change_note:'Local QA copy of current public cover.'})});
+  if(!saved.ok)throw Error(await saved.text());
+}

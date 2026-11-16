@@ -8,6 +8,7 @@ const p=await b.newPage({colorScheme:'dark'});
 const ready=async path=>{await p.goto(base+path);await p.locator('.view:not([aria-busy])').waitFor();await p.evaluate(()=>document.fonts.ready);};
 for(const width of [1920,1440,1280,1024,768,430,375,320]){
   await p.setViewportSize({width,height:1000});await ready('/');
+  await p.locator('.front-page img').evaluateAll(imgs=>Promise.all(imgs.map(img=>{img.loading='eager';return img.decode().catch(()=>{});})));
   await p.screenshot({path:`${dir}/after-home-${width}.png`});
   await p.locator('.front-page').screenshot({path:`${dir}/after-featured-${width}.png`});
 }

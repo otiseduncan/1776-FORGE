@@ -19,7 +19,7 @@ Verified release bindings:
 | R2 | `forge-documents` |
 | URL | `https://1776-forge.otiseduncan.workers.dev` |
 
-No legacy Baldwin Minute Watch Worker, database, bucket, DNS or source checkout is modified. No remote migrations or editorial writes are performed. Test users, civic entries and discussions exist only in the isolated local development database.
+No legacy Baldwin Minute Watch Worker, database, bucket, DNS or source checkout is modified. No remote migrations or article-text edits are performed. After the initial repair, the owner supplied four cover PNGs and explicitly requested their attachment; those cover-only media/metadata writes are documented below. Test users, civic entries and discussions exist only in the isolated local development database.
 
 ## Defects corrected
 
@@ -79,14 +79,30 @@ Four public manuscripts were read from the deployed API without changing them:
 | Follow the Money: Baldwin County's Hospital Fund and the Missing Financial Audits | 22,019 | 0 | 0 |
 | Putnam County: Bring the Original Records into the Data-Center Discussion | 2,306 | 6 | 0 |
 
-Independent browser assertions compare rendered word order to each full Markdown body, with formatting syntax removed, and compare heading/citation/document counts. Read-only live integrity checks compare titles, categories, body, deck, excerpt, byline, authors, publication/update dates, citations and source links with the pre-repair snapshot. All seven original PDF downloads match their recorded SHA-256 fingerprints.
+Independent browser assertions compare rendered word order to each full Markdown body, with formatting syntax removed, and compare heading/citation/document counts. Read-only live integrity checks compare titles, categories, body, deck, excerpt, byline, authors, original publication dates, citations and source links with the pre-repair snapshot. The authorized cover-update timestamp and image hashes are checked separately against the attachment manifest. All seven original PDF downloads match their recorded SHA-256 fingerprints.
 
-Category presentation is checked against stored metadata; this audit does not certify investigative claims or recategorize reporting. The hospital article has source links in its body but no separate citation-table entries. No associated cover images are present on these four articles; image handling is tested with isolated browser response fixtures.
+Category presentation is checked against stored metadata; this audit does not certify investigative claims or recategorize reporting. The hospital article has source links in its body but no separate citation-table entries.
+
+### Owner-supplied covers
+
+The owner subsequently supplied and requested these four covers. Each original PNG was uploaded unchanged to the existing `forge-documents` bucket under a new UUID media key, then attached to the matching published article. All are 1672×941 pixels and explicitly marked as illustrations, with descriptive alt text and the caption “Cover illustration; not a photograph of the events described.” Credit reads “Artwork supplied by 1776 FORGE.”
+
+| Supplied file | Story |
+|---|---|
+| `Investigating Systemwide Accountability-1.png` | Harry Keim Dismissed |
+| `Baldwin County Budget Work Session-3.png` | November 13 budget work session |
+| `Follow the Money_ Hospital Fund Investigation-2.png` | Hospital fund investigation |
+| `Putnam County Records Data Center-4.png` | Putnam data-center discussion |
+
+Authorized Cloudflare administrative access was used; no deployed application session was fabricated and no authentication setting was changed. A private D1 SQL backup was saved before the change. Updates were guarded by the recorded article version and an empty previous cover; every story received a cover-only version-history note and administration audit entries explicitly identifying the Cloudflare CLI method, with no fabricated human editor attribution. Only `hero_media_id`, `current_version` and the legitimate cover-update `updated_at` changed on the article rows. Original publication dates, titles, author attribution, bodies and citations remain unchanged.
+
+All four publicly downloaded image hashes match the supplied originals. Featured images use `object-fit: contain` so the headline embedded in the artwork stays visible; article hero and listing layouts are retested using the real covers. The delivered `COVER_ART_MANIFEST.json` records story URLs, media IDs, dimensions, sizes and hashes. No source PNG or database backup is committed to Git.
 
 ## Checks and repeatability
 
 - `npm run verify`: TypeScript check, all 25 frontend syntax checks, **64/64 integration tests pass**.
 - `npm run test:browser`: **19/19 browser tests pass**, including all eight widths and imported-text integrity.
+- The local route loops cover **856 route/viewport checks** (86 public routes and 21 owner routes at each of eight widths), in addition to stress cases, preview/modal actions and content checks.
 - `wrangler deploy --env production --dry-run --outdir dist/qa-worker`: Worker bundle and assets build successfully; target bindings reviewed.
 - `git diff --check`: pass.
 - Dependency installation audit: zero vulnerabilities reported.
@@ -123,9 +139,9 @@ node scripts/qa-provenance.mjs HEAD
 
 ## Verification limits and existing data gaps
 
-- Fresh interactive Google consent and real deployed owner write/publish actions were not replayed. Google configuration and anonymous permission boundaries were checked over HTTPS; OIDC and authorized writes pass integration tests. Authenticated visual/form checks are local.
+- Fresh interactive Google consent and deployed browser publishing actions were not replayed. Google configuration and anonymous permission boundaries were checked over HTTPS; OIDC and authorized writes pass integration tests. Authenticated visual/form checks are local. The explicitly requested cover uploads used authorized Cloudflare administration, with audited cover-only metadata changes.
 - Live verified GIS data is empty. Base tiles render; no road condition or government facts are invented. Civic detail layouts use clearly labelled local fixtures where live data is absent.
-- External agencies, source websites and video providers control their own availability. Their factual contents and every external destination are not certified by this layout audit.
+- Read-only availability probes checked all 26 directory destinations: 20 succeeded, five returned HTTP 403 (Congress.gov, Constitution Annotated, GAO, Georgia Secretary of State and CourtListener), and Georgia DCA could not be fetched. These six remain unverified; blocked automation is not proof that a public link is broken. No directory database rows were changed. Run `node scripts/qa-resource-links.mjs` to repeat the probe. Other external source/video availability and factual contents are not certified by this audit.
 - Browser automation uses Chromium; Safari/Firefox and a full manual screen-reader audit were not performed.
 - The original import manuscripts are not independently compared to private source files. The existing published API content is preserved and its rendered text is checked in full.
 
@@ -133,4 +149,16 @@ No remaining layout failure is observed in the tested cases. These limits are no
 
 ## Release record
 
-Code commit and final Cloudflare version are recorded below after deployment and live verification. Deployment is authorized only for the requested FORGE URL; the separate staging Worker and all legacy services remain unchanged.
+The repair commit is [`b30197cf3498173694dc7c0db39c08c8717dde7f`](https://github.com/otiseduncan/1776-FORGE/commit/b30197cf3498173694dc7c0db39c08c8717dde7f), pushed to `fix/site-quality-audit`. Main and Claude's branch were not moved.
+
+Released to **https://1776-forge.otiseduncan.workers.dev** on November 15, 2026 at 7:26 p.m. Eastern:
+
+- Cloudflare version: `87d9658c-6a9f-4fe7-9ad4-4967ab13f260`.
+- Version tag: `qa-b30197c`; version message identifies the source commit and test results.
+- Deployed with `wrangler deploy --env production --keep-vars`; the database ID, bucket and existing secret names were rechecked on the released version.
+- All 45 tracked served assets match the repair commit. HTTPS responds 200; all four article metadata/body/citation comparisons pass; all seven original PDF hashes match. Anonymous workspace/admin API reads return 401.
+- Live responsive browser verification is recorded after its final pass below.
+
+Before/after screenshots include `before-home-1440.png`, `before-home-320.png`, `before-thread-320.png`, `after-featured-1440.png`, every requested `after-home-WIDTH.png`, and `local/after-local-nested-replies-320.png`. The delivered public after-screenshots were captured from the released HTTPS URL. Local authenticated screenshots are explicitly labelled local. Artifacts are separate deliverables, not committed manuscripts or fixtures.
+
+Deployment touched only the requested FORGE Worker/assets. The separate staging Worker and all legacy services remain unchanged.

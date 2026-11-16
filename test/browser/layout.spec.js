@@ -89,6 +89,11 @@ test('every imported article preserves source text order, headings and citations
   for(const item of news.items){
     const data=await(await request.get('/api/news/'+item.slug)).json();
     await ready(page,'/news/'+item.slug);
+    if(data.article.hero_url){
+      const img=page.locator('.article-hero img');await img.scrollIntoViewIfNeeded();
+      await expect(img).toHaveJSProperty('complete',true);await expect(img).not.toHaveJSProperty('naturalWidth',0);
+      if(data.article.hero_is_illustration)await expect(page.locator('.article-hero figcaption')).toContainText('Illustration');
+    }
     const source=data.article.body;
     const plain=source.replace(/\[([^\]]+)\]\((?:https?:\/\/|\/)[^\s)]+\)/g,'$1').replace(/^\s*\d+[.)]\s+/gm,'');
     const words=s=>(s.match(/[\p{L}\p{N}]+/gu)||[]);

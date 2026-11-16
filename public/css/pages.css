@@ -147,7 +147,7 @@ dl.standards dd { margin: 4px 0 0; color: var(--text); max-width: 72ch; }
 .lead-media { position: relative; min-width: 0; width: 100%; aspect-ratio: 16 / 9; background: var(--surface-2); align-self: stretch; }
 /* A percentage height plus aspect-ratio transferred the text row's height into
    the media width. Keep sizing in the grid track, regardless of headline length. */
-.lead-media img { position: absolute; inset: 0; }
+.lead-media img { position: absolute; inset: 0; object-fit: contain; }
 .lead-media-plain { aspect-ratio: auto; }
 .lead-media-plain { display: grid; place-items: center; color: var(--gold-500); background: linear-gradient(135deg, var(--navy-900, #101b2d), var(--navy-700, #1d3150)); }
 .lead-body { min-width: 0; overflow-wrap: anywhere; padding: var(--sp-5) var(--sp-6) var(--sp-5) 0; }
