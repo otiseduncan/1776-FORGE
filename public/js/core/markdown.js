@@ -71,6 +71,9 @@ export function renderMarkdown(src) {
       root.append(h("blockquote", inline(parts.join(" "))));
     } else {
       const parts = [];
+      // Unsupported image syntax is displayed literally. Always consume a line:
+      // BLOCK_START also matches images that MEDIA_IMAGE intentionally rejects.
+      if (BLOCK_START.test(lines[i])) { parts.push(lines[i].trim()); i++; }
       while (i < lines.length && lines[i].trim() && !BLOCK_START.test(lines[i]) && !isRule(lines[i]) && !(lines[i].includes("|") && isTableSep(lines[i + 1]))) { parts.push(lines[i].trim()); i++; }
       root.append(h("p", inline(parts.join(" "))));
     }

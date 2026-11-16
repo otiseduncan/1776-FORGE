@@ -32,6 +32,9 @@ code, kbd { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; fon
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .container-narrow { max-width: 820px; }
 main { flex: 1; outline: none; }
+/* Content grids may shrink below long titles, URLs and native form widths. */
+main { overflow-wrap: anywhere; }
+.grid > *, .layout-sidebar > *, .layout-filters > *, .ws-layout > *, .legal-index > *, .editor-split > * { min-width: 0; }
 
 /* ---------------------------------------------------------------- header */
 .site-header {
@@ -42,7 +45,7 @@ main { flex: 1; outline: none; }
   box-shadow: 0 1px 0 rgba(214, 170, 82, 0.35), 0 8px 24px -16px rgba(0, 0, 0, 0.6);
 }
 .site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 3px; background: var(--grad-flag-line); opacity: 0.9; }
-.header-inner { display: flex; align-items: center; gap: var(--sp-4); min-height: var(--header-h); }
+.header-inner { display: flex; align-items: center; gap: var(--sp-4); min-height: var(--header-h); max-width: 1560px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--white); flex-shrink: 0; }
 .brand:hover { color: var(--white); }
 .brand-emblem { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold-500); box-shadow: 0 0 0 3px rgba(214, 170, 82, 0.18), 0 4px 12px rgba(0, 0, 0, 0.45); background: var(--navy-800); }
@@ -60,7 +63,7 @@ main { flex: 1; outline: none; }
 .icon-btn .count { position: absolute; top: -3px; right: -3px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--red-600); color: #fff; font-size: 0.68rem; font-weight: 700; display: grid; place-items: center; border: 2px solid var(--navy-900); }
 .menu-toggle { display: none; }
 .avatar { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; background: var(--blue-700); color: #fff; display: inline-grid; place-items: center; font-weight: 700; font-size: 0.85rem; border: 2px solid var(--gold-500); }
-.account-menu { position: relative; }
+.account-menu { position: relative; display: flex; align-items: center; gap: var(--sp-2); }
 .account-menu > button { background: none; border: 0; padding: 0; border-radius: 50%; }
 .dropdown { position: absolute; right: 0; top: calc(100% + 10px); min-width: 230px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-3); padding: 6px; display: none; z-index: 600; }
 .dropdown.open { display: block; animation: pop var(--dur) var(--ease); }
@@ -74,7 +77,7 @@ main { flex: 1; outline: none; }
   .primary-nav a { padding: 9px 7px; font-size: 0.82rem; }
   .brand-tagline { display: none; }
 }
-@media (max-width: 1180px) {
+@media (max-width: 1480px) {
   .menu-toggle { display: inline-grid; }
   .primary-nav {
     position: fixed; inset: calc(var(--header-h) + 3px) 0 auto 0; margin: 0;
@@ -96,6 +99,17 @@ main { flex: 1; outline: none; }
   .brand-emblem { width: 38px; height: 38px; }
   .header-actions { gap: 6px; }
   .icon-btn { width: 36px; height: 36px; }
+  .header-inner { gap: 8px; }
+  .brand { gap: 8px; }
+  .brand-emblem, .icon-btn, .account-menu > button { flex-shrink: 0; }
+  .header-actions .btn { white-space: nowrap; }
+}
+@media (max-width: 360px) {
+  .wordmark { font-size: 0.95rem; letter-spacing: 0.02em; }
+  .header-actions { gap: 4px; }
+  .header-actions .btn-sm { padding-inline: 8px; }
+  .brand-emblem { width: 32px; height: 32px; }
+  .brand { gap: 6px; }
 }
 
 /* ---------------------------------------------------------------- page hero (inner pages) */

@@ -130,6 +130,7 @@ $("#searchBtn").append(icon("search", 20));
 function closeMenu() {
   nav.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open menu");
   clear(menuToggle).append(icon("menu", 22));
 }
 menuToggle.addEventListener("click", () => {

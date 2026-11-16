@@ -144,9 +144,13 @@ dl.standards dd { margin: 4px 0 0; color: var(--text); max-width: 72ch; }
 .story-thumb img, .lead-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .thumb-tag { position: absolute; left: 10px; bottom: 10px; background: rgba(10, 18, 32, 0.78); color: #fff; font: 700 0.66rem/1 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px; }
 .lead-story { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--sp-6); align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-2); }
-.lead-media { position: relative; aspect-ratio: 16 / 9; background: var(--surface-2); height: 100%; }
+.lead-media { position: relative; min-width: 0; width: 100%; aspect-ratio: 16 / 9; background: var(--surface-2); align-self: stretch; }
+/* A percentage height plus aspect-ratio transferred the text row's height into
+   the media width. Keep sizing in the grid track, regardless of headline length. */
+.lead-media img { position: absolute; inset: 0; }
+.lead-media-plain { aspect-ratio: auto; }
 .lead-media-plain { display: grid; place-items: center; color: var(--gold-500); background: linear-gradient(135deg, var(--navy-900, #101b2d), var(--navy-700, #1d3150)); }
-.lead-body { padding: var(--sp-5) var(--sp-6) var(--sp-5) 0; }
+.lead-body { min-width: 0; overflow-wrap: anywhere; padding: var(--sp-5) var(--sp-6) var(--sp-5) 0; }
 .lead-body .kicker { font: 700 0.72rem/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); margin-bottom: var(--sp-3); display: flex; gap: 8px; flex-wrap: wrap; }
 .lead-body h2 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.15; margin: 0 0 var(--sp-3); }
 .lead-body h2 a { color: var(--heading); text-decoration: none; }
@@ -195,7 +199,7 @@ dl.standards dd { margin: 4px 0 0; color: var(--text); max-width: 72ch; }
 .front-head h2 { margin: 6px 0 0; font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .front-grid { margin-top: var(--sp-5); }
 .lead-media-plain { min-height: 260px; }
-.lead-plate { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; padding: var(--sp-6); height: 100%; width: 100%; box-sizing: border-box; border-left: 6px solid var(--red-600, #b22234); }
+.lead-plate { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; padding: var(--sp-6); min-width: 0; overflow-wrap: anywhere; height: 100%; width: 100%; box-sizing: border-box; border-left: 6px solid var(--red-600, #b22234); }
 .lead-plate .plate-kicker { font: 700 0.75rem/1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-500, #d6aa52); }
 .lead-plate strong { font: 700 clamp(1.5rem, 3vw, 2.4rem)/1.1 var(--font-display); color: #fff; }
 .lead-plate .plate-rule { width: 72px; height: 3px; background: var(--gold-500, #d6aa52); }
@@ -204,7 +208,8 @@ dl.standards dd { margin: 4px 0 0; color: var(--text); max-width: 72ch; }
 
 /* Header newsroom-desk shortcut and environment strip */
 .desk-link { margin-right: 10px; white-space: nowrap; }
-@media (max-width: 560px) { .desk-link .desk-label { display: none; } }
+/* The same workspace destination remains in the account menu on small screens. */
+@media (max-width: 560px) { .desk-link { display: none; } }
 .env-strip { background: #7a4b00; color: #fff; text-align: center; font: 600 0.85rem/1.4 var(--font-body); padding: 6px 16px; }
 .env-strip a { color: #fff; text-decoration: underline; }
 .env-strip.local { background: #3b3f46; }

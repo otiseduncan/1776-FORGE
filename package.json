@@ -8,6 +8,9 @@
     "check": "tsc -p . && node scripts/check-frontend.mjs",
     "test": "node --test --disable-warning=ExperimentalWarning \"test/*.test.ts\"",
     "verify": "npm run check && npm test",
+    "test:browser": "playwright test",
+    "qa:snapshot": "node scripts/qa-snapshot.mjs",
+    "qa:seed": "node --disable-warning=ExperimentalWarning scripts/qa-seed.ts",
     "db:migrate:local": "wrangler d1 migrations apply DB --local",
     "db:migrate:staging": "wrangler d1 migrations apply DB --remote --env staging",
     "db:migrate:production": "wrangler d1 migrations apply DB --remote --env production",
@@ -18,6 +21,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20261115.1",
+    "@playwright/test": "^1.65.1",
     "leaflet": "^1.9.4",
     "typescript": "^5.9.3",
     "wrangler": "^4.162.0"
