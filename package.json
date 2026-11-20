@@ -15,8 +15,8 @@
     "db:migrate:staging": "wrangler d1 migrations apply DB --remote --env staging",
     "db:migrate:production": "wrangler d1 migrations apply DB --remote --env production",
     "dev:session": "node scripts/dev-session.mjs",
-    "deploy:staging": "npm run verify && wrangler deploy --env staging",
-    "deploy:production": "npm run verify && wrangler deploy --env production",
+    "deploy:staging": "npm run verify && wrangler deploy --config wrangler.consolidation-preview.json --keep-vars",
+    "deploy:production": "npm run verify && wrangler deploy --config wrangler.production.json --keep-vars",
     "cf-typegen": "wrangler types --include-runtime false"
   },
   "devDependencies": {
