@@ -10,7 +10,7 @@ const SIGNIN_ERRORS = {
   expired: "Your sign-in attempt took too long. Please try again.",
   verification: "Google could not verify your sign-in. Please try again.",
   unverified: "Your Google account email is not verified. Verify it with Google, then try again.",
-  blocked: "This account cannot sign in. If you think this is a mistake, contact the FORGE team.",
+  blocked: "This account cannot sign in. If you think this is a mistake, contact the Baldwin Minute Watch team.",
 };
 
 const GOOGLE_G = () => {
@@ -30,9 +30,9 @@ export async function signin({ view, query }) {
   const returnTo = query.get("return") || "/";
   if (user()) { window.forgeNavigate(returnTo.startsWith("/") && !returnTo.startsWith("//") ? returnTo : "/", { replace: true }); return; }
   view.append(h("div.container.section", h("div.auth-card.panel", { style: { padding: "40px 28px" } },
-    h("img.brand-emblem", { src: "/assets/brand/forge-eagle-256.webp", alt: "", width: 88, height: 88 }),
+    h("img.brand-emblem", { src: "/assets/brand/bmw-eagle-flag.webp", alt: "", width: 88, height: 88 }),
     h("div.eyebrow", "Free membership"),
-    h("h1", { style: { fontSize: "var(--fs-2xl)" } }, "Join 1776 FORGE"),
+    h("h1", { style: { fontSize: "var(--fs-2xl)" } }, "Join Baldwin Minute Watch"),
     h("p.muted", "Reading is always free. A free account lets you take part."),
     err ? notice(SIGNIN_ERRORS[err] || "Sign-in did not complete. Please try again.", "danger", "alert") : null,
     h("ul.list-plain.perks",
@@ -40,14 +40,14 @@ export async function signin({ view, query }) {
     cfg.authConfigured
       ? h("a.google-btn", { href: signInUrl(returnTo), "data-native": "" }, GOOGLE_G(), "Continue with Google")
       : notice(h("span", h("strong", "Sign-in isn't configured in this environment yet. "), "An administrator must add the Google OAuth client before members can join. Everything public remains readable."), "warning", "lock"),
-    h("p.small.muted", { style: { marginTop: "20px" } }, "We use Google only to confirm your identity and verified email. FORGE never sees your Google password. ", h("a", { href: "/standards#privacy" }, "Privacy"), " · ", h("a", { href: "/standards#community" }, "Community guidelines")))));
+    h("p.small.muted", { style: { marginTop: "20px" } }, "We use Google only to confirm your identity and verified email. Baldwin Minute Watch never sees your Google password. ", h("a", { href: "/standards#privacy" }, "Privacy"), " · ", h("a", { href: "/standards#community" }, "Community guidelines")))));
 }
 
 export async function account({ view, query }) {
   setTitle("Your account");
   const u = user();
   if (!u) { view.append(pageHero({ eyebrow: "Account", title: "Your account" }), h("div.container.section", h("div.auth-card", empty({ iconName: "user", title: "Sign in to manage your account", actions: h("a.btn.btn-gold", { href: "/signin?return=/account" }, "Sign in") })))); return; }
-  view.append(pageHero({ eyebrow: "Account", title: u.display_name, lede: query.get("welcome") ? "Welcome to 1776 FORGE. Set the name other members will see." : null, meta: h("div.btn-row", roleTag(u.role) || h("span.role-tag", "Member"), h("a.btn.btn-ghost-light.btn-sm", { href: `/authors/${u.id}` }, "View public profile")) }));
+  view.append(pageHero({ eyebrow: "Account", title: u.display_name, lede: query.get("welcome") ? "Welcome to Baldwin Minute Watch. Set the name other members will see." : null, meta: h("div.btn-row", roleTag(u.role) || h("span.role-tag", "Member"), h("a.btn.btn-ghost-light.btn-sm", { href: `/authors/${u.id}` }, "View public profile")) }));
   const profileForm = h("form.panel", h("h3", "Public profile"),
     h("div", { style: { display: "flex", gap: "14px", alignItems: "center", marginBottom: "16px" } }, avatar(u, 56), h("div.small.muted", "Your photo comes from your Google account.")),
     field({ name: "display_name", label: "Display name", value: u.display_name, required: true, max: 60, hint: "Shown on your posts. Use your real name or a consistent handle." }),
@@ -58,13 +58,13 @@ export async function account({ view, query }) {
   const caps = session().me?.capabilities || [];
   const access = h("section.panel", h("h3", "Membership & access"),
     h("dl.meta", h("dt", "Email"), h("dd", u.email), h("dt", "Role"), h("dd", label("role", u.role)), h("dt", "Member since"), h("dd", date(u.created_at)), h("dt", "Plan"), h("dd", "Free membership")),
-    h("p.small.muted", "Roles grant responsibilities (contributor, researcher, editor) and are assigned by administrators. Membership is free; FORGE does not take payments."),
+    h("p.small.muted", "Roles grant responsibilities (contributor, researcher, editor) and are assigned by administrators. Membership is free; Baldwin Minute Watch does not take payments."),
     caps.length ? h("details", h("summary.small", `What your role can do (${caps.length})`), h("ul.small", caps.map((c) => h("li", c)))) : null);
 
   const security = h("section.panel", h("h3", icon("lock", 14), " Security"),
     h("p.small", "Signed in with Google. Signing out everywhere ends every session on every device."),
     h("div.btn-row",
-      h("button.btn.btn-ghost", { type: "button", onclick: async () => { if (!confirm("Sign out of FORGE on all devices?")) return; await post("/api/me/sessions/revoke-all"); await loadSession(true); window.forgeNavigate("/"); toast("Signed out everywhere.", "success"); } }, icon("logout", 16), "Sign out everywhere")));
+      h("button.btn.btn-ghost", { type: "button", onclick: async () => { if (!confirm("Sign out of Baldwin Minute Watch on all devices?")) return; await post("/api/me/sessions/revoke-all"); await loadSession(true); window.forgeNavigate("/"); toast("Signed out everywhere.", "success"); } }, icon("logout", 16), "Sign out everywhere")));
 
   const danger = h("section.panel", { style: { borderColor: "var(--danger)" } }, h("h3", "Delete account"),
     h("p.small", "Your name, email, photo and bio are removed and your posts are attributed to “Former member”. Published contributions stay so discussions remain readable. This cannot be undone."),
@@ -100,7 +100,7 @@ export async function profile({ view, params }) {
   catch (err) { if (err.status === 404) { const { notFound } = await import("./static.js"); return notFound({ view }); } throw err; }
   const p = data.profile;
   setTitle(p.display_name);
-  view.append(pageHero({ eyebrow: p.role !== "member" ? `FORGE ${label("role", p.role).toLowerCase()}` : "Community member", title: p.display_name, lede: p.bio, meta: h("span.small", `Member since ${date(p.created_at)} · ${plural(data.commentCount, "reply", "replies")}`) }));
+  view.append(pageHero({ eyebrow: p.role !== "member" ? `Baldwin Minute Watch ${label("role", p.role).toLowerCase()}` : "Community member", title: p.display_name, lede: p.bio, meta: h("span.small", `Member since ${date(p.created_at)} · ${plural(data.commentCount, "reply", "replies")}`) }));
   const main = h("div.stack");
   if (data.articles.length) main.append(h("section", h("h2", { style: { fontSize: "var(--fs-xl)" } }, "Reporting"), h("div.grid.grid-2", data.articles.map((a) => h("article.card.interactive.card-accent-red",
     h("div.kicker", label("kind", a.kind), a.category_name && h("span", "· " + a.category_name)), h("h3", h("a", { href: `/news/${a.slug}` }, a.title)), a.summary && h("p", a.summary), h("div.card-foot", h("span", date(a.published_at))))))));

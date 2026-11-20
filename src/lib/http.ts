@@ -26,6 +26,10 @@ export function errorResponse(err: unknown): Response {
   if (err instanceof HttpError) {
     return json({ error: err.message, ...(err.details ? { details: err.details } : {}) }, err.status);
   }
+  if (err instanceof Error && err.message.includes("D1_ERROR") && /overloaded|too many resources consumed/i.test(err.message)) {
+    console.error("Database capacity temporarily exceeded");
+    return json({ error: "The research database is busy. Please try again in a few seconds." }, 503, { "retry-after": "10" });
+  }
   console.error("Unhandled error", err instanceof Error ? err.stack || err.message : err);
   return json({ error: "Internal server error" }, 500);
 }

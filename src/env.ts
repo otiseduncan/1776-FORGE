@@ -4,6 +4,10 @@ export interface Env {
   DB?: D1Database;
   /** NEW 1776 FORGE R2 bucket for original documents and attachments. */
   DOCS?: R2Bucket;
+  /** Read-only compatibility access to the independently preserved records Worker. */
+  LEGACY_RECORDS?: Fetcher;
+  LEGACY_MAP?: Fetcher;
+  LEGACY_MAP_ORIGIN?: string;
   APP_ENV?: string;
   GOOGLE_CLIENT_ID?: string;
   GOOGLE_CLIENT_SECRET?: string;

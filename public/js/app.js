@@ -1,9 +1,20 @@
-// 1776 FORGE single-page application shell: routing, header, account menu, theme.
+// Baldwin Minute Watch single-page application shell: routing, header, account menu, theme.
 import { h, icon, clear, $, $$ } from "./core/dom.js";
 import { loadSession, onSession, user, can, signInUrl, signOut, session } from "./core/session.js";
 import { avatar, errorBox, setTitle } from "./core/ui.js";
+import { legacyRecordPath } from "./core/legacy-link.js";
+
+const legacyPath = legacyRecordPath(location.pathname, location.search, location.hash);
+if (legacyPath?.startsWith("/legacy-map")) location.replace(legacyPath);
+else if (legacyPath) history.replaceState(null, "", legacyPath);
 
 const routes = [
+  ["/legacy/community", () => import("./pages/legacy.js").then((m) => m.legacyCommunity)],
+  ["/legacy/community/:id", () => import("./pages/legacy.js").then((m) => m.legacyThread)],
+  ["/legacy/records", () => import("./pages/legacy.js").then((m) => m.legacyIndex)],
+  ["/legacy/records/:id", () => import("./pages/legacy.js").then((m) => m.legacyRecord)],
+  ["/about", () => import("./pages/static.js").then((m) => m.about)],
+  ["/forge", () => import("./pages/records.js").then((m) => m.recordsIndex)],
   ["/", () => import("./pages/home.js").then((m) => m.home)],
   ["/news", () => import("./pages/news.js").then((m) => m.newsIndex)],
   ["/news/series", () => import("./pages/news.js").then((m) => m.seriesIndex)],

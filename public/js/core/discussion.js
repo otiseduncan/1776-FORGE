@@ -9,7 +9,7 @@ import { turnstileField } from "./turnstile.js";
 export function discussionPanel({ contextType, contextId, contextTitle, discussions = [] }) {
   const wrap = h("section.panel", { id: "discussion", "aria-labelledby": "disc-title" },
     h("h3#disc-title", icon("chat", 14), " Community discussion"),
-    h("div.community-label", icon("users", 16), h("span", "Community posts are member opinion, not verified FORGE reporting.")));
+    h("div.community-label", icon("users", 16), h("span", "Community posts are member opinion, not verified Baldwin Minute Watch reporting.")));
   const list = h("ul.related-list", { style: { marginTop: "12px" } }, discussions.map((d) => h("li", h("a", { href: `/community/t/${d.id}` }, icon("chat", 16), h("span", d.title, h("span.small.muted", ` · ${plural(d.comment_count, "comment")} · ${ago(d.last_activity_at)}`))))));
   if (discussions.length) wrap.append(list);
   else wrap.append(h("p.muted.small", { style: { marginTop: "12px" } }, "No discussion has started yet."));

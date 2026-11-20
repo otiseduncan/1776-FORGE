@@ -188,3 +188,21 @@ main { overflow-wrap: anywhere; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
+
+/* Consolidated Baldwin Minute Watch masthead; existing owner artwork. */
+.wordmark { font-size: clamp(.88rem, 1.25vw, 1.25rem); letter-spacing: .015em; white-space: normal; line-height: 1.15; }
+.brand { max-width: 365px; min-width: 0; flex-shrink: 1; }
+.brand-emblem { object-fit: cover; object-position: 14% center; border-radius: 50%; }
+.brand-tagline { font-size: .75rem; line-height: 1.4; letter-spacing: 0; white-space: normal; }
+.footer-wordmark { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold-300); }
+.bmw-masthead { background: var(--navy-950); color: #e2e8f0; border-bottom: 4px solid var(--red-600); }
+.bmw-masthead-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem; align-items: center; padding-block: 2.5rem; }
+.bmw-masthead h1 { color: #fff; font-size: clamp(2rem, 3.5vw, 3.5rem); letter-spacing: -.025em; }
+.bmw-masthead .eyebrow { color: var(--gold-300); font-size: .875rem; }
+.bmw-motto { font-family: var(--font-display); font-size: 1.3rem; }
+.bmw-art { display: block; width: 100%; border-radius: 4px; }
+.bmw-desks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.bmw-desks h2 { font-size: 1.5rem; }
+
+
+@media(max-width: 700px) { .bmw-masthead-grid, .bmw-desks { grid-template-columns: 1fr; } .bmw-masthead-grid { gap: 1rem; padding-block: 1.5rem; } .bmw-art { max-height: 180px; object-fit: cover; } .brand-tagline { font-size: .7rem; } .brand-emblem { width: 36px; height: 36px; } }

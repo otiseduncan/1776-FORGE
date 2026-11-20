@@ -15,7 +15,7 @@ export async function govIndex({ view, query }) {
   const summary = await get("/api/civic/summary").catch((e) => ({ error: e }));
   view.append(pageHero({
     eyebrow: "Follow the decisions and the money",
-    title: "Meetings, votes & budgets",
+    title: "Meeting Watch",
     lede: "Agendas, minutes, video and recorded votes of local governing bodies, alongside adopted budgets and audited financial reports. Every entry links to its source.",
     actions: summary.permissions?.write ? h("a.btn.btn-gold", { href: "/workspace/civic" }, icon("plus", 18), "Add civic records") : null,
   }));
@@ -26,7 +26,7 @@ export async function govIndex({ view, query }) {
   box.append(h("div.stats.light", { style: { marginBottom: "24px" } },
     [["Governing bodies", c.bodies], ["Meetings", c.meetings], ["Motions", c.motions], ["Recorded votes", c.votes], ["Budgets", c.budgets], ["Financial reports", c.financial_reports]]
       .map(([l, v]) => h("div.stat", h("strong", n(v)), h("span", l)))));
-  box.append(notice("FORGE records only votes that appear in official minutes, transcripts or video. Where no source exists, nothing is shown — we never infer how an official voted.", "gold", "shield"));
+  box.append(notice("Baldwin Minute Watch records only votes that appear in official minutes, transcripts or video. Where no source exists, nothing is shown — we never infer how an official voted.", "gold", "shield"));
   const go = (p) => window.forgeNavigate("/government" + qs({ tab, jurisdiction, ...p }));
   const juris = h("select.select", { "aria-label": "Jurisdiction", style: { maxWidth: "260px" }, onchange: (e) => go({ jurisdiction: e.target.value, page: 1 }) },
     [["", "All jurisdictions"], ["ga-baldwin", "Baldwin County"], ["ga-milledgeville", "City of Milledgeville"], ["ga", "State of Georgia"]].map(([v, l]) => h("option", { value: v, selected: v === jurisdiction || undefined }, l)));
@@ -151,7 +151,7 @@ export async function officialDetail({ view, params }) {
     lede: [o.term_start && `Term from ${date(o.term_start)}`, o.term_end && `to ${date(o.term_end)}`].filter(Boolean).join(" ") || null }));
   view.append(h("div.container.section",
     h("div.stats.light", { style: { marginBottom: "24px" } }, ["yea", "nay", "abstain", "absent", "recused"].map((k) => h("div.stat", h("strong", n(data.tally[k] || 0)), h("span", label("vote", k))))),
-    notice("This record lists only votes FORGE has entered from official minutes, transcripts or video. It is not a complete voting history.", "info", "info"),
+    notice("This record lists only votes Baldwin Minute Watch has entered from official minutes, transcripts or video. It is not a complete voting history.", "info", "info"),
     data.votes.length ? h("div.table-wrap", { style: { marginTop: "16px" } }, h("table.data", h("thead", h("tr", h("th", "Date"), h("th", "Motion"), h("th", "Vote"), h("th", "Result"))),
       h("tbody", data.votes.map((v) => h("tr", h("td", h("a", { href: `/government/meetings/${v.meeting_id}` }, date(v.meeting_date))), h("td", v.title, v.resolution_number ? h("span.small.muted", ` (${v.resolution_number})`) : null), h("td", badge(VOTE_BADGE[v.vote], label("vote", v.vote))), h("td", label("result", v.result)))))))
       : h("div", { style: { marginTop: "16px" } }, empty({ iconName: "vote", title: "No votes recorded yet" })),

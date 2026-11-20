@@ -46,7 +46,7 @@ export function skeleton(count = 3, height = 140) {
 
 export function errorBox(err, retry) {
   return h("div.notice.notice-danger", { role: "alert" }, icon("alert", 20), h("div",
-    h("strong", err?.status === 503 ? "This part of FORGE is not connected yet. " : "Something went wrong. "),
+    h("strong", err?.status === 503 ? "This part of Baldwin Minute Watch is not connected yet. " : "Something went wrong. "),
     err?.message || "Please try again.",
     retry && h("div", { style: { marginTop: "8px" } }, h("button.btn.btn-sm.btn-ghost", { type: "button", onclick: retry }, "Try again"))));
 }
@@ -170,7 +170,7 @@ export function personLine(name, role, when) {
 }
 
 export function setTitle(title) {
-  document.title = title ? `${title} · 1776 FORGE` : "1776 FORGE — Fellowship for Open Records and Government Examination";
+  document.title = title ? `${title} · Baldwin Minute Watch` : "Baldwin Minute Watch — Independent civic journalism and public records";
 }
 
 export function signedIn() { return !!user(); }

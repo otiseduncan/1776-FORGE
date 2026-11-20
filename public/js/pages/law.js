@@ -22,7 +22,7 @@ const LAYERS = [
   ["Current authority", "Law in force today, including later amendments."],
   ["Historical version", "Superseded or repealed text kept for the record."],
   ["Judicial interpretation", "What courts have held — cited to the decision."],
-  ["FORGE commentary", "Our analysis, labelled and linked from the provision."],
+  ["Baldwin Minute Watch commentary", "Our analysis, labelled and linked from the provision."],
   ["Community opinion", "Member discussion — opinion, not legal authority."],
 ];
 
@@ -81,14 +81,14 @@ export async function lawDetail({ view, params }) {
   main.append(h("section.panel", h("h3", icon("book", 14), " Original / official text"),
     a.body_text
       ? [h("div.prose", { style: { whiteSpace: "pre-wrap" } }, a.body_text), h("p.small.muted", "Text copied from: ", h("a", { href: a.body_text_source, target: "_blank", rel: "noopener noreferrer" }, a.body_text_source))]
-      : [h("p", "Read the authoritative text at the official source. FORGE does not re-type legal text; verified copies are imported with their source and version."),
+      : [h("p", "Read the authoritative text at the official source. Baldwin Minute Watch does not re-type legal text; verified copies are imported with their source and version."),
          h("div.btn-row", h("a.btn.btn-blue", { href: a.source_url, target: "_blank", rel: "noopener noreferrer" }, icon("external", 16), `Official text — ${new URL(a.source_url).hostname.replace("www.", "")}`),
            a.annotated_url && h("a.btn.btn-ghost", { href: a.annotated_url, target: "_blank", rel: "noopener noreferrer" }, icon("scale", 16), "Constitution Annotated analysis"))]));
 
   main.append(h("section.panel", h("h3", icon("gavel", 14), " Judicial interpretation"),
     data.layers.interpretation.length ? relatedList(data.layers.interpretation) : h("p.muted.small", "No court decisions are linked yet. Decisions are added only with official citation, court and date.")));
-  main.append(h("section.panel", h("h3", icon("news", 14), " FORGE commentary"),
-    data.layers.commentary.length ? relatedList(data.layers.commentary) : h("p.muted.small", "No FORGE analysis is linked to this provision yet.")));
+  main.append(h("section.panel", h("h3", icon("news", 14), " Baldwin Minute Watch commentary"),
+    data.layers.commentary.length ? relatedList(data.layers.commentary) : h("p.muted.small", "No Baldwin Minute Watch analysis is linked to this provision yet.")));
   main.append(h("section.panel", h("h3", icon("doc", 14), " Related public records & investigations"),
     relatedList([...data.layers.records, ...data.layers.other])));
 
