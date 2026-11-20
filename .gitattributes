@@ -1,0 +1,2 @@
+# Preserve imported public source files byte-for-byte on every platform.
+public/data/map-source/** -text
