@@ -5,7 +5,9 @@
   "workers_dev": true,
   "routes": [
     { "pattern": "baldwinminutewatch.com", "custom_domain": true },
-    { "pattern": "baldwinminutewatch.org", "custom_domain": true }
+    { "pattern": "baldwinminutewatch.org", "custom_domain": true },
+    { "pattern": "www.baldwinminutewatch.com", "custom_domain": true },
+    { "pattern": "www.baldwinminutewatch.org", "custom_domain": true }
   ],
   "assets": {
     "directory": "./public",

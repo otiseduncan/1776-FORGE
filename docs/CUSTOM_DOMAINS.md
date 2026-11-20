@@ -7,6 +7,8 @@ The owner confirmed the domains were already purchased and corrected their spell
 
 Both apex hostnames are attached as Cloudflare Worker Custom Domains to `1776-forge-staging`. The routes are recorded in `wrangler.consolidation-preview.json` so future deployments with that configuration retain the domains. The existing workers.dev staging URL remains available.
 
+The `www` form of each domain is also attached and redirects with HTTP 308 to its matching HTTPS apex. HTTP requests to either bare domain are also redirected to HTTPS so sign-in always uses the registered secure callback. Record paths and query strings are retained. This gives each domain a single session/OAuth hostname and prevents missing-www DNS failures.
+
 The earlier, misspelled `baldwinminutewach.com` and `baldwinminutewach.org` Worker attachments were removed. Their domain registrations were not deleted or altered. No domain purchase or payment was made by the agent.
 
 Google OAuth client `90816671582-ubot1ro6sg9jnd6725l21hd5b7su0q0o.apps.googleusercontent.com` now retains both new HTTPS JavaScript origins and these redirect URIs:

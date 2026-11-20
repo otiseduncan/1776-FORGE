@@ -75,6 +75,13 @@ async function renderShell(request: Request, env: Env, url: URL): Promise<Respon
 export default {
   async fetch(request: Request, env: Env, exec: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    const apexHostname = url.hostname.replace(/^www\./, "");
+    if (["baldwinminutewatch.com", "baldwinminutewatch.org"].includes(apexHostname) && (url.hostname !== apexHostname || url.protocol !== "https:")) {
+      url.hostname = apexHostname;
+      url.protocol = "https:";
+      url.port = "";
+      return Response.redirect(url.href, 308);
+    }
     if (url.pathname === "/legacy-map" && ["GET", "HEAD"].includes(request.method)) {
       const origin = env.LEGACY_MAP_ORIGIN || "https://bmw-legacy-consolidation-preview.otiseduncan.workers.dev";
       return Response.redirect(origin + "/" + url.search, 302);

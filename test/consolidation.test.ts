@@ -4,6 +4,18 @@ import { legacyEvidence } from "../src/lib/legacy.ts";
 import { legacyRecordPath } from "../public/js/core/legacy-link.js";
 import type { Env } from "../src/env.ts";
 import { errorResponse } from "../src/lib/http.ts";
+import worker from "../src/index.ts";
+
+test("both www hostnames redirect to HTTPS apex while preserving evidence paths and query strings", async () => {
+  for (const domain of ["baldwinminutewatch.com", "baldwinminutewatch.org"]) {
+    const response = await worker.fetch(new Request(`http://www.${domain}/records/legacy-id?download=1`), {} as Env, {} as ExecutionContext);
+    assert.equal(response.status, 308);
+    assert.equal(response.headers.get("location"), `https://${domain}/records/legacy-id?download=1`);
+    const httpApex = await worker.fetch(new Request(`http://${domain}/records/legacy-id?download=1`), {} as Env, {} as ExecutionContext);
+    assert.equal(httpApex.status, 308);
+    assert.equal(httpApex.headers.get("location"), `https://${domain}/records/legacy-id?download=1`);
+  }
+});
 
 test("D1 overload returns a retryable service response without exposing database errors", async () => {
   const res = errorResponse(new Error("D1_ERROR: D1 DB is overloaded. Too many resources consumed within a 10 second window."));
