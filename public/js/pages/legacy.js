@@ -1,5 +1,5 @@
 import { h } from "../core/dom.js";
-import { get } from "../core/api.js";
+import { get, qs } from "../core/api.js";
 import { pageHero, setTitle, notice, pagination } from "../core/ui.js";
 import { renderMarkdown } from "../core/markdown.js";
 
@@ -25,16 +25,25 @@ export async function legacyIndex({ view, query }) {
   const page = Math.max(1, Number(query.get("page")) || 1);
   const q = query.get("q") || "";
   const jurisdiction = query.get("jurisdiction") || "";
+  const classification = query.get('classification') || '';
+  const year = query.get('year') || '';
+  const entity = query.get('entity') || '';
   const status = await get("/civic-api/public-records/status");
   const jurisdictions = Object.keys(status.documents_by_jurisdiction || {});
   const scope = jurisdiction === "all" ? `&jurisdictions=${encodeURIComponent(jurisdictions.join(","))}` : jurisdiction ? `&jurisdiction=${encodeURIComponent(jurisdiction)}` : "";
-  const d = await get(`/civic-api/public-records?limit=30&page=${page}&q=${encodeURIComponent(q)}${scope}`);
+  const d = await get(`/civic-api/public-records?limit=30&page=${page}&q=${encodeURIComponent(q)}${scope}&classification=${encodeURIComponent(classification)}&year=${encodeURIComponent(year)}&entity=${encodeURIComponent(entity)}`);
   view.append(pageHero({ eyebrow: "The Forge · Original collection", title: "Preserved legacy records", lede: "The original archive remains available with its existing identifiers, sources and publication review decisions. This collection is kept separate while migration is reconciled." }));
   const input = h("input.input", { name: "q", type: "search", value: q, "aria-label": "Search legacy records", placeholder: "Search the original collection" });
-  const go = (p, term=q, area=jurisdiction) => window.forgeNavigate(`/legacy/records?page=${p}&q=${encodeURIComponent(term)}&jurisdiction=${encodeURIComponent(area)}`);
+  const go = (p, term=q, area=jurisdiction, kind=classification, selectedYear=year) => window.forgeNavigate('/legacy/records'+qs({page:p,q:term,jurisdiction:area,classification:kind,year:selectedYear,entity:area===jurisdiction?entity:''}));
   const select = h("select.select", { "aria-label": "Legacy jurisdiction", onchange: e => go(1,q,e.target.value), style: { marginBlock: "16px", maxWidth: "420px" } }, [["", "Baldwin-area original collection"], ["all", "All archived jurisdictions"], ...jurisdictions.map(j => [j,j.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()).replace(/\bGa\b/g,"GA")])].map(([value,title])=>h("option", { value, selected:value===jurisdiction || undefined },title)));
   const box = h("section.container.section", h("form.search-bar", { onsubmit: e => { e.preventDefault(); go(1,input.value); } }, input, h("button.btn.btn-blue", { type: "submit" }, "Search")), select,
+    h('div.btn-row',
+      h('select.select', {'aria-label':'Archive record type',style:{maxWidth:'320px'},onchange:e=>go(1,q,jurisdiction,e.target.value)},[['','All record types'],...d.classifications.map(k=>[k,k.replaceAll('_',' ')])].map(([v,l])=>h('option',{value:v,selected:v===classification||undefined},l))),
+      h('select.select', {'aria-label':'Archive year',style:{maxWidth:'180px'},onchange:e=>go(1,q,jurisdiction,classification,e.target.value)},[['','All years'],...d.years.map(y=>[String(y),String(y)]),['unknown','Date unknown']].map(([v,l])=>h('option',{value:v,selected:v===year||undefined},l)))),
     h("p.muted", { style: { marginBlock: "20px" } }, `${d.total.toLocaleString()} listed records · Original archive catalogue`),
+    entity ? h('p',h('strong',d.entities.find(e=>e.id===entity)?.name||'Selected agency'),' · ',h('a',{href:'/legacy/records'},'Clear agency filter')) : null,
+    h('p.small.muted',{style:{marginBottom:'20px'}},'Search covers titles, filenames, agencies, dates, source links and selected screened document text. Full OCR text is not available online.'),
+    !d.items.length ? h('p','No records match these filters. Try fewer words or another year.') : null,
     h("div.grid.grid-3", (d.items || []).map(r => h("article.card", h("h2", { style: { fontSize: "1.2rem" } }, h("a", { href: `/legacy/records/${encodeURIComponent(r.id)}` }, r.title)), h("p", r.publisher || r.entity_id || "Publisher not recorded"), h("p.small", r.document_date || "Date not recorded")))));
   if (d.pages > 1) box.append(pagination(d.page, d.limit, d.total, p => go(p)));
   view.append(box);

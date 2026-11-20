@@ -8,6 +8,16 @@
 .hero-band::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--grad-flag-line); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
 .hero-band h1 { color: #fff; font-size: var(--fs-4xl); max-width: 16ch; text-wrap: balance; margin-bottom: var(--sp-4); }
+.hero-band h2 { color: #fff; }
+.meeting-tabs { flex-wrap: wrap; overflow-x: visible; }
+.meeting-tabs button { white-space: normal; }
+.meeting-video-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+.meeting-video-card .video-embed { margin: 0; }
+@media (max-width: 640px) {
+  .meeting-video-card { grid-template-columns: minmax(0, 1fr); }
+  .search-panel .search-bar { flex-wrap: wrap; }
+  .search-panel .search-bar .input-wrap { flex-basis: 100%; }
+}
 .hero-band h1 em { font-style: normal; background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-band .lede { color: #cfd8e5; font-size: 1.15rem; max-width: 56ch; }
 .hero-search { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(214, 170, 82, 0.45); border-radius: var(--radius-lg); padding: var(--sp-5); box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.7); backdrop-filter: blur(6px); }

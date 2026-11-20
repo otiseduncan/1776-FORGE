@@ -82,9 +82,11 @@ export function registerRecords(r: Router): void {
     const args: unknown[] = [];
     const q = cleanQuery(c.url);
     if (q) {
-      where.push("(d.title LIKE ? ESCAPE '\\' OR d.summary LIKE ? ESCAPE '\\' OR d.citation LIKE ? ESCAPE '\\' OR a.name LIKE ? ESCAPE '\\' OR j.name LIKE ? ESCAPE '\\')");
-      const p = likePattern(q);
-      args.push(p, p, p, p, p);
+      const fields = ['d.title', 'd.summary', 'd.citation', 'a.name', 'j.name', 'd.record_date', 'd.original_filename', 'd.document_type'];
+      for (const term of q.split(/\s+/).slice(0, 12)) {
+        where.push('(' + fields.map(f => `${f} LIKE ? ESCAPE '\\'`).join(' OR ') + ')');
+        args.push(...fields.map(() => likePattern(term)));
+      }
     }
     const level = c.url.searchParams.get("level");
     if (level) {

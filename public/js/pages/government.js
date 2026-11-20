@@ -1,15 +1,16 @@
 import { h, icon } from "../core/dom.js";
 import { get, qs } from "../core/api.js";
 import { date, cents, n, plural, label } from "../core/format.js";
-import { pageHero, setTitle, empty, notice, citationList, relatedList, pagination, badge, sectionHead } from "../core/ui.js";
+import { pageHero, setTitle, empty, notice, citationList, relatedList, pagination, badge, sectionHead, errorBox } from "../core/ui.js";
 import { discussionPanel } from "../core/discussion.js";
+import { embeddedMinuteRecords } from '../core/embedded-minutes.js';
 
 const VOTE_BADGE = { yea: "verified", nay: "disputed", abstain: "pending", absent: "unreviewed", recused: "superseded" };
 const RESULT_BADGE = { passed: "verified", failed: "disputed", tabled: "pending", withdrawn: "superseded", unrecorded: "unreviewed" };
 
 export async function govIndex({ view, query }) {
   setTitle("Government: meetings, votes & budgets");
-  const tab = query.get("tab") || "meetings";
+  const tab = query.get("tab") || "archive";
   const jurisdiction = query.get("jurisdiction") || "";
   const page = Number(query.get("page") || 1);
   const summary = await get("/api/civic/summary").catch((e) => ({ error: e }));
@@ -23,26 +24,39 @@ export async function govIndex({ view, query }) {
   view.append(box);
   if (summary.error) { box.append(notice(summary.error.status === 503 ? "The civic records database is not connected in this environment." : summary.error.message, "warning", "alert")); return; }
   const c = summary.counts || {};
-  box.append(h("div.stats.light", { style: { marginBottom: "24px" } },
+  if (Object.values(c).some(v => v > 0)) box.append(h("div.stats.light", { style: { marginBottom: "24px" } },
     [["Governing bodies", c.bodies], ["Meetings", c.meetings], ["Motions", c.motions], ["Recorded votes", c.votes], ["Budgets", c.budgets], ["Financial reports", c.financial_reports]]
       .map(([l, v]) => h("div.stat", h("strong", n(v)), h("span", l)))));
-  box.append(notice("Baldwin Minute Watch records only votes that appear in official minutes, transcripts or video. Where no source exists, nothing is shown — we never infer how an official voted.", "gold", "shield"));
+  box.append(h('p.small.muted', 'Published minutes and packets are source documents. Individual votes appear only after source review.'));
   const go = (p) => window.forgeNavigate("/government" + qs({ tab, jurisdiction, ...p }));
   const juris = h("select.select", { "aria-label": "Jurisdiction", style: { maxWidth: "260px" }, onchange: (e) => go({ jurisdiction: e.target.value, page: 1 }) },
     [["", "All jurisdictions"], ["ga-baldwin", "Baldwin County"], ["ga-milledgeville", "City of Milledgeville"], ["ga", "State of Georgia"]].map(([v, l]) => h("option", { value: v, selected: v === jurisdiction || undefined }, l)));
   box.append(h("div", { style: { display: "flex", gap: "12px", justifyContent: "space-between", flexWrap: "wrap", margin: "24px 0 16px", alignItems: "center" } },
-    h("div.tabs", { role: "tablist" }, [["meetings", "Meetings & votes"], ["bodies", "Governing bodies"], ["budgets", "Budgets & audits"]].map(([id, l]) =>
+    h("div.tabs.meeting-tabs", { role: "tablist" }, [["archive", "Minutes & packets"], ["meetings", "Reviewed votes"], ["bodies", "Governing bodies"], ["budgets", "Budgets & audits"]].map(([id, l]) =>
       h("button.tab", { type: "button", role: "tab", "aria-selected": String(tab === id), onclick: () => go({ tab: id, page: 1 }) }, l))),
     juris));
   const panel = h("div");
   box.append(panel);
+  if (tab === 'archive') {
+    await archivedMeetings(panel, query, jurisdiction);
+    return;
+  }
   if (tab === "bodies") {
     const data = await get("/api/civic/bodies" + qs({ jurisdiction }));
-    if (!data.items.length) { panel.append(empty({ iconName: "users", title: "No governing bodies recorded", text: "Researchers add commissions, councils and boards with their official website." })); return; }
+    if (!data.items.length) {
+      const archive = await get('/civic-api/public-records?limit=1');
+      const areas = {'ga-baldwin':'baldwin-ga','ga-milledgeville':'milledgeville-ga','ga':'georgia-state'};
+      const agencies = archive.entities.filter(e=>!jurisdiction || e.jurisdiction_id===areas[jurisdiction]);
+      panel.append(sectionHead('Archived agencies', 'Browse the original records by their source agency. Officials and individual vote histories are added after review.'),
+        h('div.grid.grid-3',agencies.map(e=>h('article.card',h('h3',h('a',{href:'/legacy/records'+qs({entity:e.id})},e.name)),h('p.small.muted',plural(e.records,'archived record')),e.source?h('a',{href:e.source,target:'_blank',rel:'noopener noreferrer'},'Official source'):null))));
+      return;
+    }
     panel.append(h("div.grid.grid-3", data.items.map((b) => h("article.card.interactive.card-accent-blue",
       h("div.kicker", b.jurisdiction_name), h("h3", h("a", { href: `/government/bodies/${b.id}` }, b.name)),
       h("div.card-foot", h("span", plural(b.officials, "official")), h("span", plural(b.meetings, "meeting")))))));
   } else if (tab === "budgets") {
+    panel.append(h('section.panel', sectionHead('Archived budgets & audits', 'Read the source documents, including records awaiting line-item transcription.'),
+      h('div.btn-row', h('a.btn.btn-blue',{href:'/legacy/records?classification=budget_document'},'Budget documents'),h('a.btn.btn-ghost',{href:'/legacy/records?classification=financial_report'},'Financial reports & audits'))));
     const data = await get("/api/civic/budgets" + qs({ jurisdiction }));
     panel.append(sectionHead("Budgets", "Adopted, proposed and amended budgets with line items transcribed from the official document."));
     panel.append(data.budgets.length ? h("div.table-wrap", h("table.data",
@@ -59,10 +73,58 @@ export async function govIndex({ view, query }) {
       : empty({ iconName: "coins", title: "No financial reports entered yet", text: "Georgia local governments file audits with the Department of Audits and Accounts; links appear here once recorded." }));
   } else {
     const data = await get("/api/civic/meetings" + qs({ jurisdiction, page }));
-    if (!data.items.length) { panel.append(empty({ iconName: "calendar", title: "No meetings recorded yet", text: "Meetings appear here with their agenda, minutes, video or transcript once a researcher adds them." })); return; }
+    if (!data.items.length) { panel.append(empty({ iconName: "calendar", title: "Votes have not been transcribed yet", text: "The archived minutes and packets are available in Meeting Watch. Individual motions and votes will appear here after source review.", actions: [h('a.btn.btn-blue', { href: '/government' }, 'Read minutes & packets')] })); return; }
     panel.append(h("div.grid", { style: { gap: "12px" } }, data.items.map(meetingCard)));
     panel.append(pagination(page, data.pageSize, data.total, (p) => go({ page: p })));
   }
+}
+
+async function archivedMeetings(panel, query, jurisdiction) {
+  const q = query.get('q') || '';
+  const year = query.get('year') || 'all';
+  const page = Math.max(1, Number(query.get('page')) || 1);
+  const go = patch => window.forgeNavigate('/government' + qs({ jurisdiction, q, year, ...patch }));
+  try {
+    const videos = await get('/api/civic/videos');
+    panel.append(h('section.section-tight', sectionHead('The Minute Watch Breakdown', 'Our meeting coverage, alongside the original public records.'),
+      ...videos.items.map(v=>h('article.panel.meeting-video-card', {id:v.id},
+        h('div', h('h2',v.title), h('p.small.muted', 'Baldwin Minute Watch reporting · Official minutes and packets are listed below.'),
+          h('p',h('a',{href:v.url,target:'_blank',rel:'noopener noreferrer'},'Watch on YouTube'))),
+        h('div.video-embed', h('iframe',{src:v.embed_url,title:v.title,loading:'lazy',allowfullscreen:true,referrerpolicy:'strict-origin-when-cross-origin'}))))));
+  } catch(e) { panel.append(notice('Meeting videos could not load. Please try again.', 'warning')); }
+  const input = h('input.input', { type: 'search', value: q, 'aria-label': 'Search meeting dates and titles', placeholder: 'Meeting title or date (YYYY-MM-DD)' });
+  panel.append(h('form.search-panel', { role: 'search', onsubmit: e => { e.preventDefault(); go({q: input.value.trim(), page: 1}); } },
+    h('div.search-bar', h('div.input-wrap', icon('search', 20), input), h('button.btn.btn-blue', {type:'submit'}, 'Find meetings'))));
+  if (jurisdiction && jurisdiction !== 'ga-baldwin') {
+    const area = jurisdiction === 'ga-milledgeville' ? 'milledgeville-ga' : 'georgia-state';
+    panel.append(notice('This meeting calendar covers the Baldwin County Commission. Browse source documents for the selected jurisdiction below.'));
+    panel.append(h('div.btn-row', h('a.btn.btn-blue', {href:'/legacy/records'+qs({jurisdiction:area,q,classification:'meeting_minutes'})}, 'Browse minutes'), h('a.btn.btn-ghost', {href:'/legacy/records'+qs({jurisdiction:area,q,classification:'meeting_agenda'})}, 'Browse agendas')));
+    return;
+  }
+  let data;
+  try { data = await get('/civic-api/commission/meetings' + qs({year,q,page})); }
+  catch(e) { panel.append(errorBox(e)); return; }
+  panel.append(h('div.btn-row', {style:{marginBlock:'18px'}}, h('select.select', { 'aria-label':'Meeting year', onchange:e=>go({year:e.target.value,page:1}), style:{maxWidth:'220px'} },
+    [['all','All years'], ...data.years.slice().sort().reverse().map(y=>[y,y])].map(([v,l])=>h('option',{value:v,selected:String(v)===year||undefined},l))),
+    h('a.btn.btn-ghost.btn-sm', {href:'/legacy/records?classification=meeting_minutes'}, 'All archived minutes'),
+    h('a.btn.btn-ghost.btn-sm', {href:'/legacy/records?classification=meeting_packet'}, 'All agenda packets')));
+  panel.append(h('p.small.muted', `${n(data.total)} calendar entries · Collection through ${data.through_date}. Availability notes reflect that collection date. Search the archive for document text.`));
+  if (!data.items.length) panel.append(empty({title:'No calendar entries match',text:'Try another year or search the full archive.',actions:[h('a.btn.btn-blue',{href:'/legacy/records'+qs({q})},'Search archived documents')]}));
+  panel.append(h('div.grid', {style:{gap:'12px'}}, data.items.map(m => h('article.card',
+    h('div.kicker', date(m.date), m.cancelled ? ' · Cancelled' : null), h('h3',m.title),
+    h('div.btn-row',m.documents.map(d=>h('a.btn.btn-ghost.btn-sm',{href:'/legacy/records/'+encodeURIComponent(d.id)},d.classification==='meeting_minutes'?'Minutes':d.classification==='meeting_agenda'?'Agenda':d.classification==='meeting_packet'?'Agenda packet':'Source document'))),
+    ...Object.entries(m.document_status || {}).map(([kind,s]) => h('p.small.muted', {style:{marginTop:'10px'}}, `${kind === 'packet' ? 'Packet' : kind === 'minutes' ? 'Minutes' : kind}: ${s.status}`,
+      s.embedded_in ? [' · ',h('a',{
+        href: embeddedMinuteRecords[s.embedded_in.sha256] ? '/legacy/records/'+embeddedMinuteRecords[s.embedded_in.sha256]+'#page='+s.embedded_in.pdf_page : s.embedded_in.source_url+'#page='+s.embedded_in.pdf_page,
+        ...(embeddedMinuteRecords[s.embedded_in.sha256] ? {} : {target:'_blank',rel:'noopener noreferrer'})
+      },`Open source, PDF page ${s.embedded_in.pdf_page}`)] : null)),
+    h('p.small', {style:{marginTop:'12px'}}, h('a',{href:m.source_url,target:'_blank',rel:'noopener noreferrer'},'Official meeting page'))))));
+  panel.append(pagination(page,30,data.total,p=>go({page:p})));
+  try {
+    const news = await get('/api/news');
+    const reports = news.items.filter(a=>a.video_url);
+    if(reports.length) panel.append(h('section.section-tight',sectionHead('Meeting reporting & video','Baldwin Minute Watch reporting is separate from official minutes.'),h('div.grid.grid-2',reports.map(a=>h('article.card',h('h3',h('a',{href:'/news/'+a.slug},a.title)),h('p',a.summary))))));
+  } catch { /* Calendar remains available if newsroom is temporarily offline. */ }
 }
 
 function meetingCard(m) {

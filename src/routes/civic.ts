@@ -4,6 +4,7 @@ import { newId } from "../lib/crypto.ts";
 import { can } from "../auth/permissions.ts";
 import { bool, httpsUrl, int, isoDate, oneOf, reqStr, str, videoUrl } from "../lib/validate.ts";
 import { audit, citationsFor, discussionsFor, now, relatedContent } from "../lib/store.ts";
+import { meetingVideos } from '../data/meeting-videos.ts';
 
 const VOTES = ["yea", "nay", "abstain", "absent", "recused"] as const;
 const RESULTS = ["passed", "failed", "tabled", "withdrawn", "unrecorded"] as const;
@@ -14,6 +15,7 @@ async function mustExist(c: Ctx, table: string, id: string | null, label: string
 }
 
 export function registerCivic(r: Router): void {
+  r.get('/api/civic/videos', () => json({ items: meetingVideos }));
   // ---- governing bodies & officials
   r.get("/api/civic/bodies", async (c) => {
     const j = c.url.searchParams.get("jurisdiction");

@@ -1,10 +1,12 @@
 import { h, icon } from "../core/dom.js";
 import { get, qs } from "../core/api.js";
 import { date, label, n } from "../core/format.js";
-import { pageHero, setTitle, empty, errorBox, verificationBadge } from "../core/ui.js";
+import { pageHero, setTitle, empty, errorBox, verificationBadge, notice } from "../core/ui.js";
 
 const GROUPS = [
   ["records", "Public records", "doc", (r) => `/records/${r.id}`],
+  ["archive", "Preserved archive", "doc", (r) => `/legacy/records/${encodeURIComponent(r.id)}`],
+  ['videos', 'Meeting videos', 'news', r => '/government#' + r.id],
   ["news", "Baldwin Minute Watch reporting", "news", (r) => `/news/${r.slug}`],
   ["law", "Constitution & law", "scale", (r) => `/law/${r.id}`],
   ["meetings", "Meetings & votes", "calendar", (r) => `/government/meetings/${r.id}`],
@@ -38,7 +40,8 @@ export async function searchPage({ view, query }) {
   let data;
   try { data = await get("/api/search" + qs({ q, types: type })); }
   catch (e) { box.append(errorBox(e)); return; }
-  box.append(h("p.results-meta", { "aria-live": "polite" }, `${n(data.total)} result${data.total === 1 ? "" : "s"}`));
+  box.append(h("p.results-meta", { "aria-live": "polite" }, `${n(data.total)} result${data.total === 1 ? "" : "s"} shown`));
+  if (data.archiveAvailable === false) box.append(notice("The preserved archive could not be searched right now. These results may be incomplete. Please try again.", "warning"));
   if (!data.total) { box.append(empty({ iconName: "search", title: "No matches", text: "Try fewer words, a different spelling, or browse records by jurisdiction." })); return; }
   for (const [id, title, ic, href] of GROUPS) {
     const items = data.groups[id] || [];
@@ -50,6 +53,7 @@ export async function searchPage({ view, query }) {
           r.date ? date(r.date) : null, r.jurisdiction || r.body || null, r.citation || null, r.kind ? label("kind", r.kind) : null,
           r.verification_state ? verificationBadge(r.verification_state) : null, id === "community" ? h("span.badge", "Community opinion") : null),
         r.excerpt ? h("p", highlight(r.excerpt, q)) : null)),
+      id === 'archive' ? h('p', h('a', { href: '/legacy/records' + qs({ q, jurisdiction: 'all' }) }, `Browse all ${n(data.archiveTotal)} archive matches`)) :
       !type && items.length >= 8 ? h("p", h("a", { href: "/search" + qs({ q, type: id }) }, `More ${title.toLowerCase()} `, icon("arrow", 14))) : null));
   }
 }

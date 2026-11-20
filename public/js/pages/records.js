@@ -46,7 +46,7 @@ export async function recordsIndex({ view, query }) {
   else {
     results.append(h("div.results-meta", h("span", `${n(data.total)} ${data.total === 1 ? "record" : "records"}${params.q ? ` matching “${params.q}”` : ""}`)));
     if (!data.items.length) {
-      results.append(empty({ iconName: "doc", title: data.total === 0 && !params.q ? "No records have been added to this archive yet" : "No records match your search", text: "The new archive starts empty by design. Legacy records will be imported only after independent backup, inventory and hash verification — nothing is fabricated." }));
+      results.append(empty({ iconName: "doc", title: "No records match these filters", text: "Try fewer words or search both collections. Preserved minutes, agenda packets and other original records also appear in the archive linked above." }));
     } else {
       results.append(h("div.grid", data.items.map((d) => h("article.card.interactive",
         h("div.kicker", d.category_name || d.document_type, d.jurisdiction_name && h("span", "· " + d.jurisdiction_name), d.agency_name && h("span", "· " + d.agency_name)),
@@ -58,7 +58,9 @@ export async function recordsIndex({ view, query }) {
       results.append(pagination(page, data.pageSize, data.total, (p) => go({ page: p })));
     }
   }
-  view.append(h("div.container.section", searchForm, h("div.layout-filters", filters, results)));
+  view.append(h("div.container.section", searchForm,
+    h('p', {style:{marginBottom:'24px'}}, h('a',{href:'/search'+qs({q:params.q||'minutes'})},'Search across both record collections'), ' · ', h('a',{href:'/legacy/records'+qs({q:params.q,jurisdiction:'all'})},'Browse preserved minutes, packets & other records')),
+    h("div.layout-filters", filters, results)));
 }
 
 export async function recordDetail({ view, params }) {
