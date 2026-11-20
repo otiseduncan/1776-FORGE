@@ -9,14 +9,14 @@ export function notFound({ view }) {
     h("p.muted", { style: { maxWidth: "520px", margin: "0 auto 24px" } }, "The link may be mistyped, or the item may have been moved or withdrawn. Withdrawn records keep a public note explaining why."),
     h("div.btn-row", { style: { justifyContent: "center" } },
       h("a.btn.btn-gold", { href: "/" }, "Return home"),
-      h("a.btn.btn-ghost", { href: "/search" }, icon("search", 16), "Search FORGE"),
+      h("a.btn.btn-ghost", { href: "/search" }, icon("search", 16), "Search Baldwin Minute Watch"),
       h("a.btn.btn-ghost", { href: "/records" }, icon("doc", 16), "Browse records")))));
 }
 
 const SECTIONS = [
   ["editorial", "Editorial standards", [
-    ["Evidence before conclusions", "Every factual claim in FORGE reporting links to the record it rests on — a public document, an official recording or an on-the-record source. If we cannot show it, we do not assert it."],
-    ["Reporting, commentary and community are separate", "Investigations and reports are labelled by kind. Commentary is labelled as opinion. Community discussions are member opinion and are visually distinct from FORGE reporting."],
+    ["Evidence before conclusions", "Every factual claim in Baldwin Minute Watch reporting links to the record it rests on — a public document, an official recording or an on-the-record source. If we cannot show it, we do not assert it."],
+    ["Reporting, commentary and community are separate", "Investigations and reports are labelled by kind. Commentary is labelled as opinion. Community discussions are member opinion and are visually distinct from Baldwin Minute Watch reporting."],
     ["Two-person publishing", "A contributor drafts; a different editor reviews and publishes. Published edits keep a version history with a change note."],
     ["Corrections are public", "Errors are corrected in place with a dated correction notice. We do not silently rewrite published work."],
     ["No invented data", "We never fabricate records, votes, road conditions, budgets or court holdings. Where information is missing, the page says so."],
@@ -28,11 +28,11 @@ const SECTIONS = [
   ]],
   ["law", "Legal information", [
     ["Primary sources first", "Constitutional and statutory text links to the National Archives, the U.S. Code, Congress.gov and official state publications."],
-    ["Layers are labelled", "Original text, current authority, historical versions, judicial interpretation, FORGE commentary and community opinion are always kept apart."],
-    ["Not legal advice", "FORGE provides legal information from primary sources. It is not a law firm and cannot advise you about your situation."],
+    ["Layers are labelled", "Original text, current authority, historical versions, judicial interpretation, Baldwin Minute Watch commentary and community opinion are always kept apart."],
+    ["Not legal advice", "Baldwin Minute Watch provides legal information from primary sources. It is not a law firm and cannot advise you about your situation."],
   ]],
   ["community", "Community guidelines", [
-    ["Reading is free; posting is free", "Anyone can read the forum. Any signed-in member can post. FORGE does not charge for participation."],
+    ["Reading is free; posting is free", "Anyone can read the forum. Any signed-in member can post. Baldwin Minute Watch does not charge for participation."],
     ["Argue the issue, respect the person", "Criticise decisions and public conduct of officials freely. Harassment, slurs and personal attacks on members are removed."],
     ["No threats, no doxxing", "Threats of violence and the publication of private personal information (home addresses, phone numbers, family details of private people) are removed and may end your membership."],
     ["Bring the evidence", "Link records when you make factual claims. Fabricated or altered documents are removed."],
@@ -48,10 +48,23 @@ const SECTIONS = [
 
 export function standards({ view }) {
   setTitle("Standards, guidelines & privacy");
-  view.append(pageHero({ eyebrow: "How FORGE works", title: "Standards, guidelines & privacy", lede: "The rules we hold our reporting, our archive and our community to." }));
+  view.append(pageHero({ eyebrow: "How Baldwin Minute Watch works", title: "Standards, guidelines & privacy", lede: "The rules we hold our reporting, our archive and our community to." }));
   view.append(h("div.container.section", h("div.legal-index",
     h("nav.legal-nav", { "aria-label": "Sections" }, SECTIONS.map(([id, name]) => h("a", { href: `#${id}` }, name))),
     h("div.stack", SECTIONS.map(([id, name, items]) => h("section.panel", { id, style: { scrollMarginTop: "100px" } },
       h("h2", { style: { fontSize: "var(--fs-2xl)", marginTop: 0 } }, name),
       h("dl.standards", items.map(([t, d]) => [h("dt", t), h("dd", d)]))))))));
+}
+
+export function about({ view }) {
+  setTitle("About our mission");
+  view.append(pageHero({ eyebrow: "Baldwin Minute Watch", title: "Debate the Issue. Bring the Documents.", lede: "Independent civic journalism that connects public decisions to the records behind them." }));
+  view.append(h("section.container.container-narrow.section.prose",
+    h("h2", "One recognizable public home"), h("p", "Baldwin Minute Watch reports on government, public spending and the decisions that shape our communities. Our work begins in Baldwin County and Milledgeville, Georgia, and follows the evidence across jurisdictions."),
+    h("h2", "The Forge: our research and evidence system"), h("p", "The Forge supports our reporting with searchable public records, original documents, maps, meeting minutes, votes, budgets and source references. Records keep their provenance and verification status. A missing record is a gap to investigate, never permission to invent."),
+    h("h2", "Standards readers can inspect"), h("p", "Reporting, commentary and community opinion are clearly distinguished. Published corrections remain visible. Original files and evidence references are preserved."),
+    h("p", h("a", { href: "/standards" }, "Read our editorial standards and corrections policy")),
+    h("h2", "A free public conversation"), h("p", "News, records, maps and community discussions are free to read. Signed-in members can participate under public moderation rules."),
+    h("p", h("a", { href: "/records" }, "Search The Forge"), " · ", h("a", { href: "/community" }, "Join the discussion")),
+    h("p.small.muted", "1776 FORGE is the historical project name of the platform behind Baldwin Minute Watch.")));
 }

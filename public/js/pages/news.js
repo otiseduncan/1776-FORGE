@@ -31,7 +31,7 @@ export function storyCard(a) {
 export function leadStory(a) {
   return h("article.lead-story",
     a.hero_url ? heroImg(a, "lead-media") : h("div.lead-media.lead-media-plain", { "aria-hidden": "true" },
-      h("div.lead-plate", h("span.plate-kicker", label("kind", a.kind)), h("strong", a.series_title || a.category_name || "1776 FORGE"), h("span.plate-rule"), h("span.plate-foot", "1776 FORGE · Debate the issue. Bring the documents."))),
+      h("div.lead-plate", h("span.plate-kicker", label("kind", a.kind)), h("strong", a.series_title || a.category_name || "Baldwin Minute Watch"), h("span.plate-rule"), h("span.plate-foot", "Baldwin Minute Watch · Debate the Issue. Bring the Documents."))),
     h("div.lead-body",
       h("div.kicker", label("kind", a.kind), a.series_title ? h("span", "· " + a.series_title) : null),
       h("h2", h("a", { href: `/news/${a.slug}` }, a.title)),
@@ -53,7 +53,7 @@ export async function newsIndex({ view, query }) {
     get("/api/series").catch(() => ({ items: [] })),
   ]);
   view.append(pageHero({
-    eyebrow: "1776 FORGE Newsroom",
+    eyebrow: "Baldwin Minute Watch Newsroom",
     title: "Investigations & reporting",
     lede: "Evidence-backed journalism. Every story links to the records behind it, and every correction stays attached to the story.",
     actions: h("div.btn-row",
@@ -93,7 +93,7 @@ export async function newsIndex({ view, query }) {
 export async function seriesIndex({ view }) {
   setTitle("Series & investigations");
   const data = await get("/api/series");
-  view.append(pageHero({ eyebrow: "1776 FORGE Newsroom", title: "Series & investigations", crumbs: [{ href: "/news", label: "Newsroom" }, { label: "Series" }],
+  view.append(pageHero({ eyebrow: "Baldwin Minute Watch Newsroom", title: "Series & investigations", crumbs: [{ href: "/news", label: "Newsroom" }, { label: "Series" }],
     lede: "Long-running investigations and multi-part series, in reading order, with the records behind every installment." }));
   const body = h("div.container.section");
   if (!data.items.length) body.append(empty({ iconName: "layers", title: "No series published yet", text: "Investigations that span several stories are collected here once an editor publishes them." }));
@@ -130,7 +130,7 @@ export async function seriesPage({ view, params }) {
 function sourceDocuments(docs) {
   return h("section.source-docs", { id: "source-documents", "aria-labelledby": "source-docs-h" },
     h("h2", { id: "source-docs-h" }, icon("doc", 20), " Source documents"),
-    h("p.small.muted", "Original records preserved in the FORGE archive. Each file is stored unchanged with its SHA-256 fingerprint."),
+    h("p.small.muted", "Original records preserved in The Forge archive. Each file is stored unchanged with its SHA-256 fingerprint."),
     h("ul.doc-list", docs.map((d) => h("li",
       h("a.doc-title", { href: `/records/${d.id}` }, icon("doc", 16), d.title),
       h("div.doc-meta",
@@ -194,7 +194,7 @@ export async function article({ view, params }) {
       h("strong", "Publication history. "),
       `Originally published${a.original_publisher ? ` by ${a.original_publisher}` : ""}${a.original_published_at ? ` on ${date(a.original_published_at)}` : ""}`,
       a.original_headline && a.original_headline !== a.title ? [" under the headline ", h("em", `“${a.original_headline}”`)] : null, ". ",
-      a.published_at ? `Republished by 1776 FORGE on ${date(a.published_at)}.` : "Prepared for republication by 1776 FORGE.")));
+      a.published_at ? `Republished by Baldwin Minute Watch on ${date(a.published_at)}.` : "Prepared for republication by Baldwin Minute Watch.")));
   }
   if (data.corrections.length) main.append(h("section.correction-box", { id: "corrections" }, h("h3", "Corrections & updates"), data.corrections.map((c) => h("p", h("strong", `${({ correction: "Correction", clarification: "Clarification", update: "Update", editors_note: "Editor's note" })[c.kind] || "Note"} (${date(c.created_at)}): `), c.body))));
   const video = a.video_url && embedUrl(a.video_url);

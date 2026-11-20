@@ -9,14 +9,14 @@ const LEVELS = [["", "All levels"], ["federal", "Federal"], ["state", "State"], 
 const VERIFY = [["", "Any status"], ["verified", "Verified"], ["unreviewed", "Unreviewed"], ["disputed", "Disputed"], ["superseded", "Superseded"]];
 
 export async function recordsIndex({ view, query }) {
-  setTitle("Public Records Library");
+  setTitle("The Forge · Public Records");
   const params = Object.fromEntries(["q", "level", "jurisdiction", "category", "verification", "from", "to", "sort", "page"].map((k) => [k, query.get(k) || ""]));
   const page = Number(params.page || 1);
   view.append(pageHero({
-    eyebrow: "Documents, not just claims",
-    title: "Public records library",
+    eyebrow: "Baldwin Minute Watch research & evidence",
+    title: "The Forge",
     lede: "Federal, state, county and municipal records — each with its original source, record date, verification status and a cryptographic fingerprint of the stored file.",
-    actions: can("document.create") ? h("a.btn.btn-gold", { href: "/records/new" }, icon("plus", 18), "Add a record") : null,
+    actions: h("div.btn-row", h("a.btn.btn-ghost-light", { href: "/legacy/records" }, "Browse the legacy collection"), can("document.create") ? h("a.btn.btn-gold", { href: "/records/new" }, icon("plus", 18), "Add a record") : null),
   }));
   const [facets, data] = await Promise.all([
     get("/api/records/facets").catch(() => null),
@@ -86,7 +86,7 @@ export async function recordDetail({ view, params }) {
     if (d.mime_type === "application/pdf") main.append(h("iframe.pdf-frame", { src: fileUrl, title: `PDF preview: ${d.title}`, loading: "lazy" }));
     else if (d.mime_type?.startsWith("image/")) main.append(h("img", { src: fileUrl, alt: `Scanned record: ${d.title}`, style: { borderRadius: "10px", border: "1px solid var(--border)" } }));
   } else {
-    main.append(empty({ iconName: "doc", title: "No original file is stored yet", text: d.source_url ? "This record links to its official source. A verified copy has not been archived in FORGE storage yet." : "A researcher has catalogued this record but has not attached the original file.", actions: d.source_url ? [h("a.btn.btn-blue", { href: d.source_url, target: "_blank", rel: "noopener noreferrer" }, icon("external", 18), "View at official source")] : null }));
+    main.append(empty({ iconName: "doc", title: "No original file is stored yet", text: d.source_url ? "This record links to its official source. A verified copy has not been archived in The Forge storage yet." : "A researcher has catalogued this record but has not attached the original file.", actions: d.source_url ? [h("a.btn.btn-blue", { href: d.source_url, target: "_blank", rel: "noopener noreferrer" }, icon("external", 18), "View at official source")] : null }));
   }
   if (data.meetings?.length) main.append(h("section.panel", h("h3", icon("calendar", 14), " Meetings that cite this record"), h("ul.related-list", data.meetings.map((m) => h("li", h("a", { href: `/government/meetings/${m.id}` }, icon("calendar", 16), h("span", m.title, h("span.small.muted", " · " + date(m.meeting_date)))))))));
   main.append(h("section.panel", h("h3", icon("link", 14), " Connected content"), relatedList(data.related)));
@@ -159,7 +159,7 @@ export function citeDialog(subjectType, subjectId) {
 
 export async function recordNew({ view }) {
   setTitle("Add a record");
-  view.append(pageHero({ crumbs: [{ label: "Public records", href: "/records" }], eyebrow: "Researcher workspace", title: "Add a public record", lede: "Catalogue a record with its official source. You can attach the original file after saving; FORGE fingerprints it with SHA-256 and checks for duplicates." }));
+  view.append(pageHero({ crumbs: [{ label: "Public records", href: "/records" }], eyebrow: "Researcher workspace", title: "Add a public record", lede: "Catalogue a record with its official source. You can attach the original file after saving; The Forge fingerprints it with SHA-256 and checks for duplicates." }));
   const box = h("div.container.container-narrow.section");
   view.append(box);
   if (!can("document.create")) { box.append(notice("Adding records requires a researcher role. Ask an administrator if you would like to help catalogue records.", "warning", "lock")); return; }

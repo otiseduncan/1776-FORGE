@@ -1,0 +1,32 @@
+{
+  "name": "baldwin-minute-watch-map",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "APP_ENV": "production",
+    "PUBLIC_ORIGIN": "https://baldwin-minute-watch-map.otiseduncan.workers.dev",
+    "LEGACY_MAP_ORIGIN": "REPLACE_WITH_REVIEWED_STABLE_ARCHIVE_ORIGIN"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "forge-db",
+      "database_id": "70520726-5e87-48e1-bf77-1b092bce0d59",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "DOCS", "bucket_name": "forge-documents" }],
+  "services": [
+    { "binding": "LEGACY_RECORDS", "service": "baldwin-minute-watch-v21" },
+    { "binding": "LEGACY_MAP", "service": "REPLACE_WITH_REVIEWED_STABLE_ARCHIVE_SERVICE" }
+  ],
+  "observability": { "enabled": true },
+  "triggers": { "crons": ["0 6 * * 1"] }
+}

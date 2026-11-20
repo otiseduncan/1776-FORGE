@@ -1,4 +1,5 @@
 import type { Env } from "./env.ts";
+import { legacyEvidence } from "./lib/legacy.ts";
 import { Ctx, Router } from "./lib/context.ts";
 import { HttpError, errorResponse, json } from "./lib/http.ts";
 import { registerAuth } from "./routes/auth.ts";
@@ -61,6 +62,7 @@ async function renderShell(request: Request, env: Env, url: URL): Promise<Respon
   const shell = await env.ASSETS.fetch(new Request(new URL("/", url), { headers: request.headers }));
   let meta = null;
   try { meta = await pageMetaFor(env, url); } catch (err) { console.error("page meta failed", err); }
+  if (meta && env.APP_ENV !== "production") meta.noindex = true;
   if (!meta || !shell.ok || !(shell.headers.get("content-type") || "").includes("text/html")) return shell;
   const headers = new Headers(shell.headers);
   headers.delete("content-length");
@@ -73,10 +75,23 @@ async function renderShell(request: Request, env: Env, url: URL): Promise<Respon
 export default {
   async fetch(request: Request, env: Env, exec: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    const apexHostname = url.hostname.replace(/^www\./, "");
+    if (["baldwinminutewatch.com", "baldwinminutewatch.org"].includes(apexHostname) && (url.hostname !== apexHostname || url.protocol !== "https:")) {
+      url.hostname = apexHostname;
+      url.protocol = "https:";
+      url.port = "";
+      return Response.redirect(url.href, 308);
+    }
+    if (url.pathname === "/legacy-map" && ["GET", "HEAD"].includes(request.method)) {
+      const origin = env.LEGACY_MAP_ORIGIN || "https://bmw-legacy-consolidation-preview.otiseduncan.workers.dev";
+      return Response.redirect(origin + "/" + url.search, 302);
+    }
+    const legacy = await legacyEvidence(request, env);
+    if (legacy) return legacy;
     if (url.pathname.startsWith("/api/")) return handleApi(request, env, exec);
     if (url.pathname === "/sitemap.xml") return sitemap(env, url.origin);
     if (url.pathname === "/robots.txt") return robots(url.origin, env);
-    if (url.pathname.startsWith("/news/") && (request.method === "GET" || request.method === "HEAD")) return renderShell(request, env, url);
+    if (!url.pathname.startsWith("/assets/") && !url.pathname.startsWith("/js/") && !url.pathname.startsWith("/css/") && !url.pathname.startsWith("/vendor/") && (request.method === "GET" || request.method === "HEAD")) return renderShell(request, env, url);
     return env.ASSETS.fetch(request);
   },
 

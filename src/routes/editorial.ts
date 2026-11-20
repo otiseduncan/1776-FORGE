@@ -133,7 +133,7 @@ export function registerEditorial(r: Router): void {
          FROM articles a LEFT JOIN users u ON u.id = a.author_id WHERE a.series_id = ? ${staff ? "" : "AND a.status = 'published'"}
         ORDER BY COALESCE(a.series_order, 999), COALESCE(a.original_published_at, a.published_at)`,
     ).bind(s.id).all<Record<string, unknown>>();
-    return json({ series: { ...s, hero_url: s.hero_media_id ? `/api/media/${s.hero_media_id}/file` : null }, items: rows.results.map((a) => ({ ...a, byline: a.byline || a.author || "1776 FORGE staff" })), permissions: { edit: staff } });
+    return json({ series: { ...s, hero_url: s.hero_media_id ? `/api/media/${s.hero_media_id}/file` : null }, items: rows.results.map((a) => ({ ...a, byline: a.byline || a.author || "Baldwin Minute Watch staff" })), permissions: { edit: staff } });
   });
 
   r.post("/api/series", async (c) => {
@@ -195,12 +195,12 @@ export function injectMeta(html: string, m: PageMeta): string {
     `<title>${esc(m.title)}</title>`,
     `<meta name="description" content="${esc(m.description)}">`,
     `<link rel="canonical" href="${esc(m.canonical)}">`,
-    `<meta property="og:site_name" content="1776 FORGE">`,
+    `<meta property="og:site_name" content="Baldwin Minute Watch">`,
     `<meta property="og:title" content="${esc(m.title)}">`,
     `<meta property="og:description" content="${esc(m.description)}">`,
     `<meta property="og:url" content="${esc(m.canonical)}">`,
     `<meta property="og:type" content="${esc(m.type || "website")}">`,
-    `<meta property="og:image" content="${esc(m.image || new URL("/assets/brand/og-image.jpg", m.canonical).href)}">`,
+    `<meta property="og:image" content="${esc(m.image || new URL("/assets/brand/bmw-eagle-flag.webp", m.canonical).href)}">`,
     m.imageAlt ? `<meta property="og:image:alt" content="${esc(m.imageAlt)}">` : "",
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${esc(m.title)}">`,
@@ -226,33 +226,37 @@ function plainText(md: string, max = 200): string {
 
 /** Page metadata for crawlers and link previews. Unpublished stories get the generic shell and noindex. */
 export async function pageMetaFor(env: Env, url: URL): Promise<PageMeta | null> {
-  if (!env.DB) return null;
+  const generic: PageMeta = { title: "Baldwin Minute Watch — Debate the Issue. Bring the Documents.", description: "Independent civic reporting, public records and community discussions. Search The Forge for the documents behind the reporting.", canonical: url.origin + url.pathname, noindex: env.APP_ENV !== "production" };
+  if (["/records", "/forge"].includes(url.pathname)) generic.title = "The Forge · Baldwin Minute Watch";
+  if (url.pathname === "/government") generic.title = "Meeting Watch · Baldwin Minute Watch";
+  if (url.pathname === "/about") generic.title = "About our mission · Baldwin Minute Watch";
+  if (!env.DB) return generic;
   const canonical = url.origin + url.pathname.replace(/\/+$/, "");
   const series = url.pathname.match(/^\/news\/series\/([a-z0-9-]{1,90})\/?$/);
   if (series) {
     const s = await env.DB.prepare("SELECT title, description, hero_media_id FROM article_series WHERE slug = ? AND status = 'published'").bind(series[1]).first<Record<string, string>>();
-    if (!s) return { title: "Not found · 1776 FORGE", description: "This page is not available.", canonical, noindex: true };
-    return { title: `${s.title} · 1776 FORGE`, description: plainText(s.description || s.title), canonical, image: s.hero_media_id ? `${url.origin}/api/media/${s.hero_media_id}/file` : null };
+    if (!s) return { title: "Not found · Baldwin Minute Watch", description: "This page is not available.", canonical, noindex: true };
+    return { title: `${s.title} · Baldwin Minute Watch`, description: plainText(s.description || s.title), canonical, image: s.hero_media_id ? `${url.origin}/api/media/${s.hero_media_id}/file` : null };
   }
   const story = url.pathname.match(/^\/news\/([a-z0-9-]{1,90})\/?$/);
-  if (!story) return null;
+  if (!story) return generic;
   const a = await env.DB.prepare(
     `SELECT a.slug, a.title, a.summary, a.excerpt, a.seo_title, a.seo_description, a.keywords, a.body, a.status, a.published_at, a.updated_at, a.kind,
             a.original_publisher, a.original_published_at, a.byline, u.display_name AS author, a.hero_media_id, m.alt_text
        FROM articles a LEFT JOIN users u ON u.id = a.author_id LEFT JOIN media_assets m ON m.id = a.hero_media_id WHERE a.slug = ?`,
   ).bind(story[1]).first<Record<string, string>>();
-  if (!a || a.status !== "published") return { title: "1776 FORGE Newsroom", description: "Evidence-backed reporting from 1776 FORGE.", canonical, noindex: true };
+  if (!a || a.status !== "published") return { title: "Baldwin Minute Watch Newsroom", description: "Evidence-backed reporting from Baldwin Minute Watch.", canonical, noindex: true };
   const description = a.seo_description || a.excerpt || a.summary || plainText(a.body);
-  const byline = a.byline || a.author || "1776 FORGE";
+  const byline = a.byline || a.author || "Baldwin Minute Watch";
   const image = a.hero_media_id ? `${url.origin}/api/media/${a.hero_media_id}/file` : null;
   const canonicalStory = `${url.origin}/news/${a.slug}`;
   return {
-    title: `${a.seo_title || a.title} · 1776 FORGE`, description, canonical: canonicalStory, image, imageAlt: a.alt_text, type: "article",
+    title: `${a.seo_title || a.title} · Baldwin Minute Watch`, description, canonical: canonicalStory, image, imageAlt: a.alt_text, type: "article",
     published: a.published_at, modified: a.updated_at, author: byline,
     jsonLd: {
       "@context": "https://schema.org", "@type": a.kind === "commentary" || a.kind === "personal_essay" ? "OpinionNewsArticle" : "NewsArticle",
       headline: a.title, description, url: canonicalStory, datePublished: a.published_at, dateModified: a.updated_at || a.published_at,
-      author: { "@type": "Person", name: byline }, publisher: { "@type": "Organization", name: "1776 FORGE" },
+      author: { "@type": "Person", name: byline }, publisher: { "@type": "Organization", name: "Baldwin Minute Watch" },
       ...(image ? { image: [image] } : {}), ...(a.keywords ? { keywords: a.keywords } : {}),
       ...(a.original_published_at ? { isBasedOn: { "@type": "CreativeWork", publisher: a.original_publisher || undefined, datePublished: a.original_published_at } } : {}),
     },

@@ -140,7 +140,7 @@ async function imports(content) {
     h("li", "Export the legacy D1 database and R2 objects read-only (see docs/MIGRATION.md)."),
     h("li", h("code", "node scripts/legacy/inventory.mjs <export-dir>"), " writes a manifest of rows, objects and SHA-256 hashes."),
     h("li", h("code", "node scripts/legacy/reconcile.mjs <manifest> <export-dir>"), " checks counts, references and hashes, and produces a report."),
-    h("li", "Register the batch below. Import into the NEW FORGE database and bucket only after the report shows zero discrepancies."))));
+    h("li", "Register the batch below. Import into the isolated The Forge database and bucket only after the report shows zero discrepancies."))));
   const form = h("form.panel", h("h3", "Register a verified import batch"),
     field({ name: "source_description", label: "Source description", required: true, hint: "Where the export came from and when it was taken" }),
     field({ name: "manifest_sha256", label: "Manifest SHA-256", required: true, attrs: { pattern: "[a-f0-9]{64}" } }),

@@ -87,7 +87,7 @@ function heroPanel(a, onChange) {
     h("div.field", h("label", { for: "hero-file" }, "Image file (JPEG, PNG or WebP, up to 15 MB)"), h("input", { id: "hero-file", name: "file", type: "file", accept: "image/jpeg,image/png,image/webp", required: true })),
     field({ name: "alt_text", label: "Alt text", required: true, max: 400, hint: "Describe what the image shows for readers using screen readers." }),
     field({ name: "caption", label: "Caption", max: 600 }),
-    field({ name: "credit", label: "Credit", max: 200, placeholder: "e.g. Illustration: 1776 FORGE" }),
+    field({ name: "credit", label: "Credit", max: 200, placeholder: "e.g. Illustration: Baldwin Minute Watch" }),
     h("label.checkbox", h("input", { type: "checkbox", name: "is_illustration", checked: true }), " This is an illustration, not a photograph of a real event"),
     h("div.btn-row", h("button.btn.btn-blue", { type: "submit" }, icon("upload", 16), "Upload and use as cover"), h("button.btn.btn-ghost", { type: "button", onclick: () => libraryDialog(onChange) }, "Choose from library"),
       a.hero_media_id ? h("button.btn.btn-ghost", { type: "button", onclick: () => onChange(null) }, "Remove cover") : null));

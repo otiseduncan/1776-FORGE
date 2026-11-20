@@ -5,7 +5,7 @@ import { pageHero, setTitle, empty, errorBox, verificationBadge } from "../core/
 
 const GROUPS = [
   ["records", "Public records", "doc", (r) => `/records/${r.id}`],
-  ["news", "FORGE reporting", "news", (r) => `/news/${r.slug}`],
+  ["news", "Baldwin Minute Watch reporting", "news", (r) => `/news/${r.slug}`],
   ["law", "Constitution & law", "scale", (r) => `/law/${r.id}`],
   ["meetings", "Meetings & votes", "calendar", (r) => `/government/meetings/${r.id}`],
   ["map", "Map", "pin", (r) => `/map?feature=${r.id}`],
@@ -26,15 +26,15 @@ export async function searchPage({ view, query }) {
   const q = (query.get("q") || "").trim();
   const type = query.get("type") || "";
   setTitle(q ? `Search: ${q}` : "Search");
-  const input = h("input.input", { type: "search", name: "q", value: q, placeholder: "Search records, reporting, law, meetings, map…", "aria-label": "Search FORGE", autofocus: true });
-  view.append(pageHero({ eyebrow: "Search everything", title: q ? `Results for “${q}”` : "Search FORGE" }));
+  const input = h("input.input", { type: "search", name: "q", value: q, placeholder: "Search records, reporting, law, meetings, map…", "aria-label": "Search Baldwin Minute Watch", autofocus: true });
+  view.append(pageHero({ eyebrow: "Search everything", title: q ? `Results for “${q}”` : "Search Baldwin Minute Watch" }));
   const box = h("div.container.section");
   view.append(box);
   box.append(h("form.search-panel", { role: "search", style: { marginBottom: "24px" }, onsubmit: (e) => { e.preventDefault(); window.forgeNavigate("/search" + qs({ q: input.value.trim(), type })); } },
     h("div.search-bar", h("div.input-wrap", icon("search", 20), input), h("button.btn.btn-gold", { type: "submit" }, "Search")),
     h("div.chips", { style: { marginTop: "12px" } }, [["", "Everything"], ...GROUPS.map(([id, l]) => [id, l])].map(([id, l]) =>
       h("button.chip", { type: "button", "aria-pressed": String(type === id), onclick: () => window.forgeNavigate("/search" + qs({ q: input.value.trim(), type: id })) }, l)))));
-  if (q.length < 2) { box.append(empty({ iconName: "search", title: "What are you looking for?", text: "Search across public records, FORGE reporting, legal authorities, meetings, map features, resources and community discussion." })); return; }
+  if (q.length < 2) { box.append(empty({ iconName: "search", title: "What are you looking for?", text: "Search across public records, Baldwin Minute Watch reporting, legal authorities, meetings, map features, resources and community discussion." })); return; }
   let data;
   try { data = await get("/api/search" + qs({ q, types: type })); }
   catch (e) { box.append(errorBox(e)); return; }

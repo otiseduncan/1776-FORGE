@@ -20,6 +20,7 @@ export async function mapPage({ view, query }) {
   view.append(pageHero({
     eyebrow: "Places and accountability",
     title: "Interactive map",
+    actions: h("a.btn.btn-ghost-light", { href: "/legacy-map#/map", "data-native": "" }, "Open preserved community map"),
     lede: "Roads, public projects and community problem reports across Baldwin County and Milledgeville. Condition ratings appear only when they are linked to a source.",
   }));
   const jurisdictions = (await get("/api/jurisdictions").catch(() => ({ items: [] }))).items;
@@ -104,7 +105,7 @@ export async function mapPage({ view, query }) {
       if (p.kind === "report") {
         const d = await get(`/api/map/reports/${f.id}`);
         clear(detail).append(h("h3", icon("flag", 14), " Community report"),
-          h("div.community-label", icon("users", 16), "Submitted by a member and approved by moderators. Not verified FORGE reporting."),
+          h("div.community-label", icon("users", 16), "Submitted by a member and approved by moderators. Not verified Baldwin Minute Watch reporting."),
           h("h4", { style: { marginTop: "12px" } }, d.report.title),
           h("p.small.muted", `${d.report.author || "Member"} · ${ago(d.report.created_at)} · ${String(d.report.category || "other").replace("_", " ")}`),
           h("p", d.report.description),

@@ -63,7 +63,7 @@ export async function newDiscussion({ view, query }) {
     field({ name: "title", label: "Title", required: true, max: 160, hint: "A specific question or topic works best." }),
     field({ name: "body", label: "Your post", type: "textarea", rows: 10, required: true, max: 20000, hint: "Plain text. Paste links to records (https://…) to support your point." }),
     turnstileField(),
-    h("div.community-label", icon("users", 16), "Your post will be labelled as community opinion, distinct from FORGE reporting."),
+    h("div.community-label", icon("users", 16), "Your post will be labelled as community opinion, distinct from Baldwin Minute Watch reporting."),
     h("div.btn-row", { style: { marginTop: "16px" } }, h("button.btn.btn-gold", { type: "submit" }, "Post discussion"), h("a.btn.btn-ghost", { href: "/community" }, "Cancel")));
   bindForm(form, async (d) => {
     const res = await post("/api/forum/discussions", { title: d.title, body: d.body, category_id: d.category_id, turnstileToken: d["cf-turnstile-response"] });
@@ -113,7 +113,7 @@ export async function thread({ view, params, query }) {
 
   view.append(h("div.container.section", h("div.layout-sidebar",
     h("div.stack",
-      h("div.community-label", icon("users", 16), "Community discussion — member opinion, not verified FORGE reporting."),
+      h("div.community-label", icon("users", 16), "Community discussion — member opinion, not verified Baldwin Minute Watch reporting."),
       opener,
       h("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" } }, h("h2", { style: { fontSize: "var(--fs-xl)", margin: 0 } }, plural(d.comment_count, "reply", "replies")), followBtn),
       threadEl,
@@ -189,7 +189,19 @@ function reportDialog(type, id) {
 function modButton(type, id, action, text, small) {
   return h(small ? "button" : "button.btn.btn-ghost.btn-sm", { type: "button", onclick: async () => {
     let reason = null;
-    if (action === "hide" || action === "lock") { reason = prompt("Public reason for this action (shown in the moderation log):"); if (!reason) return; }
+    if (action === "hide" || action === "lock") {
+      const form = h("form", field({ name: "reason", label: "Public reason", type: "textarea", required: true, max: 2000 }),
+        h("p.small.muted", "This explanation appears in the public moderation log."),
+        h("button.btn.btn-red", { type: "submit" }, "Confirm moderation"));
+      const dlg = modal("Moderate content", form);
+      bindForm(form, async (data) => {
+        await post("/api/moderation/actions", { target_type: type, target_id: id, action, reason: data.reason });
+        dlg.close();
+        toast("Moderation action recorded.", "success");
+        window.forgeNavigate(location.pathname + location.search, { replace: true });
+      });
+      return;
+    }
     try { await post("/api/moderation/actions", { target_type: type, target_id: id, action, reason }); toast("Moderation action recorded.", "success"); window.forgeNavigate(location.pathname + location.search, { replace: true }); }
     catch (e) { toast(e.message, "error"); }
   } }, small ? [icon("shield", 14), " ", text] : text);

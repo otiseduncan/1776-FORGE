@@ -32,7 +32,7 @@ export function shape(row: Record<string, unknown>): Record<string, unknown> {
   return {
     ...row,
     tags: row.tags ? String(row.tags).split("|") : [],
-    byline: row.byline || row.author || "1776 FORGE staff",
+    byline: row.byline || row.author || "Baldwin Minute Watch staff",
     reading_minutes: readingMinutes(words),
     hero_url: row.hero_media_id ? `/api/media/${row.hero_media_id}/file` : null,
     hero_is_illustration: !!row.hero_is_illustration,
