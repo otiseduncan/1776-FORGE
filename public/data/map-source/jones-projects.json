@@ -1,0 +1,272 @@
+{
+  "county_id": "13169",
+  "county_name": "Jones County",
+  "reviewed_on": "2026-10-20",
+  "projects": [
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-wyan-tidwell",
+      "name": "Wyan Avenue / Tidwell Drive — road improvements",
+      "category": "Road program",
+      "stage": "County plan dated October 8, 2025 lists reclamation and resurfacing of Wyan Avenue / Tidwell Drive. The 2026 procurement mirror names Wyan Avenue; inclusion of Tidwell Drive in that bid needs confirmation. Award and completion are not verified.",
+      "financial": "County planning estimate (2025): $210,903. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+      "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+      "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "source_date": "2025-10-08",
+      "address": "Wyan Avenue / Tidwell Drive, Jones County, Georgia",
+      "location_note": "Road named in the county plan. Exact work limits and coordinates have not been verified; no pin assigned.",
+      "estimate_cents": 21090300,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+          "publisher": "Jones County Public Works",
+          "date": "2025-10-08",
+          "page": 1
+        },
+        {
+          "url": "https://app.govly.com/public/opportunities/16723826",
+          "publisher": "Govly mirror of Georgia Procurement Registry",
+          "date": "2026-06-18",
+          "role": "Secondary corroboration; official bid page could not be read"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-graham-woods",
+      "name": "Graham Woods Circle — road improvements",
+      "category": "Road program",
+      "stage": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+      "financial": "County planning estimate (2025): $477,039. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+      "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+      "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "source_date": "2025-10-08",
+      "address": "Graham Woods Circle, Jones County, Georgia",
+      "location_note": "Road named in the county plan. Exact work limits and coordinates have not been verified; no pin assigned.",
+      "estimate_cents": 47703900,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+          "publisher": "Jones County Public Works",
+          "date": "2025-10-08",
+          "page": 1
+        },
+        {
+          "url": "https://app.govly.com/public/opportunities/16723826",
+          "publisher": "Govly mirror of Georgia Procurement Registry",
+          "date": "2026-06-18",
+          "role": "Secondary corroboration; official bid page could not be read"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-kent-road",
+      "name": "Kent Road — road improvements",
+      "category": "Road program",
+      "stage": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+      "financial": "County planning estimate (2025): $204,007. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+      "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+      "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "source_date": "2025-10-08",
+      "address": "Kent Road, Jones County, Georgia",
+      "location_note": "Road named in the county plan. Exact work limits and coordinates have not been verified; no pin assigned.",
+      "estimate_cents": 20400700,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+          "publisher": "Jones County Public Works",
+          "date": "2025-10-08",
+          "page": 1
+        },
+        {
+          "url": "https://app.govly.com/public/opportunities/16723826",
+          "publisher": "Govly mirror of Georgia Procurement Registry",
+          "date": "2026-06-18",
+          "role": "Secondary corroboration; official bid page could not be read"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-henry-drive",
+      "name": "Henry Drive — road improvements",
+      "category": "Road program",
+      "stage": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+      "financial": "County planning estimate (2025): $371,381. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+      "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+      "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "source_date": "2025-10-08",
+      "address": "Henry Drive, Jones County, Georgia",
+      "location_note": "Road named in the county plan. Exact work limits and coordinates have not been verified; no pin assigned.",
+      "estimate_cents": 37138100,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+          "publisher": "Jones County Public Works",
+          "date": "2025-10-08",
+          "page": 1
+        },
+        {
+          "url": "https://app.govly.com/public/opportunities/16723826",
+          "publisher": "Govly mirror of Georgia Procurement Registry",
+          "date": "2026-06-18",
+          "role": "Secondary corroboration; official bid page could not be read"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-castle-court",
+      "name": "Castle Court — road improvements",
+      "category": "Road program",
+      "stage": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+      "financial": "County planning estimate (2025): $128,415. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+      "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+      "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "source_date": "2025-10-08",
+      "address": "Castle Court, Jones County, Georgia",
+      "location_note": "Road named in the county plan. Exact work limits and coordinates have not been verified; no pin assigned.",
+      "estimate_cents": 12841500,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+          "publisher": "Jones County Public Works",
+          "date": "2025-10-08",
+          "page": 1
+        },
+        {
+          "url": "https://app.govly.com/public/opportunities/16723826",
+          "publisher": "Govly mirror of Georgia Procurement Registry",
+          "date": "2026-06-18",
+          "role": "Secondary corroboration; official bid page could not be read"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-system-upgrades",
+      "name": "Water-system rehabilitation program",
+      "category": "Infrastructure",
+      "stage": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-03-01 to 2028-12-31. Lite-N-Tie mains and booster station; Griswoldville, Masseyville and Henderson Road facilities; system controls. Actual start, award and current progress are not confirmed.",
+      "financial": "Plan-listed estimated project cost: $17,018,000. Financing approval, contract value and payments are not established.",
+      "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 10.",
+      "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=10",
+      "source_date": "2025-05-31",
+      "address": "Jones County, Georgia — multiple water-system sites",
+      "location_note": "Multi-site or regional proposal; no single verified project location. No pin assigned.",
+      "estimate_cents": 1701800000,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download",
+          "publisher": "Georgia Environmental Finance Authority",
+          "date": "2025-05-31",
+          "page": 10,
+          "document_status": "Draft intended use plan; not an award or construction certificate"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-bradley-greene",
+      "name": "Bradley / Greene Settlement water improvements",
+      "category": "Infrastructure",
+      "stage": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-03-01 to 2028-03-01. Water-service improvements around SR 11, Hungerford Road, Settlement Road and Wheeler Road. Actual start, award and current progress are not confirmed.",
+      "financial": "Plan-listed estimated project cost: $18,224,098. Financing approval, contract value and payments are not established.",
+      "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 11.",
+      "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11",
+      "source_date": "2025-05-31",
+      "address": "Bradley / Greene Settlement area, Jones County, Georgia",
+      "location_note": "Multi-site or regional proposal; no single verified project location. No pin assigned.",
+      "estimate_cents": 1822409800,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download",
+          "publisher": "Georgia Environmental Finance Authority",
+          "date": "2025-05-31",
+          "page": 11,
+          "document_status": "Draft intended use plan; not an award or construction certificate"
+        }
+      ]
+    },
+    {
+      "county_id": "13169",
+      "county_name": "Jones County",
+      "geometry": null,
+      "verification": "Public source reviewed; construction status and payments not independently verified",
+      "validated_at": "2026-10-20",
+      "status": "Needs verification",
+      "type": "Jones County pilot — source-documented project",
+      "id": "jones-regional-water",
+      "name": "Jones–Wilkinson regional potable-water project",
+      "category": "Infrastructure",
+      "stage": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-01-01 to 2028-01-01. Proposed water-treatment plant and elevated storage serving the southeastern Jones / northwestern Wilkinson area. Actual start, award and current progress are not confirmed.",
+      "financial": "Plan-listed estimated project cost: $15,677,547. Financing approval, contract value and payments are not established.",
+      "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 11.",
+      "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11",
+      "source_date": "2025-05-31",
+      "address": "Southeastern Jones County / northwestern Wilkinson County, Georgia",
+      "location_note": "Multi-site or regional proposal; no single verified project location. No pin assigned.",
+      "estimate_cents": 1567754700,
+      "amount_kind": "planning estimate",
+      "sources": [
+        {
+          "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download",
+          "publisher": "Georgia Environmental Finance Authority",
+          "date": "2025-05-31",
+          "page": 11,
+          "document_status": "Draft intended use plan; not an award or construction certificate"
+        }
+      ]
+    }
+  ]
+}

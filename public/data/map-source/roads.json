@@ -1,0 +1,678 @@
+{
+  "published": "2026-10-18",
+  "data_note": "All geometries traced by Baldwin Minute Watch; project limits and road-level financial disbursements not independently verified.",
+  "records": [
+    {
+      "id": "bmw-reviewed-road-1",
+      "name": "Admiralty Way",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.29138755798341,
+            33.17258142646055
+          ],
+          [
+            -83.29029321670532,
+            33.1743595112744
+          ],
+          [
+            -83.29100131988527,
+            33.17597592071141
+          ],
+          [
+            -83.2920527458191,
+            33.17759230033539
+          ],
+          [
+            -83.29177379608156,
+            33.17877762644477
+          ],
+          [
+            -83.29254627227785,
+            33.17958579414479
+          ],
+          [
+            -83.29398393630983,
+            33.18138169568098
+          ],
+          [
+            -83.29411268234253,
+            33.18312368500172
+          ],
+          [
+            -83.2941770553589,
+            33.18319551886931
+          ],
+          [
+            -83.29389810562135,
+            33.1835187705447
+          ],
+          [
+            -83.29063653945923,
+            33.18468605833171
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 387216.82,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "Road inspected; detailed condition findings have not been entered into this public record.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-2",
+      "name": "Forrest Hill Road",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.2872247695923,
+            33.04557976140103
+          ],
+          [
+            -83.28640937805177,
+            33.04417679422486
+          ],
+          [
+            -83.28434944152832,
+            33.044788346767156
+          ],
+          [
+            -83.28434944152832,
+            33.04514808157322
+          ],
+          [
+            -83.28422069549562,
+            33.04583157365686
+          ],
+          [
+            -83.28336238861085,
+            33.046766870017954
+          ],
+          [
+            -83.28331947326662,
+            33.04734243207248
+          ],
+          [
+            -83.28353404998781,
+            33.0478820180824
+          ],
+          [
+            -83.28323364257814,
+            33.04863743294212
+          ],
+          [
+            -83.28323364257814,
+            33.04921298277162
+          ],
+          [
+            -83.28357696533205,
+            33.049680614238326
+          ],
+          [
+            -83.28422069549562,
+            33.05018421457917
+          ],
+          [
+            -83.28503608703613,
+            33.050759754299285
+          ],
+          [
+            -83.2857656478882,
+            33.05151514447323
+          ],
+          [
+            -83.2866668701172,
+            33.052198587142016
+          ],
+          [
+            -83.28765392303468,
+            33.053025905380466
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 474186.74,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "resurfaced; pavement looked good; white edge lines and double-yellow centerlines visible.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-3",
+      "name": "Highview Road",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.1939697265625,
+            33.046874788189704
+          ],
+          [
+            -83.19330453872682,
+            33.046766870017954
+          ],
+          [
+            -83.19298267364503,
+            33.04674888364315
+          ],
+          [
+            -83.1924891471863,
+            33.047036665199364
+          ],
+          [
+            -83.19203853607179,
+            33.04748632199838
+          ],
+          [
+            -83.1912660598755,
+            33.04815180984759
+          ],
+          [
+            -83.19077253341676,
+            33.04851153091548
+          ],
+          [
+            -83.19040775299074,
+            33.04870937687651
+          ],
+          [
+            -83.18982839584352,
+            33.04878132075214
+          ],
+          [
+            -83.1893563270569,
+            33.04872736285092
+          ],
+          [
+            -83.18877696990968,
+            33.048457572848974
+          ],
+          [
+            -83.18804740905762,
+            33.04820576810145
+          ],
+          [
+            -83.18740367889406,
+            33.04800792100901
+          ],
+          [
+            -83.18697452545166,
+            33.04784604578458
+          ],
+          [
+            -83.18635225296022,
+            33.047648197884
+          ],
+          [
+            -83.18596601486207,
+            33.047684170262634
+          ],
+          [
+            -83.18547248840333,
+            33.04772014262655
+          ],
+          [
+            -83.1848931312561,
+            33.04798993488765
+          ],
+          [
+            -83.18422794342042,
+            33.04831368450997
+          ],
+          [
+            -83.18390607833864,
+            33.0485295169303
+          ],
+          [
+            -83.18321943283082,
+            33.04872736285092
+          ],
+          [
+            -83.18242549896242,
+            33.04892520832707
+          ],
+          [
+            -83.18186759948732,
+            33.04903312385398
+          ],
+          [
+            -83.18152427673341,
+            33.049141039248646
+          ],
+          [
+            -83.18111658096315,
+            33.0493029120927
+          ],
+          [
+            -83.1808376312256,
+            33.04964464267522
+          ],
+          [
+            -83.1803870201111,
+            33.0500043576452
+          ],
+          [
+            -83.1799364089966,
+            33.05034608550565
+          ],
+          [
+            -83.17965745925903,
+            33.05050795613458
+          ],
+          [
+            -83.17916393280031,
+            33.05072378317698
+          ],
+          [
+            -83.1788206100464,
+            33.050939609690374
+          ],
+          [
+            -83.17862749099733,
+            33.051191406620745
+          ],
+          [
+            -83.17841291427614,
+            33.051209392088225
+          ],
+          [
+            -83.17815542221071,
+            33.051371261130186
+          ],
+          [
+            -83.17806959152223,
+            33.05149715906821
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 538408.03,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "Road inspected; detailed condition findings have not been entered into this public record.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-4",
+      "name": "Hardwick Street",
+      "status": "Concern reported",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.23076963424684,
+            33.05257627686738
+          ],
+          [
+            -83.22858095169069,
+            33.05221657240378
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 88675.28,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "resurfaced roadway showing cracking and potholes.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-5",
+      "name": "Knight Circle (Night Circle)",
+      "status": "Concern reported",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.26304197311403,
+            33.18251309474914
+          ],
+          [
+            -83.2625699043274,
+            33.18333918642785
+          ],
+          [
+            -83.26269865036011,
+            33.18384202102743
+          ],
+          [
+            -83.26295614242555,
+            33.18420118683165
+          ],
+          [
+            -83.26332092285158,
+            33.18432689451526
+          ],
+          [
+            -83.26362133026124,
+            33.184111395518634
+          ],
+          [
+            -83.26381444931032,
+            33.1836085624651
+          ],
+          [
+            -83.26381444931032,
+            33.18312368500172
+          ],
+          [
+            -83.2637929916382,
+            33.1828722660013
+          ],
+          [
+            -83.263578414917,
+            33.18269268055927
+          ],
+          [
+            -83.26325654983522,
+            33.18260288770022
+          ],
+          [
+            -83.26308488845827,
+            33.182549011940615
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 48163.08,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "repaved; no white edge lines observed; some centerline markings appeared doubled.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-6",
+      "name": "Grace Court",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.25072526931764,
+            33.16237919220086
+          ],
+          [
+            -83.24924468994142,
+            33.163277323859376
+          ],
+          [
+            -83.2493305206299,
+            33.163690461333026
+          ],
+          [
+            -83.24935197830202,
+            33.16387008571441
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 51333.19,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "resurfaced short dead-end road, generally decent pavement condition.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-7",
+      "name": "West Lakeview Lane",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.25608968734741,
+            33.16670810209902
+          ],
+          [
+            -83.25566053390504,
+            33.16618720724104
+          ],
+          [
+            -83.25559616088869,
+            33.165468726496385
+          ],
+          [
+            -83.25559616088869,
+            33.16417544631815
+          ]
+        ]
+      },
+      "contractor": "The Surface Masters, Inc.",
+      "billed": 67207.38,
+      "spent": null,
+      "approved": null,
+      "funding": "2024 LMIG resurfacing project (contract title). Actual fund ledger allocation not yet verified; do not assume LMIG paid all costs.",
+      "observation": "Road inspected; detailed condition findings have not been entered into this public record.",
+      "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-8",
+      "name": "Pineway Drive SE",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.23602676391603,
+            33.03451729830517
+          ],
+          [
+            -83.23588728904726,
+            33.034544281612426
+          ],
+          [
+            -83.23562979698183,
+            33.03448132054929
+          ],
+          [
+            -83.23543667793275,
+            33.034283442629395
+          ],
+          [
+            -83.23518991470338,
+            33.03395064694376
+          ],
+          [
+            -83.2349216938019,
+            33.0338337184315
+          ],
+          [
+            -83.23458909988405,
+            33.033869696451795
+          ],
+          [
+            -83.23373079299927,
+            33.033932657951965
+          ],
+          [
+            -83.233140707016,
+            33.03398662491632
+          ],
+          [
+            -83.23266863822938,
+            33.03403159736136
+          ],
+          [
+            -83.23230385780336,
+            33.03403159736136
+          ],
+          [
+            -83.23199272155762,
+            33.03401360838609
+          ],
+          [
+            -83.23171377182008,
+            33.033869696451795
+          ],
+          [
+            -83.23149919509889,
+            33.03365382810962
+          ],
+          [
+            -83.22933197021486,
+            33.03190887292892
+          ],
+          [
+            -83.2289242744446,
+            33.031710989232145
+          ],
+          [
+            -83.22852730751038,
+            33.03166601560271
+          ],
+          [
+            -83.22803378105165,
+            33.03169299978312
+          ],
+          [
+            -83.22749733924867,
+            33.031899878225076
+          ],
+          [
+            -83.22704672813417,
+            33.032187708292916
+          ],
+          [
+            -83.22646737098695,
+            33.03257447846609
+          ],
+          [
+            -83.22611331939699,
+            33.033105160359696
+          ],
+          [
+            -83.2259523868561,
+            33.03363583905725
+          ],
+          [
+            -83.22554469108583,
+            33.03574053326404
+          ]
+        ]
+      },
+      "contractor": null,
+      "billed": null,
+      "spent": null,
+      "approved": null,
+      "funding": "Not verified. Do not assume this is the same project as Pineaway Drive listed in Surface Masters records.",
+      "observation": "Road inspected; the name has not been reconciled with the separate Pineaway Drive entry in county billing records.",
+      "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-9",
+      "name": "Fairfield Avenue SE",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.23160648345949,
+            33.03385170744347
+          ],
+          [
+            -83.23116660118104,
+            33.03437338719352
+          ],
+          [
+            -83.23093056678773,
+            33.03477813659591
+          ],
+          [
+            -83.23071599006654,
+            33.035236850337654
+          ],
+          [
+            -83.23057651519777,
+            33.035731538951325
+          ]
+        ]
+      },
+      "contractor": null,
+      "billed": null,
+      "spent": null,
+      "approved": null,
+      "funding": "Not verified",
+      "observation": "Road inspected; additional field observations have not yet been published.",
+      "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+      "url": null
+    },
+    {
+      "id": "bmw-reviewed-road-10",
+      "name": "Lakeland Avenue",
+      "status": "Completed",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -83.23049068450929,
+            33.03570455600764
+          ],
+          [
+            -83.2296109199524,
+            33.03547969782234
+          ],
+          [
+            -83.22933197021486,
+            33.035308805217724
+          ],
+          [
+            -83.22927832603456,
+            33.03501199095873
+          ],
+          [
+            -83.22941780090333,
+            33.034724170116355
+          ],
+          [
+            -83.22978258132936,
+            33.03435539828804
+          ],
+          [
+            -83.23007225990297,
+            33.03387869095456
+          ],
+          [
+            -83.23023319244386,
+            33.033509915587715
+          ],
+          [
+            -83.23049068450929,
+            33.03324007897561
+          ],
+          [
+            -83.2307267189026,
+            33.033105160359696
+          ]
+        ]
+      },
+      "contractor": null,
+      "billed": null,
+      "spent": null,
+      "approved": null,
+      "funding": "Not verified",
+      "observation": "Road inspected; additional field observations have not yet been published.",
+      "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+      "url": null
+    }
+  ]
+}

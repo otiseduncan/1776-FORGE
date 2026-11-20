@@ -1,0 +1,4378 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-20",
+  "all_projects_vetted": false,
+  "publication": "Editorial repository updates only; no public write endpoint",
+  "county_finances": [
+    {
+      "county_id": "13009",
+      "year": 2025,
+      "status": "Annual report not collected",
+      "scope": "Baldwin County — 2025",
+      "money_in": null,
+      "money_out": null,
+      "money_left": null,
+      "set_aside": null,
+      "note": "The UGA county listing checked October 20, 2026 does not list an annual financial report for this year. Project figures below use the county records collected so far; they are not a complete county total.",
+      "source_url": "https://ted.cviog.uga.edu/FINANCIAL-DOCUMENTS/node/62",
+      "source_title": "County financial-document listing"
+    },
+    {
+      "county_id": "13009",
+      "year": 2024,
+      "status": "Annual report not collected",
+      "scope": "Baldwin County — 2024",
+      "money_in": null,
+      "money_out": null,
+      "money_left": null,
+      "set_aside": null,
+      "note": "The UGA county listing checked October 20, 2026 does not list an annual financial report for this year. Project figures below use the county records collected so far; they are not a complete county total.",
+      "source_url": "https://ted.cviog.uga.edu/FINANCIAL-DOCUMENTS/node/62",
+      "source_title": "County financial-document listing"
+    },
+    {
+      "county_id": "13009",
+      "year": 2023,
+      "status": "Annual report",
+      "scope": "Baldwin County — governmental funds, year ended December 31, 2023. Water and other business-type funds are separate.",
+      "money_in": {
+        "cents": 5388234000,
+        "note": "Reported revenue, annual report page 17."
+      },
+      "money_out": {
+        "cents": 5673631400,
+        "note": "Reported expenditures, annual report page 17."
+      },
+      "money_left": {
+        "cents": 1108153700,
+        "note": "Year-end fund balance, annual report page 15."
+      },
+      "set_aside": {
+        "cents": 414625500,
+        "note": "Restricted for named purposes; included in money left, not additional savings."
+      },
+      "note": "These are the county’s reported accounting figures, not bank balances. Money left includes earlier years and financing movements.",
+      "source_url": "https://ted.cviog.uga.edu/financial-documents/sites/default/files//budgetdoc/financial-report/county-baldwin-fy2023-financial-report.pdf",
+      "source_title": "2023 Baldwin County annual financial report — pages 15 and 17",
+      "retrieved_on": "2026-10-20",
+      "calculation": {
+        "set_aside_dollars": [
+          48556,
+          79783,
+          300178,
+          501186,
+          79833,
+          3136719
+        ]
+      }
+    }
+  ],
+  "documents": [
+    {
+      "id": "source-001",
+      "title": "THE SURFACE MASTER PAYMENTS.pdf",
+      "sha256": "91a28669a4c91e9607a450169067bb1e59b3de1fd3e7c1fd24786c3a047b9a54",
+      "page_count": 11,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-002",
+      "title": "Brian Wood Pittman Construction Invoices and Checks.pdf",
+      "sha256": "4dc4273003e8104f5b658e67e79c7a10be1edf45bd208cc484ddc796494cc0f4",
+      "page_count": 109,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [
+        2,
+        88,
+        92,
+        94,
+        96
+      ],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [
+        {
+          "page": 3,
+          "reason": "Tax/personal identifier field"
+        },
+        {
+          "page": 6,
+          "reason": "Tax/personal identifier field"
+        },
+        {
+          "page": 54,
+          "reason": "Tax/personal identifier field"
+        },
+        {
+          "page": 68,
+          "reason": "Tax/personal identifier field"
+        }
+      ],
+      "text_available": true
+    },
+    {
+      "id": "source-003",
+      "title": "Addendum 5.pdf",
+      "sha256": "dd30df9b572c9110405297c6245bd8d61fac2f553a199be710cd05f634606abb",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-004",
+      "title": "Addendum 4.pdf",
+      "sha256": "6ef9a4b2e736405ca80cb429819afa71112e2327514dd26c5232a113ecc5266a",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-005",
+      "title": "Addendum 3.pdf",
+      "sha256": "63cf2b9d3e5948172ced98800563187b595481ee7e85248af99f8bcd45c414da",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-006",
+      "title": "Addendum 2.pdf",
+      "sha256": "883e948a66a51d5260151edd857daf1a6f50cf57bc1214710c41135b833f614b",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-007",
+      "title": "Addendum 1.pdf",
+      "sha256": "119a042c03ec8c9e4252016ccf722289283d735efb309da937874845eb62fca7",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-008",
+      "title": "Contract.pdf",
+      "sha256": "4cb9493099b120fbf1c92610116bd7be1213dee310e189b68d24533ba0c4c0ff",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-009",
+      "title": "Pittman Contract.pdf",
+      "sha256": "8b096c0269e7bbd29a171cabfcabc565781bf7cfd7532de114948e5022f2c2f9",
+      "page_count": 46,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [
+        {
+          "page": 1,
+          "reason": "Tax/personal identifier field"
+        }
+      ],
+      "text_available": true
+    },
+    {
+      "id": "source-010",
+      "title": "TSM Invoice #7047 - Baldwin Co. 2024.pdf",
+      "sha256": "d85219025247364dbefd866978c3b0a62a935f09485f8e838d150217b121ebdb",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-011",
+      "title": "TSM Invoice #7014 - Baldwin Co. 2024 Resurfacing.pdf",
+      "sha256": "acf630b9689b7bb24f4ce8faf6e16cf952270d51cd674f383c3901babe832aec",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-012",
+      "title": "TSM Invoice #6860 - Baldwin Co. 2024 Resurfacing Project.pdf",
+      "sha256": "93f6adbf49ceefe13795a3e9c8e407783ac28035ef94b3b49f9c2eba6930403e",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-013",
+      "title": "TSM Invoice #1330 - Baldwin Co. 2024.pdf",
+      "sha256": "9157ed62c8d074e40a76dbc647e97ee82740f23ca2429100826f7cbd20bbd625",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-014",
+      "title": "THE SURFACE MASTERS, INC INV 6759.pdf",
+      "sha256": "dd75717002863e71cf80c5793c3dfbc9ba5e66a81387f52bbf9004b9a7c3a480",
+      "page_count": 5,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-015",
+      "title": "CO 9 Surface Masters-Additional Paving Admiralty Way.pdf",
+      "sha256": "8efabc30f1b8be5ab52c0cd25d5d60e3c1f406b130f636238e8bd4a3121a5b9f",
+      "page_count": 2,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-016",
+      "title": "CO 11 Surface Masters-Wright Street Repair.pdf",
+      "sha256": "eaed23c1b991975838213899b78090423239a0d4770bf2adaf50aeb48509e608",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-017",
+      "title": "Surface Masters-2024 LMIG Contract.pdf",
+      "sha256": "19b86262a303535b8f58e20a8ed7153721eea1577e603d19f614461bccac21ed",
+      "page_count": 44,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [
+        {
+          "page": 1,
+          "reason": "Tax/personal identifier field"
+        },
+        {
+          "page": 44,
+          "reason": "W-9 tax-identification page withheld"
+        }
+      ],
+      "text_available": true
+    },
+    {
+      "id": "source-018",
+      "title": "THE SURFACE MASTERS INV 6980(2).pdf",
+      "sha256": "a42328589ec6cc0576eaf2a906bd6c97eb432281bdb151e42f9ace64669b3a5d",
+      "page_count": 3,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-019",
+      "title": "THE SURFACE MASTERS 7087.pdf",
+      "sha256": "28b21d11203fa026dcdaf5733f29bf39586f3deb64d833bb1ba7811d4f225c0f",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-020",
+      "title": "THE SURFACE MASTERS 1077.pdf",
+      "sha256": "1ea757f3f94cc719be2e60619d9b67eb1f0315032407fcb638e1065feeba09b9",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-021",
+      "title": "THE SURFACE MASTER RET24422.pdf",
+      "sha256": "2468278a36b6c5746bdc0b1372359c56c30edf8386658d13d683085d27a44074",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-022",
+      "title": "THE SURFACE MASTER INV 6941 DATED 12.2.24.pdf",
+      "sha256": "1d904fd5389efd0daf4a41000be9be8a8d0939c33c292bccd28da6cd1dc6fa2a",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-023",
+      "title": "THE SURFACE MASTER 1130.pdf",
+      "sha256": "47827de34bb5a9c2d04126fd9947f6b58524539c3f48c0e35bb7a484b3247e24",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-024",
+      "title": "CO 10 Surface Masters - Log Cabin Thermo.pdf",
+      "sha256": "15f33bd24ea12774472967cb151b5592729e94c2d8bf50e60a05c5c984061e73",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-025",
+      "title": "CO 8 Surface Masters-Remobilization Wright-Thomas.pdf",
+      "sha256": "58961ef8b9c68df23b4e80f25cb54c690480eaba577a6d246016817323da05da",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-026",
+      "title": "CO 7 Surface Masters-Milling.pdf",
+      "sha256": "7d183d9936fda20cacbf92812e73d7489708a48c7e2fe9fd4f1e67535a9c02c7",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-027",
+      "title": "CO 6 Surface Masters-Log Cabin.pdf",
+      "sha256": "0bfc8e6f11138525c7998034ef3f1e5d3cf343d38b5930e3a1f68daa8a49811e",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-028",
+      "title": "CO 5 Surface Masters-Add Paving.pdf",
+      "sha256": "56452180a3ef1cce44bfe9e3f98f766d2455741244a71daf3734476fe2a950fc",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-029",
+      "title": "CO 4 Surface Masters-Add Patching.pdf",
+      "sha256": "c4adc97eb4fe05c68c05266de42a9f72bf8c6ef1a7afc526d8a49c14c8afb8c4",
+      "page_count": 2,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-030",
+      "title": "CO 2&3.pdf",
+      "sha256": "febe2af4b6e1d624bc3dc014e1fd8ccdd4d978b2a27ff935b874deebd8d50128",
+      "page_count": 4,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-031",
+      "title": "CO 1 Surface Masters-Road Scraping1.pdf",
+      "sha256": "0ef26219ac7ada1e5c5243a9cf998a15f2aff0570a34eb2a880f4b3f8827c231",
+      "page_count": 1,
+      "source_url": null,
+      "issuing_body": "Baldwin County records response, October 15, 2026",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-032",
+      "title": "houston-2026-09-22",
+      "sha256": "abdf970bedc24a3e5348ff4c55a90b9e632f522242271d87310ea307aa1e8516",
+      "page_count": 7,
+      "source_url": "https://www.houstoncountyga.gov/minutes/2026-09-22%20%20Minutes.pdf",
+      "issuing_body": "Houston County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-033",
+      "title": "houston-2026-10-06",
+      "sha256": "8528bc1ca95847b077bc1a426e3e73586107477f8c85e966e7c4c27a21b7d5c8",
+      "page_count": 6,
+      "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+      "issuing_body": "Houston County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-034",
+      "title": "houston-2026-10-20-agenda",
+      "sha256": "1a42ceb315ddac612e53428200f36df4a09908789ded78cc941c45fb907dd10a",
+      "page_count": 25,
+      "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-20%20Department%20Head%20Copy.pdf",
+      "issuing_body": "Houston County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-035",
+      "title": "jones-transportation-2025-10-08",
+      "sha256": "bf95546b691cdb340ce976406e7d32ad0384a0f90b1b6f6daf1766c04bd9eee7",
+      "page_count": 2,
+      "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+      "issuing_body": "Jones County Public Works",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-036",
+      "title": "greene-lra-2026",
+      "sha256": "fc4152244121ceaeefb78d8a171d0d81ad1f56c5b26380b4de4f03617bcf825e",
+      "page_count": 23,
+      "source_url": "https://www.greenecountyga.gov/DocumentCenter/View/2808",
+      "issuing_body": "Greene County",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-037",
+      "title": "baldwin-sawyer-2026-04-22",
+      "sha256": "33a18c8517d048ad758737f8ac622ac0dde0441472d4a67e98341fcb0d753de4",
+      "page_count": 58,
+      "source_url": "https://www.baldwincountyga.com/DocumentCenter/View/355/Sawyer-Forensic-Investigation-Report",
+      "issuing_body": "Sawyer & Company LLC, published by Baldwin County",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Extracted text; proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": false
+    },
+    {
+      "id": "source-038",
+      "title": "baldwin-2025-02-18",
+      "sha256": "d9b6a3b16ba2bdf3e080cda7d8b651cdb00d40bc350e3e174a0d6f157bf2111f",
+      "page_count": 10,
+      "source_url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Minutes-c2fde9f3a85a48a78158d670599acdac.pdf",
+      "issuing_body": "Baldwin County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-039",
+      "title": "baldwin-2025-04-15",
+      "sha256": "69b896dcc60c78493e4da0ae8f9461d781c754cb26924b8c5e05b5af5d12db7a",
+      "page_count": 20,
+      "source_url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Minutes-c9e2e5bd2c404fd7ac4b2163c1f9a4ad.pdf",
+      "issuing_body": "Baldwin County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-040",
+      "title": "baldwin-2025-09-02",
+      "sha256": "4c8758a876496c8e522db7391afeed8bf73c7888525f880bd3e6ee05014a1d47",
+      "page_count": 7,
+      "source_url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Minutes-e001f68f929f4fce8b85ca721842499b.pdf",
+      "issuing_body": "Baldwin County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-041",
+      "title": "baldwin-2025-07-01",
+      "sha256": "018b151e120171068845009d3db1eb6bd9a37adaec6c6dabca27c23e591933c5",
+      "page_count": 3,
+      "source_url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Minutes-1695a6324dff41e5976f061c5cb0388d.pdf",
+      "issuing_body": "Baldwin County Board of Commissioners",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "OCR proofreading required",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-042",
+      "title": "Resolution 2026-73 — monthly financial reporting (unsigned county-supplied copy)",
+      "sha256": "35d9b92dd7363513139b19ad4838038ef4fdf6896bdc79551df2cc7618a682b1",
+      "page_count": 2,
+      "issuing_body": "Baldwin County Clerk — records response, October 15, 2026",
+      "source_url": "https://baldwincounty.teammunicode.com/meetings",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Unsigned copy; adoption requires meeting record",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    },
+    {
+      "id": "source-043",
+      "title": "Baldwin County October 6, 2026 meeting packet",
+      "sha256": "ce9e6cfd36a902f7c06e70fbe1b037997a242b17993ce71dd60e638ec9c60b54",
+      "page_count": 47,
+      "issuing_body": "Baldwin County Clerk — records response, October 15, 2026",
+      "source_url": "https://baldwincounty.teammunicode.com/meetings",
+      "retrieved_on": "2026-10-20",
+      "full_page_coverage": true,
+      "unreadable_pages": [],
+      "review_status": "Source text with OCR for scanned attachments",
+      "verbatim_verified": false,
+      "redactions": [],
+      "text_available": true
+    }
+  ],
+  "records": [
+    {
+      "id": "research-01",
+      "name": "Aquatic Center",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": {
+        "cents": 690041445,
+        "label": "Original contract, report-listed",
+        "document_id": "source-037",
+        "page": 38
+      },
+      "contract": {
+        "cents": 699890917,
+        "label": "Revised contract, report-listed; not payments",
+        "document_id": "source-037",
+        "page": 38
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Dyer Construction",
+        "source_url": "https://www.baldwincountyga.com/DocumentCenter/View/355/Sawyer-Forensic-Investigation-Report",
+        "page": 29
+      },
+      "authorization": null,
+      "funding": {
+        "text": "Report describes 2017 and 2023 SPLOST phases; grants used in Phase 1, not Phase 2.",
+        "document_id": "source-037",
+        "page": 38
+      },
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-037"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Construction previously tracked; current site status unverified",
+        "financial": "Revised Aquatic Center contract: $6,998,909.17, according to the April 22, 2026 county-published report, page 38. Paid-to-date total not collected.",
+        "source": "Prior Baldwin Minute Watch capital-project research, 2025–2026",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "correction": "Replaces the earlier rounded, unreconciled $6,999,000 summary with report-listed contract figures.",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "research-02",
+      "name": "Pittman Construction Road Resurfacing",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": {
+        "cents": 461417969,
+        "label": "Original 2025 contract, report-listed",
+        "document_id": "source-037",
+        "page": 37
+      },
+      "contract": {
+        "cents": 601035264,
+        "label": "Original plus report-listed changes; not confirmed payment",
+        "document_id": "source-037",
+        "page": 37
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Pittman Construction",
+        "document_id": "source-009"
+      },
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-009",
+        "source-008",
+        "source-002",
+        "source-003",
+        "source-004",
+        "source-005",
+        "source-006",
+        "source-007",
+        "source-037"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Multiple roads; review contract and inspection phases",
+        "financial": "2025 original contract $4,614,179.69; original plus report-listed changes $6,010,352.64. 2025 payments not supplied; the acquired check packet concerns older LMIG jobs.",
+        "source": "Prior Baldwin Minute Watch project comparison; 2023 and 2025 contract packets",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "The supplied invoice/check packet contains 2020–2023 LMIG projects. Do not assign those payments to the 2025 contract.",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-pittman-2025",
+        "baldwin-pittman-authority"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ],
+      "money_review": "The April 2026 county-published investigator report identifies $729,927.95 of work without Board approval. Underlying approvals, later action and the 2025 payment ledger are still needed."
+    },
+    {
+      "id": "research-03",
+      "name": "Surface Masters Resurfacing",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": {
+        "cents": 365818585,
+        "label": "Original 2024 contract",
+        "document_id": "source-015",
+        "page": 1
+      },
+      "contract": {
+        "cents": 429158935,
+        "label": "Revised through CO11; scope reconciliation outstanding",
+        "document_id": "source-016",
+        "page": 1
+      },
+      "paid": {
+        "cents": 446512641,
+        "label": "Nine unique county checks for the supplied 2024 LMIG invoice schedule",
+        "document_id": "source-001",
+        "page": null,
+        "as_of": "2025-10-24"
+      },
+      "contractor": {
+        "text": "The Surface Masters, Inc.",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-001",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-013",
+        "source-014",
+        "source-015",
+        "source-016",
+        "source-017",
+        "source-018",
+        "source-019",
+        "source-020",
+        "source-021",
+        "source-022",
+        "source-023",
+        "source-024",
+        "source-025",
+        "source-026",
+        "source-027",
+        "source-028",
+        "source-029",
+        "source-030",
+        "source-031"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "2024 LMIG resurfacing contract; several roads separately mapped",
+        "financial": "County checks total $4,465,126.41 through October 24, 2025 and match eleven supplied invoice dues. Last supplied revised contract $4,291,589.35; $173,537.06 difference needs final quantity and approval reconciliation.",
+        "source": "Baldwin road-contract audit findings, October 15, 2026",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "The Forrest Hill first payment is included in the running 2024 LMIG schedule. Check copies on source pages 6 and 9 repeat checks already counted. Contract-to-payment authorization differences remain open.",
+      "spending_note": "County check records matched to eleven supplied invoices, including retainage. Recorded payments through October 24, 2025.",
+      "gaps": [
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments",
+        "baldwin-surface-authority"
+      ],
+      "money_review": "Invoices and recorded checks match. Contract-to-payment difference: $173,537.06; final quantity and authorization explanation needed.",
+      "collection_gaps": [
+        "Final paid-to-date project ledger and subsequent payments",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-04",
+      "name": "Roberts Land Management",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": {
+        "cents": 203199832,
+        "label": "Report-described expenditure; original vouchers not obtained",
+        "document_id": "source-037",
+        "page": 33
+      },
+      "contractor": {
+        "text": "Roberts Land Management",
+        "document_id": "source-037",
+        "page": 33
+      },
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-037"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Earlier project tracking; work location and status require verification",
+        "financial": "The county-published April 22, 2026 investigator report, page 33, identifies $2,031,998.32 in expenditures for Roberts Land Management.",
+        "source": "Prior Baldwin Minute Watch project dashboard",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "Report says no contract or detailed budget was located at the time of its analysis.",
+      "spending_note": "Spending reported in the county-published April 2026 investigation, page 33.",
+      "gaps": [
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Final paid-to-date project ledger and subsequent payments",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-05",
+      "name": "Little Fishing Creek Golf Course",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 3000000,
+        "label": "Master-plan fee only; not whole-course cost",
+        "document_id": "source-039",
+        "page": 18
+      },
+      "paid": {
+        "cents": 47557400,
+        "label": "2025 expenditures described by investigator; not full lifetime cost",
+        "document_id": "source-037",
+        "page": 34
+      },
+      "contractor": {
+        "text": "Mike Young Designs Inc. for master plan; multiple other vendors for improvements",
+        "document_id": "source-039",
+        "page": 18
+      },
+      "authorization": {
+        "text": "April 15, 2025: Hall motion, Little second; unanimous approval of master-plan proposal.",
+        "document_id": "source-039",
+        "page": 18
+      },
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-039",
+        "source-037"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-039",
+          "page": 18,
+          "text": "Golf Course Master Plan\n\nStan Aldrich addressed the commission speaking in favor of the golf course renovations and\nhiring a professional was the right way.\n\nChairman Strickland thanked Commissioner Hall and spoke in favor of having a master plan\nstating it was part of a long-term strategic plan and asked for community support. He thanked\nCommissioner Hall.\n\nCommissioner Hall made a motion to accept a proposal from Mike Young Designs Inc. for a golf\ncourse renovation/remodeling master plan. Commissioner Little seconded the motion.\n\nThere was a discussion about developing a long-range plan and that the work would be done in\nphases, the cost to develop the plan would be $30,000 and the construction would be put out\nto bid. There was also conversation about how, last year, golf almost paid for itself, the\npotential for working with private investors, and involving stake holders in the planning.\n\nThe motion passed unanimously.\n\nMowing Contract\nCounty Attorney Brandon Palmer stated they receive a formal protest from the lowest bidder\n\nalleging irregularities. He suggested a motion to reject all bids and reissue the bid.\n\nCommissioner Little made a motion to reject all bids for a mowing agreement and reissue the\nbids. Commissioner Butts",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Course improvements and related work; site review pending",
+        "financial": "The county-published April 22, 2026 investigator report, page 34, identifies $475,574 in 2025 golf-course expenditures and separately $673,852 encumbered/unpaid for 2026. Earlier $6,998,714 figure is unsupported for this scope.",
+        "source": "Prior Baldwin Minute Watch project research",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "correction": "Earlier $6,998,714 figure is unsupported for this golf-course scope and is superseded. Report separately lists $673,852 encumbered/unpaid for 2026. Do not add unpaid commitments to paid spending.",
+      "spending_note": "Golf-course spending for 2025, reported in the county-published April 2026 investigation, page 34.",
+      "gaps": [
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Final paid-to-date project ledger and subsequent payments",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-06",
+      "name": "Trackman Golf Facility",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "Trackman, Inc. identified in project research; executed agreement and price require reconciliation",
+        "source_url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Packet-0a57b3e16cfe42b7b167d370abf1b62e.pdf"
+      },
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-037"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Trackman installation and covered practice bays; site inspection pending",
+        "financial": "Earlier reporting referenced $1,800,000 as an estimate or proposal, NOT confirmed payment or authorized final project cost. Earlier plans discussed 14 bays; later publicity described 13.",
+        "source": "Baldwin County 2025 meetings; December 2025 electrical/fiber procurement; Visit Milledgeville June 2026",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "Earlier $1.8 million estimate/proposal is not treated as authorized cost or payment.",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-07",
+      "name": "Sibley Place Industrial Park",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": {
+        "cents": 200000000,
+        "label": "OneGeorgia grant award; not construction cost or paid amount",
+        "document_id": "source-040",
+        "page": 3
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": {
+        "text": "September 2, 2025: Resolution R-2025-68, Hall motion, Butts second; passed unanimously.",
+        "document_id": "source-040",
+        "page": 3
+      },
+      "funding": {
+        "text": "OneGeorgia Rural Site Development Grant; county agreement with Development Authority to manage roadway grant into Smith-Sibley.",
+        "document_id": "source-040",
+        "page": 3
+      },
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-040"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-040",
+          "page": 3,
+          "text": "OneGeorgia Rural Site Development Grant\n\nChairman Strickland read the caption of Resolution R-2025-68 to authorize an agreement with the\nDevelopment Authority of Milledgeville and Baldwin County to accept a OneGeorgia Rural Site\nDevelopment Grant Award.\n\nCounty Manager Carlos Tobar stated the county would enter into an agreement with the Development\nAuthority of Milledgeville and Baldwin to manage the 2 million dollar grant for the roadway into Smith-\nSibley.\n\nCommissioner Hall made a motion to approve Resolution R-2025-68. Commissioner Butts seconded\nthe motion and the motion passed unanimously.\n\nMillage Rate\n\nMary Divitorrio readdressed the commission stating she was against the tax increase and taxation\nwithout representation.\n\nAssistant County Manager Dawn Hudson stated the commission had before them a resolution to\nconsider the 2025 rate of 10.02 mills and that all advertising and p",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Site preparation, entrance road and infrastructure",
+        "financial": "Resolution R-2025-68 describes a $2,000,000 OneGeorgia award for site work. Earlier project estimate $2,194,000 not confirmed as final expenditure.",
+        "source": "Baldwin County meeting packet, Resolution R-2025-68",
+        "url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Packet-e001f68f929f4fce8b85ca721842499b.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project"
+      ]
+    },
+    {
+      "id": "research-08",
+      "name": "County Facilities and Buildings",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-043"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Multiple locations — program entry rather than one construction site",
+        "financial": "Costs vary; need location-specific authorizations and spending.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "component_amounts": [
+        {
+          "label": "Harrisburg Community Center interior buildout — Dyer bid, not payment",
+          "cents": 24157900,
+          "document_id": "source-043",
+          "page": 35
+        },
+        {
+          "label": "Harrisburg plumbing — LAV payment request, not a paid check",
+          "cents": 2579150,
+          "document_id": "source-043",
+          "page": 9
+        }
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-09",
+      "name": "Solid Waste Collection",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "RFP and service activity — not necessarily a capital construction project",
+        "financial": "Contract price not confirmed.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-10",
+      "name": "SPLOST Road Projects (Various)",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Umbrella program; may overlap the individual resurfacing records",
+        "financial": "No separate total assigned to avoid double counting.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-11",
+      "name": "T-SPLOST Projects (Various)",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Umbrella program; may overlap road/infrastructure records",
+        "financial": "No separate total assigned to avoid double counting.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-12",
+      "name": "Water / Wastewater Infrastructure",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": {
+        "text": "September 2, 2025 minutes: Hall motion, Little second; unanimous selection of Southeast Pipe Survey for 2024 CDBG sanitary-sewer work.",
+        "document_id": "source-040",
+        "page": 4
+      },
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-040"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-040",
+          "page": 4,
+          "text": "2024 CDBG Sanitary Sewer Rehabilitation\nChairman Strickland stated this item was to select Southeast Pipe Survey, Inc. to FY 2024 CDBG\nSanitary Sewer Rehabilitation.\n\nCounty Manager Tobar stated there 4 bids, the recommendation was to select the low bidder,\nSoutheast Pipe Survey, Inc.; the engineer had done his due diligence. The bid was for cured in place\nsewer pile replacement east of Vinson Highway. He stated this would be that last project east of\nVinson Highway and they would move to Oconee Heights next year.\n\nCommissioner Hall made a motion to accept the bid from Southeast Pipe Survey, Inc. Commissioner\nLittle seconded the motion and the motion passed unanimously.\n\nRecreation Department Policy\n\nPage 4",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Sibley Place utility systems and other work; exact project sites pending",
+        "financial": "Amounts not verified.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "This existing entry is an umbrella category. The source establishes a sewer project east of Vinson Highway, not the existing map point. The point is not validated by this record.",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-13",
+      "name": "Public Safety Improvements",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-043"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Facilities and equipment; individual location pending",
+        "financial": "Amounts not verified.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-14",
+      "name": "Park and Recreation Improvements",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-043"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Broad group of parks work; may overlap golf and aquatic projects",
+        "financial": "Amounts not verified.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-15",
+      "name": "Other SPLOST / T-SPLOST Projects",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-042"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Placeholder for remaining program work; NOT one site",
+        "financial": "Amounts not verified; should be split into specific documented projects.",
+        "source": "Previous 15-item capital project tracking list",
+        "url": null,
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-16",
+      "name": "Development Authority — Sibley Place Property Disposition",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "September 28, 2026 authority agenda included an intergovernmental agreement regarding Sibley Place and executive session item 'Disposition of Real Estate.' This does NOT prove a sale, closing, buyer, or sale price.",
+        "financial": "A property sale was discussed as a research lead; no verified purchaser, completed transfer, price, or deed yet.",
+        "source": "Development Authority September 28, 2026 public meeting agenda",
+        "url": "https://developmilledgeville.com/news-announcements/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "research-17",
+      "name": "Beaver Creek Solar I",
+      "county_id": "13009",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Bond validation notice described an approximately 183 MW solar facility and 91.5 MW battery system on approximately 1,574 acres near Gordon Highway and JF Hall Road; site boundary and build status pending survey.",
+        "financial": "Public notice described *up to $497,000,000* in taxable industrial development revenue bonds — a maximum principal authorization, NOT county spending, a project payment, or taxpayer liability. Notice states special limited obligation payable from company funds.",
+        "source": "Union Recorder bond-validation legal notice August 25, 2026",
+        "url": "https://marketplace.unionrecorder.com/midgeville-ga/public-notices/notice-to-the-public-you-are-h/AC1E044E1425e2BF3FOhmK4B9A9C",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "jones-wyan-tidwell",
+      "name": "Wyan Avenue / Tidwell Drive — road improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 21090300,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": {
+        "text": "FY2025 LMIG listed in county plan; final fund ledger not obtained",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "timeline": {
+        "planned": "October 8, 2025 plan anticipated bidding in November 2025; current notice to proceed and completion not confirmed.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-035"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-035",
+          "page": 1,
+          "text": "    10       Wyan Ave./Tidwell Dr.         Full-Depth Reclamation and Resurfacing        $ 210,903       FY25 LMIG      2025               To Be Bid Out Nov. 2025                        Griswoldville Road Resurfacing (Partial) (2020)",
+          "scope": "County planning-table row"
+        }
+      ],
+      "existing_research": {
+        "status": "County plan dated October 8, 2025 lists reclamation and resurfacing of Wyan Avenue / Tidwell Drive. The 2026 procurement mirror names Wyan Avenue; inclusion of Tidwell Drive in that bid needs confirmation. Award and completion are not verified.",
+        "financial": "County planning estimate (2025): $210,903. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+        "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+        "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "jones-graham-woods",
+      "name": "Graham Woods Circle — road improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 47703900,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": {
+        "text": "FY2025 LMIG listed in county plan; final fund ledger not obtained",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "timeline": {
+        "planned": "October 8, 2025 plan anticipated bidding in November 2025; current notice to proceed and completion not confirmed.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-035"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-035",
+          "page": 1,
+          "text": "    6            Woodall Drive             Full-Depth Reclamation and Resurfacing        $     53,896    FY24 LMIG      2024       Bid Awarded; Notice to Proceed Nov. 2025             Graham Woods Circle - Patching and Resurfacing\n    11       Graham Woods Circle                  Patching and Resurfacing               $ 477,039       FY25 LMIG      2025               To Be Bid Out Nov. 2025                            Henry Drive - Patching and Resurfacing",
+          "scope": "County planning-table row"
+        }
+      ],
+      "existing_research": {
+        "status": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+        "financial": "County planning estimate (2025): $477,039. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+        "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+        "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "jones-kent-road",
+      "name": "Kent Road — road improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 20400700,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": {
+        "text": "FY2025 LMIG listed in county plan; final fund ledger not obtained",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "timeline": {
+        "planned": "October 8, 2025 plan anticipated bidding in November 2025; current notice to proceed and completion not confirmed.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-035"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-035",
+          "page": 1,
+          "text": "    12             Kent Road                      Patching and Resurfacing               $ 204,007       FY25 LMIG      2025               To Be Bid Out Nov. 2025                Homer Roberts Road - Reclamation and Resurfacing (2021)\n    16           Thornton Road                    Patching and Resurfacing               $ 318,923       FY25 LMIG      2025               To Be Bid Out Nov. 2025                             Kent Road - Patching and Resurfacing",
+          "scope": "County planning-table row"
+        }
+      ],
+      "existing_research": {
+        "status": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+        "financial": "County planning estimate (2025): $204,007. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+        "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+        "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "jones-henry-drive",
+      "name": "Henry Drive — road improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 37138100,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": {
+        "text": "FY2025 LMIG listed in county plan; final fund ledger not obtained",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "timeline": {
+        "planned": "October 8, 2025 plan anticipated bidding in November 2025; current notice to proceed and completion not confirmed.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-035"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-035",
+          "page": 1,
+          "text": "    11       Graham Woods Circle                  Patching and Resurfacing               $ 477,039       FY25 LMIG      2025               To Be Bid Out Nov. 2025                            Henry Drive - Patching and Resurfacing\n    13            Henry Drive                     Patching and Resurfacing               $ 371,381       FY25 LMIG      2025               To Be Bid Out Nov. 2025                       Homestead Drive - Reclamation and Resurfacing",
+          "scope": "County planning-table row"
+        }
+      ],
+      "existing_research": {
+        "status": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+        "financial": "County planning estimate (2025): $371,381. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+        "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+        "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "jones-castle-court",
+      "name": "Castle Court — road improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 12841500,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": {
+        "text": "FY2025 LMIG listed in county plan; final fund ledger not obtained",
+        "document_id": "source-035",
+        "page": 1
+      },
+      "timeline": {
+        "planned": "October 8, 2025 plan anticipated bidding in November 2025; current notice to proceed and completion not confirmed.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-035"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-035",
+          "page": 1,
+          "text": "    14            Castle Court                    Patching and Resurfacing               $ 128,415       FY25 LMIG      2025               To Be Bid Out Nov. 2025",
+          "scope": "County planning-table row"
+        }
+      ],
+      "existing_research": {
+        "status": "County plan dated October 8, 2025 lists patching and resurfacing. A 2026 procurement notice names this road; award and completion need confirmation.",
+        "financial": "County planning estimate (2025): $128,415. FY2025 LMIG listed. This is not a verified contract price or amount paid.",
+        "source": "Jones County Public Works transportation list, October 8, 2025, page 1; 2026 procurement reference PE-68400-NONST-2026-000000022 (secondary mirror).",
+        "url": "https://www.jonescountyga.org/wp-content/uploads/2021/07/Road-Project-Priority-List-New-Template-Updated-100825.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "jones-system-upgrades",
+      "name": "Water-system rehabilitation program",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 1701800000,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=10"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-03-01 to 2028-12-31. Lite-N-Tie mains and booster station; Griswoldville, Masseyville and Henderson Road facilities; system controls. Actual start, award and current progress are not confirmed.",
+        "financial": "Plan-listed estimated project cost: $17,018,000. Financing approval, contract value and payments are not established.",
+        "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 10.",
+        "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=10",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "jones-bradley-greene",
+      "name": "Bradley / Greene Settlement water improvements",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 1822409800,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-03-01 to 2028-03-01. Water-service improvements around SR 11, Hungerford Road, Settlement Road and Wheeler Road. Actual start, award and current progress are not confirmed.",
+        "financial": "Plan-listed estimated project cost: $18,224,098. Financing approval, contract value and payments are not established.",
+        "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 11.",
+        "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "jones-regional-water",
+      "name": "Jones–Wilkinson regional potable-water project",
+      "county_id": "13169",
+      "kind": "project",
+      "projected": {
+        "cents": 1567754700,
+        "label": "Planning estimate; not payment",
+        "source_url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Listed in GEFA's FY2025 draft drinking-water plan with estimated construction dates 2026-01-01 to 2028-01-01. Proposed water-treatment plant and elevated storage serving the southeastern Jones / northwestern Wilkinson area. Actual start, award and current progress are not confirmed.",
+        "financial": "Plan-listed estimated project cost: $15,677,547. Financing approval, contract value and payments are not established.",
+        "source": "Georgia Environmental Finance Authority, FY2025 draft Drinking Water State Revolving Fund Intended Use Plan, printed page 11.",
+        "url": "https://gefa.georgia.gov/document/document/fy-2025-supplemental-and-base-iup-draft/download#page=11",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "houston-sr127-water",
+      "name": "SR 127 water supply and treatment facility",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 1142852071,
+        "label": "contracted",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-09-22%20%20Minutes.pdf",
+        "document_id": "source-032",
+        "page": 4
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Parrish Construction Group",
+        "document_id": "source-032",
+        "page": 4
+      },
+      "authorization": {
+        "text": "September 22, 2026: Talton motion, Robinson second; unanimous approval.",
+        "document_id": "source-032",
+        "page": 4
+      },
+      "funding": {
+        "text": "Water Capital Funds",
+        "document_id": "source-032",
+        "page": 4
+      },
+      "timeline": {
+        "planned": "570 contract days; start notice and actual completion not obtained.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-032"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-032",
+          "page": 4,
+          "text": "Facility.\n\nMotion by Mr. Talton, second by Ms. Robinson, and carried unanimously by all to approve\nentering into a contract with Parrish Construction Group, of Perry, Georgia, with a Guaranteed\nMaximum Price of $11,428,520.71 to construct the SR 127 Water Supply & Treatment Facility.\nThis project will be funded by Water Capital Funds and has a contract time of 570 days. County\nconsulting engineers Carter & Sloope, Inc., recommend approval of this contract.\n\n\n\n               Houston County Commissioners Meeting Continued on Page 5",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Contract approved September 22, 2026; 570-day term.",
+        "financial": "Approved guaranteed maximum price $11,428,520.71; Water Capital Funds. Not an amount paid.",
+        "source": "Houston County official public source; 2026-09-22; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-09-22%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-2026-lmig",
+      "name": "2026 LMIG road resurfacing contract",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 294816775,
+        "label": "contracted",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Reames and Son Construction",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "authorization": {
+        "text": "October 6, 2026: Byrd motion, Gottwals second; unanimous correction of April 21 motion amount.",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "funding": {
+        "text": "Funding ledger not obtained",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "timeline": {
+        "planned": "Contract start, deadline and acceptance not obtained.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-033"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-033",
+          "page": 2,
+          "text": "Board meeting.\n\nMotion by Mr. Byrd, second by Mr. Talton, and carried unanimously by all to approve\ncorrecting the amount of the contract stated in the motion approving the 2026 LMIG Road\nProject changing the amount from $2,948,046.76 to $2,948,167.75. No correction is needed on\nthe contract signed with Reames and Son Construction.\n\n\n               Houston County Commissioners Meeting Continued on Page 10",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "April 21 approval; motion amount corrected October 6, 2026. Reames and Son Construction.",
+        "financial": "Corrected contract amount $2,948,167.75. Individual road allocations and payment totals not established.",
+        "source": "Houston County official public source; 2026-10-06; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-hema-pond",
+      "name": "HEMA warehouse detention-pond design",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 1475000,
+        "label": "contracted",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Axis Engineering Consultants, LLC",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "authorization": {
+        "text": "October 6, 2026: Robinson motion, Gottwals second; unanimous approval.",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "funding": {
+        "text": "General Fund",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "timeline": {
+        "planned": "Three months from notice to proceed; notice and acceptance not obtained.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-033"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-033",
+          "page": 3,
+          "text": "rehouse.\n\nMotion by Ms. Robinson, second by Mr. Gottwals, and carried unanimously by all to approve\nentering into a service agreement with Axis Engineering Consultants, LLC, of Warner Robins,\nGeorgia, in the amount of $14,750, for the design of a detention pond to provide stormwater\nmanagement for the HEMA Warehouse. This work will be funded by the General Fund and has\na timeline of three months from the issuance of the Notice to Proceed.\n\nMs. Robinson presented a request to approve a proposal to upgrade the fuel pumps, the fuel\nmanagement units, and software at the Warner Robins and Perry fuel stations.\n\nMotion by Ms. Robinson, second by Mr. Byrd, and carried unanimously by all to approve the\nproposal from MECO/Gasboy-EKOS, of Macon, Georgia, with a total turnkey cost of\n$281,358.40, and a recurring annual software cost of $6,336 after the first year, and an optional\nwarranty and maintenance coverage for years 2-5 is available at an annual cost of $9,470. This\nupgrade, with an eight-w",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Axis Engineering design agreement approved October 6, 2026; three months after notice to proceed.",
+        "financial": "Approved design fee $14,750; General Fund. Construction and payment not established.",
+        "source": "Houston County official public source; 2026-10-06; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-fuel-stations",
+      "name": "Warner Robins and Perry county fuel-station upgrades",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 28135840,
+        "label": "approved proposal",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "paid": null,
+      "contractor": {
+        "text": "MECO/Gasboy-EKOS",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "authorization": {
+        "text": "October 6, 2026: Robinson motion, Byrd second; unanimous approval.",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "funding": {
+        "text": "2018 SPLOST",
+        "document_id": "source-033",
+        "page": 3
+      },
+      "timeline": {
+        "planned": "Eight-week completion timeline; actual start and acceptance not obtained.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-033"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-033",
+          "page": 3,
+          "text": "tations.\n\nMotion by Ms. Robinson, second by Mr. Byrd, and carried unanimously by all to approve the\nproposal from MECO/Gasboy-EKOS, of Macon, Georgia, with a total turnkey cost of\n$281,358.40, and a recurring annual software cost of $6,336 after the first year, and an optional\nwarranty and maintenance coverage for years 2-5 is available at an annual cost of $9,470. This\nupgrade, with an eight-week completion timeline, will be funded by 2018 SPLOST.\n\nChairman Perdue thanked Purchasing Department staff for their help with this action and\ncommented on the reliability issues with the current pumps and how those issues could become\nserious for Sheriff’s Office staff attempting to refuel if the pumps were unavailable. He stated\nthat this would be a complete replacement of the pumps and fueling system with built-in fraud\nand theft prevention systems.\n\nMs. Robinson presented a request from the City of Warner Robins for approval of a\nMemorandum of Understanding that divides the 2026 Justice Ass",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "County approved MECO/Gasboy-EKOS upgrade October 6, 2026; eight-week schedule.",
+        "financial": "Turnkey $281,358.40; annual software $6,336 after year one. Optional maintenance is separate; 2018 SPLOST.",
+        "source": "Houston County official public source; 2026-10-06; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-judicial-hardware",
+      "name": "Judicial systems hardware replacement",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 42764480,
+        "label": "approved quote",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "paid": null,
+      "contractor": {
+        "text": "The Redesign Group",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "authorization": {
+        "text": "October 6, 2026: Byrd motion, Robinson second; unanimous approval.",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "funding": {
+        "text": "2018 SPLOST",
+        "document_id": "source-033",
+        "page": 2
+      },
+      "timeline": {
+        "planned": "Delivery/installation and acceptance not obtained.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-033"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-033",
+          "page": 2,
+          "text": "stems.\n\nMotion by Mr. Byrd, second by Mr. Gottwals, and carried unanimously by all to approve Quote\nQ-44362 from The Redesign Group, of El Segundo, California, in the amount of $427,644.80\nfor the replacement of the servers, storage, and network infrastructure supporting the County’s\nCourt Management software and related judicial systems.\n\nMr. Gottwals stated that this purchase would be funded by the 2018 SPLOST.\n\nMs. Robinson commented that the software changeover in 2019 was very difficult.\n\nChairman Perdue commented that this purchase is for a change and upgrade in hardware only,\nnot software, and that he also remembers the painful and difficult software changeover that\nCommissioner Robinson spoke of in the judicial software program.\n\nMr. Byrd presented a request to correct a motion amount on the 2026 LMIG Road Project\napproved at the April 21, 2026, Board meeting.\n\nMotion by Mr. Byrd, second by Mr. Talton, and carried unanimously by all to approve\ncorrecting the amount of the contr",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "County approved Redesign Group hardware quote October 6, 2026.",
+        "financial": "Approved quote $427,644.80; 2018 SPLOST. Payment not verified.",
+        "source": "Houston County official public source; 2026-10-06; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-06%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-publicworks-hvac",
+      "name": "Public Works administrative building HVAC replacement",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 6998500,
+        "label": "approved bid",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-09-22%20%20Minutes.pdf",
+        "document_id": "source-032",
+        "page": 5
+      },
+      "paid": null,
+      "contractor": {
+        "text": "Wilson Bryant Air Conditioning",
+        "document_id": "source-032",
+        "page": 5
+      },
+      "authorization": {
+        "text": "September 22, 2026: Byrd motion, Gottwals second; unanimous approval.",
+        "document_id": "source-032",
+        "page": 5
+      },
+      "funding": {
+        "text": "2018 SPLOST",
+        "document_id": "source-032",
+        "page": 5
+      },
+      "timeline": {
+        "planned": "Approximately two months equipment lead time, installation within one month after arrival.",
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-032"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-032",
+          "page": 5,
+          "text": "m Public Works for approval to replace the HVAC units at the\nPublic Works Administrative Building.\n\nMotion by Mr. Byrd, second by Mr. Gottwals, and carried unanimously by all to approve the\nbid from Wilson Bryant Air Conditioning of Macon, Georgia, in the amount of $69,985 to\nreplace three HVAC units at the Public Works Administrative Building. This item is in the\ncurrent-year budget and will be funded by the 2018 SPLOST. Equipment lead time is\napproximately two months, and installation will be completed within one month of arrival.\n\nMr. Byrd requested approval of the final closeout adjustment to the American Rescue Plan Act\n(ARPA) Fiscal Recovery Fund. All funds must be expended by December 31, 2026, and\ncloseout reporting sent to the U.S. Treasury.\n\nMotion by Mr. Byrd, second by Mr. Talton, and carried unanimously by all to approve the final\nARPA project budget adjustments shown below, and authorize the Accounting Department to\nfile the final U.S. Treasury closeout reports, with any",
+          "scope": "Relevant passage; full source text is separate"
+        }
+      ],
+      "existing_research": {
+        "status": "Three HVAC units approved September 22, 2026; Wilson Bryant Air Conditioning.",
+        "financial": "Approved bid $69,985; 2018 SPLOST. Installation completion not established.",
+        "source": "Houston County official public source; 2026-09-22; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-09-22%20%20Minutes.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-echeconnee-study",
+      "name": "Echeconnee Creek Park wetland and soil study",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": {
+        "cents": 910000,
+        "label": "proposed",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-20%20Department%20Head%20Copy.pdf"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": {
+        "text": "October 20, 2026 agenda request; no approved minutes obtained. Do not treat as an award.",
+        "document_id": "source-034"
+      },
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-034"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "On October 20, 2026 agenda. Approval has not been verified.",
+        "financial": "Proposed study fee $9,100; Recreational Funds/GOSP eligibility described. Not an awarded contract.",
+        "source": "Houston County official public source; 2026-10-20; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-20%20Department%20Head%20Copy.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-courthouse-hvac",
+      "name": "Superior Courthouse server-room HVAC replacement",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": {
+        "cents": 2921500,
+        "label": "proposed",
+        "source_url": "https://www.houstoncountyga.gov/minutes/2026-10-20%20Department%20Head%20Copy.pdf"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": {
+        "text": "October 20, 2026 agenda request; no approved minutes obtained. Do not treat as an award.",
+        "document_id": "source-034"
+      },
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-034"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Emergency replacement proposed on October 20, 2026 agenda; vote not verified.",
+        "financial": "Proposed bid $29,215 to 1st Mechanical Services; 2018 SPLOST. Not confirmed approved.",
+        "source": "Houston County official public source; 2026-10-20; reviewed October 20, 2026.",
+        "url": "https://www.houstoncountyga.gov/minutes/2026-10-20%20Department%20Head%20Copy.pdf",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "houston-northlake-dunbar",
+      "name": "North Houston Lake / Dunbar corridor improvements",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": {
+        "cents": 1590000000,
+        "label": "budgeted",
+        "source_url": "https://splost.houstoncountyga.gov/project/n-houston-lake-road-and-dunbar-road-improvements/"
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County SPLOST page lists corridor and intersection improvements; page last modified July 30, 2025. Current progress needs refresh.",
+        "financial": "Published project budget $15,900,000; not an expenditure total.",
+        "source": "Houston County official public source; 2025-07-30; reviewed October 20, 2026.",
+        "url": "https://splost.houstoncountyga.gov/project/n-houston-lake-road-and-dunbar-road-improvements/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "houston-thompson-extension",
+      "name": "Thompson Mill Road extension to GA 247",
+      "county_id": "13153",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County SPLOST page describes planned extension toward GA 247 / Piney Grove Road; last modified July 30, 2025.",
+        "financial": "Headline budget $13,900,000; phase table says $14,000,000. Figures conflict and need reconciliation; neither is payment.",
+        "source": "Houston County official public source; 2025-07-30; reviewed October 20, 2026.",
+        "url": "https://splost.houstoncountyga.gov/project/thompson-mill-road-extension/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "bibb-jail-expansion",
+      "name": "Law Enforcement Center renovation and expansion",
+      "county_id": "13021",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County reported next-phase groundbreaking July 30, 2026; Warren Associates named as builder.",
+        "financial": "Full-project estimate $28.5–31 million. Phase I approval $1,244,030 is a component, not an extra project total.",
+        "source": "Bibb County official public source; 2026-07-30; reviewed October 20, 2026.",
+        "url": "https://www.maconbibb.us/jailgroundbreaking2026/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "greene-north-rhodes",
+      "name": "North Rhodes Street — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.45 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-vandiver",
+      "name": "Vandiver Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.68 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-lewis-cemetery",
+      "name": "Lewis Cemetery Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.53 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-rock-hill-church",
+      "name": "Rock Hill Church Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 1.8 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-chico",
+      "name": "Chico Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.55 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-walker",
+      "name": "Walker Lane — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.2 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-margaret-grove",
+      "name": "Margaret Grove Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 0.65 miles; patching/resurfacing scope. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-lewis",
+      "name": "Lewis Road — 2026 LRA work",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": "Solicitation required start within 10 calendar days of notice to proceed and completion by September 18, 2026, subject to special provisions. Actual completion and approved extensions not obtained.",
+        "actual": null,
+        "schedule_status": "Cannot determine delay without notice to proceed, extensions and acceptance."
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-036"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County bid lists 1.23 miles; deep patch only. Award and actual completion not verified.",
+        "financial": "No verified award value or payment amount in the reviewed notice.",
+        "source": "Greene County official public source; 2026-04-10; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?PRINT=YES&bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references"
+    },
+    {
+      "id": "greene-2026-lmig-splost",
+      "name": "2026 LMIG / SPLOST road program",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County advertised PRL 2026-01–11 resurfacing and SB2026-12–20 shoulders; bid closed March 27, 2026.",
+        "financial": "31.42 miles resurfacing and 29.80 miles shoulders listed; award amount not verified.",
+        "source": "Greene County official public source; 2026-03-03; reviewed October 20, 2026.",
+        "url": "https://greenecountyga.gov/bids.aspx?bidID=31",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "greene-airport-apron",
+      "name": "Regional Airport apron rehabilitation — Phase II",
+      "county_id": "13133",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County advertised terminal-apron rehabilitation and reconstruction; bid closed June 22, 2026.",
+        "financial": "GDOT-funded bid; contract price and actual completion unverified.",
+        "source": "Greene County official public source; 2026-05-22; reviewed October 20, 2026.",
+        "url": "https://www.greenecountyga.gov/bids.aspx?bidID=33",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "putnam-stone-proposal",
+      "name": "Putnam County Stone industrial rezoning proposal",
+      "county_id": "13237",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County received updated application July 8, 2026 for approximately 342.87 acres, Agricultural to Industrial Manufacturing. Approval not established.",
+        "financial": "Private development proposal; no verified county spending figure.",
+        "source": "Putnam County official public source; 2026-07-08; reviewed October 20, 2026.",
+        "url": "https://putnamcountyga.us/m/newsflash/Home/Detail/19",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "washington-2026-roads",
+      "name": "2026 LMIG / LRA multi-county road program",
+      "county_id": "13303",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Washington county solicitation 2026-0025 closed August 13, 2026. Includes Washington roads and separate Jefferson work.",
+        "financial": "Award and county allocations not verified. Jefferson portions are not assigned to Washington.",
+        "source": "Washington County official solicitation 2026-0025; page date not stated; reviewed October 20, 2026.",
+        "url": "https://washingtoncountyga.gov/bids.aspx?bidID=32",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "wilkinson-courthouse-parking",
+      "name": "Courthouse parking-lot rehabilitation",
+      "county_id": "13319",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Official solicitation published February 23, 2026; closed March 26. Award/current condition unverified.",
+        "financial": "Price and payment not established.",
+        "source": "Wilkinson County official public source; 2026-02-23; reviewed October 20, 2026.",
+        "url": "https://www.wilkinsoncounty.net/notice-accepting-sealed-bids-for-wilkinson-county-courthouse-parking-lot-rehabilitation/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "wilkinson-convenience-ramp",
+      "name": "Gordon–McIntyre convenience-center ramp rehabilitation",
+      "county_id": "13319",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Official solicitation published February 17, 2026; closed March 19. Award and completion unverified.",
+        "financial": "Price and payment not established.",
+        "source": "Wilkinson County official public source; 2026-02-17; reviewed October 20, 2026.",
+        "url": "https://www.wilkinsoncounty.net/notice-accepting-sealed-bids-for-gordon-mcintyre-road-convenience-center-ramp-rehabilitation/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "wilkinson-railroad-street",
+      "name": "Railroad Street resurfacing",
+      "county_id": "13319",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "County solicitation names approximately 0.75 miles; closed March 12, 2026. Work limits and award need review.",
+        "financial": "No verified contract price or paid amount.",
+        "source": "Wilkinson County official public source; 2026-02-17; reviewed October 20, 2026.",
+        "url": "https://www.wilkinsoncounty.net/notice-accepting-sealed-bids-pertaining-to-road-resurfacing-road-maintenance-and-asphalt-replacement-for-the-following-locations-1-railroad-street-%C2%B10-75-l-m/",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "peach-riip-connector",
+      "name": "Robins International Industrial Park connecting road",
+      "county_id": "13225",
+      "kind": "project",
+      "projected": null,
+      "contract": {
+        "cents": 200000000,
+        "label": "grant announced",
+        "source_url": "https://peachcountydevelopment.com/news/article/peach-county-receives-2mm-in-grant-funding-for-new-road"
+      },
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Development authority announced road grant December 10, 2024. Current construction status needs an updated record.",
+        "financial": "Announced grant $2,000,000; not a total construction cost or amount spent.",
+        "source": "Peach County official public source; 2024-12-10; reviewed October 20, 2026.",
+        "url": "https://peachcountydevelopment.com/news/article/peach-county-receives-2mm-in-grant-funding-for-new-road",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "peach-megasite-infrastructure",
+      "name": "Middle Georgia MegaSite infrastructure planning",
+      "county_id": "13225",
+      "kind": "project",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": null,
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Authority page describes wastewater expansion preliminary design. Marketing/planning statements do not establish an approved construction contract.",
+        "financial": "No verified public project cost or expenditure total.",
+        "source": "Peach County official public source; page date not stated; reviewed October 20, 2026.",
+        "url": "https://peachcountydevelopment.com/mgms",
+        "observation": null
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected"
+    },
+    {
+      "id": "bmw-reviewed-road-1",
+      "name": "Admiralty Way",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 47763500,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 1
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-015",
+        "source-028",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 1,
+          "text": "Subtotal Admiralty Way                                                        $477,635.00                    $387,216.82                     $0.00                            $387,216.82",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "Road inspected; detailed condition findings have not been entered into this public record."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 38721682,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 1
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-2",
+      "name": "Forrest Hill Road",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 48644670,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 2
+      },
+      "contract": null,
+      "paid": {
+        "cents": 8229375,
+        "label": "One documented check for Forrest Hill full-depth reclamation only; not the whole-road paid total",
+        "document_id": "source-001",
+        "page": 1,
+        "as_of": "2024-10-04",
+        "partial": true
+      },
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-014",
+        "source-028",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 2,
+          "text": "Subtotal Forrest Hill Road                                               $486,446.70              $474,050.24             $136.50                     $474,186.74",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "resurfaced; pavement looked good; white edge lines and double-yellow centerlines visible."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 47418674,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 2
+      },
+      "gaps": [
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Final paid-to-date project ledger and subsequent payments",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-3",
+      "name": "Highview Road",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 56984845,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 2
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-028",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 2,
+          "text": "Subtotal Highview Road                                                 $569,848.45              $538,303.03             $105.00                     $538,408.03",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "Road inspected; detailed condition findings have not been entered into this public record."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 54814805,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 2
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-4",
+      "name": "Hardwick Street",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 8059925,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 2
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-026",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 2,
+          "text": "Subtotal Hardwick Street                                                $80,599.25               $88,675.28               $0.00                      $88,675.28",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Concern reported",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "resurfaced roadway showing cracking and potholes."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 8867528,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 2
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-5",
+      "name": "Knight Circle (Night Circle)",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 4571250,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 3
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-031",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 3,
+          "text": "Subtotal Knight Circle                                                            $45,712.50                    $48,047.58                $115.50                       $48,163.08",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Concern reported",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "repaved; no white edge lines observed; some centerline markings appeared doubled."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 4928308,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 3
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-6",
+      "name": "Grace Court",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 3668250,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 3
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 3,
+          "text": "Subtotal Grace Court                                                             $36,682.50                    $51,207.19                $126.00                       $51,333.19",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "resurfaced short dead-end road, generally decent pavement condition."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 5245319,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 3
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-7",
+      "name": "West Lakeview Lane",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": {
+        "cents": 5981000,
+        "label": "Invoice estimated work subtotal; not an independently adopted budget",
+        "document_id": "source-010",
+        "page": 3
+      },
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-030",
+        "source-021"
+      ],
+      "excerpts": [
+        {
+          "document_id": "source-010",
+          "page": 3,
+          "text": "Subtotal West Lakeview Lane                                                           $59,810.00                    $67,123.38                $84.00                        $67,207.38",
+          "scope": "Full road subtotal row; columns are estimated total, previous amount, current invoice, job to date"
+        }
+      ],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Surface Masters invoice #7047 (February 28, 2025), county documents supplied October 15, 2026; summarized in Baldwin County Road Projects Dashboard.",
+        "url": null,
+        "observation": "Road inspected; detailed condition findings have not been entered into this public record."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "billed": {
+        "cents": 6840738,
+        "label": "Road subtotal in June 6, 2025 invoice schedule; excludes unallocated lump-sum work",
+        "document_id": "source-021",
+        "page": 3
+      },
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "money_trace_ids": [
+        "baldwin-surface-payments"
+      ],
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-8",
+      "name": "Pineway Drive SE",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": null,
+      "authorization": null,
+      "funding": null,
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+        "url": null,
+        "observation": "Road inspected; the name has not been reconciled with the separate Pineaway Drive entry in county billing records."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "scope_note": "No road-specific contract or payment evidence was found for Pineway Drive in this acquired packet. Field inspection is retained separately.",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Source text not yet collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Source records not yet collected",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority",
+        "Fund used to pay for this project"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-9",
+      "name": "Fairfield Avenue SE",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-029"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+        "url": null,
+        "observation": "Road inspected; additional field observations have not yet been published."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    },
+    {
+      "id": "bmw-reviewed-road-10",
+      "name": "Lakeland Avenue",
+      "county_id": "13009",
+      "kind": "road",
+      "projected": null,
+      "contract": null,
+      "paid": null,
+      "contractor": {
+        "text": "The Surface Masters, Inc. — 2024 LMIG contract; road-specific payment allocation needs reconciliation",
+        "document_id": "source-017"
+      },
+      "authorization": null,
+      "funding": {
+        "text": "2024 LMIG named in contract; road-level fund disbursement ledger not obtained",
+        "document_id": "source-017"
+      },
+      "timeline": {
+        "planned": null,
+        "actual": "Field inspection recorded by Baldwin Minute Watch; this does not establish contractual completion or financial closeout.",
+        "schedule_status": "Not established"
+      },
+      "budget_status": "Not established",
+      "documents": [
+        "source-017",
+        "source-010",
+        "source-011",
+        "source-012",
+        "source-001",
+        "source-029"
+      ],
+      "excerpts": [],
+      "existing_research": {
+        "status": "Completed",
+        "financial": null,
+        "source": "Baldwin Minute Watch inspection-tracking update, October 18, 2026; supporting road-level financial documents not yet matched.",
+        "url": null,
+        "observation": "Road inspected; additional field observations have not yet been published."
+      },
+      "complete": false,
+      "reviewed_on": "2026-10-20",
+      "gaps": [
+        "Spending total not obtained from the sources collected",
+        "Scanned source text may need corrections"
+      ],
+      "evidence_status": "Documented figures with source references",
+      "collection_gaps": [
+        "Project/job identifier and spending ledger",
+        "Paid invoices and checks for this project",
+        "Dated approval or contract authority"
+      ]
+    }
+  ],
+  "money_traces": [
+    {
+      "id": "baldwin-2023-governmental",
+      "county_id": "13009",
+      "title": "2023 county governmental funds",
+      "status": "Balances within annual report",
+      "period": "January 1–December 31, 2023",
+      "result": "The reported opening balance, income, spending and financing movements reconcile to the closing fund balance.",
+      "rollforward": {
+        "opening_cents": 1549408000,
+        "revenue_cents": 5388234000,
+        "expenditure_cents": 5673631400,
+        "other_financing_net_cents": -155856900,
+        "reported_closing_cents": 1108153700,
+        "calculated_closing_cents": 1108153700,
+        "difference_cents": 0
+      },
+      "source_url": "https://ted.cviog.uga.edu/financial-documents/sites/default/files/budgetdoc/financial-report/county-baldwin-fy2023-financial-report.pdf",
+      "source_label": "County annual report, printed page 17",
+      "limit": "This checks the published accounting totals; it does not establish current bank cash or clear individual transactions."
+    },
+    {
+      "id": "baldwin-2023-general",
+      "county_id": "13009",
+      "title": "Where the 2023 General Fund balance went",
+      "status": "Balances within annual report",
+      "period": "January 1–December 31, 2023",
+      "result": "The $5,014,723 reduction is explained by reported spending and financing movements. It is not an unexplained missing-money figure.",
+      "rollforward": {
+        "opening_cents": 1250109600,
+        "revenue_cents": 3038067200,
+        "expenditure_cents": 3142698800,
+        "other_financing_net_cents": -396840700,
+        "reported_closing_cents": 748637300,
+        "calculated_closing_cents": 748637300,
+        "difference_cents": 0
+      },
+      "source_url": "https://ted.cviog.uga.edu/financial-documents/sites/default/files/budgetdoc/financial-report/county-baldwin-fy2023-financial-report.pdf",
+      "source_label": "County annual report, printed pages 17 and 19",
+      "limit": "Other financing is $695,339 coming in and $4,663,746 transferred out. The beginning and ending amounts are fund balances, not bank-account balances."
+    },
+    {
+      "id": "baldwin-surface-payments",
+      "county_id": "13009",
+      "record_id": "research-03",
+      "title": "Surface Masters — invoices to checks",
+      "status": "Supplied invoices match supplied checks",
+      "period": "October 4, 2024–October 24, 2025",
+      "result": "Nine unique checks match eleven invoice amounts, including the retainage release. Two repeated check copies are counted once.",
+      "paid_cents": 446512641,
+      "invoice_due_cents": 446512641,
+      "difference_cents": 0,
+      "checks": [
+        {
+          "number": "1159295",
+          "date": "10/04/2024",
+          "cents": 8229375,
+          "invoices": [
+            {
+              "number": "6759",
+              "date": "10/3/2024",
+              "cents": 8229375,
+              "source": {
+                "document_id": "source-014",
+                "page": 1
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 1
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1159827",
+          "date": "11/22/2024",
+          "cents": 185670476,
+          "invoices": [
+            {
+              "number": "6860",
+              "date": "11/11/2024",
+              "cents": 185670476,
+              "source": {
+                "document_id": "source-012",
+                "page": 4
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 2
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1160567",
+          "date": "02/06/2025",
+          "cents": 135648788,
+          "invoices": [
+            {
+              "number": "6941",
+              "date": "12/2/2024",
+              "cents": 135648788,
+              "source": {
+                "document_id": "source-022",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 3
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1160268",
+          "date": "01/15/2025",
+          "cents": 35504490,
+          "invoices": [
+            {
+              "number": "6980",
+              "date": "12/19/2024",
+              "cents": 35504490,
+              "source": {
+                "document_id": "source-018",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 4
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1161022",
+          "date": "03/13/2025",
+          "cents": 3914582,
+          "invoices": [
+            {
+              "number": "7014",
+              "date": "1/31/2025",
+              "cents": 3914582,
+              "source": {
+                "document_id": "source-011",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 5
+          },
+          "duplicate_pages": [
+            6
+          ]
+        },
+        {
+          "number": "1160893",
+          "date": "03/04/2025",
+          "cents": 669330,
+          "invoices": [
+            {
+              "number": "7047",
+              "date": "2/28/2025",
+              "cents": 669330,
+              "source": {
+                "document_id": "source-010",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 7
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1161936",
+          "date": "06/06/2025",
+          "cents": 24533142,
+          "invoices": [
+            {
+              "number": "1077",
+              "date": "5/1/2025",
+              "cents": 1350000,
+              "source": {
+                "document_id": "source-020",
+                "page": 3
+              }
+            },
+            {
+              "number": "7087",
+              "date": "3/31/2025",
+              "cents": 23183142,
+              "source": {
+                "document_id": "source-019",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 8
+          },
+          "duplicate_pages": [
+            9
+          ]
+        },
+        {
+          "number": "1162478",
+          "date": "08/05/2025",
+          "cents": 46367459,
+          "invoices": [
+            {
+              "number": "1130",
+              "date": "6/6/2025",
+              "cents": 1850445,
+              "source": {
+                "document_id": "source-023",
+                "page": 3
+              }
+            },
+            {
+              "number": "RET24422",
+              "date": "6/6/2025",
+              "cents": 44517014,
+              "source": {
+                "document_id": "source-021",
+                "page": 3
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 10
+          },
+          "duplicate_pages": []
+        },
+        {
+          "number": "1163381",
+          "date": "10/24/2025",
+          "cents": 5974999,
+          "invoices": [
+            {
+              "number": "1330",
+              "date": "8/26/2025",
+              "cents": 5974999,
+              "source": {
+                "document_id": "source-013",
+                "page": 1
+              }
+            }
+          ],
+          "source": {
+            "document_id": "source-001",
+            "page": 11
+          },
+          "duplicate_pages": []
+        }
+      ],
+      "invoice_allocations": [
+        {
+          "number": "6759",
+          "date": "10/3/2024",
+          "cents": 8229375,
+          "source": {
+            "document_id": "source-014",
+            "page": 1
+          },
+          "check_number": "1159295",
+          "check_date": "10/04/2024",
+          "invoice_due_cents": 8229375,
+          "difference_cents": 0
+        },
+        {
+          "number": "6860",
+          "date": "11/11/2024",
+          "cents": 185670476,
+          "source": {
+            "document_id": "source-012",
+            "page": 4
+          },
+          "check_number": "1159827",
+          "check_date": "11/22/2024",
+          "invoice_due_cents": 185670476,
+          "difference_cents": 0
+        },
+        {
+          "number": "6941",
+          "date": "12/2/2024",
+          "cents": 135648788,
+          "source": {
+            "document_id": "source-022",
+            "page": 3
+          },
+          "check_number": "1160567",
+          "check_date": "02/06/2025",
+          "invoice_due_cents": 135648788,
+          "difference_cents": 0
+        },
+        {
+          "number": "6980",
+          "date": "12/19/2024",
+          "cents": 35504490,
+          "source": {
+            "document_id": "source-018",
+            "page": 3
+          },
+          "check_number": "1160268",
+          "check_date": "01/15/2025",
+          "invoice_due_cents": 35504490,
+          "difference_cents": 0
+        },
+        {
+          "number": "7014",
+          "date": "1/31/2025",
+          "cents": 3914582,
+          "source": {
+            "document_id": "source-011",
+            "page": 3
+          },
+          "check_number": "1161022",
+          "check_date": "03/13/2025",
+          "invoice_due_cents": 3914582,
+          "difference_cents": 0
+        },
+        {
+          "number": "7047",
+          "date": "2/28/2025",
+          "cents": 669330,
+          "source": {
+            "document_id": "source-010",
+            "page": 3
+          },
+          "check_number": "1160893",
+          "check_date": "03/04/2025",
+          "invoice_due_cents": 669330,
+          "difference_cents": 0
+        },
+        {
+          "number": "1077",
+          "date": "5/1/2025",
+          "cents": 1350000,
+          "source": {
+            "document_id": "source-020",
+            "page": 3
+          },
+          "check_number": "1161936",
+          "check_date": "06/06/2025",
+          "invoice_due_cents": 1350000,
+          "difference_cents": 0
+        },
+        {
+          "number": "7087",
+          "date": "3/31/2025",
+          "cents": 23183142,
+          "source": {
+            "document_id": "source-019",
+            "page": 3
+          },
+          "check_number": "1161936",
+          "check_date": "06/06/2025",
+          "invoice_due_cents": 23183142,
+          "difference_cents": 0
+        },
+        {
+          "number": "1130",
+          "date": "6/6/2025",
+          "cents": 1850445,
+          "source": {
+            "document_id": "source-023",
+            "page": 3
+          },
+          "check_number": "1162478",
+          "check_date": "08/05/2025",
+          "invoice_due_cents": 1850445,
+          "difference_cents": 0
+        },
+        {
+          "number": "RET24422",
+          "date": "6/6/2025",
+          "cents": 44517014,
+          "source": {
+            "document_id": "source-021",
+            "page": 3
+          },
+          "check_number": "1162478",
+          "check_date": "08/05/2025",
+          "invoice_due_cents": 44517014,
+          "difference_cents": 0
+        },
+        {
+          "number": "1330",
+          "date": "8/26/2025",
+          "cents": 5974999,
+          "source": {
+            "document_id": "source-013",
+            "page": 1
+          },
+          "check_number": "1163381",
+          "check_date": "10/24/2025",
+          "invoice_due_cents": 5974999,
+          "difference_cents": 0
+        }
+      ],
+      "documents": [
+        "source-001",
+        "source-020",
+        "source-023",
+        "source-013",
+        "source-014",
+        "source-012",
+        "source-022",
+        "source-018",
+        "source-011",
+        "source-010",
+        "source-019",
+        "source-021"
+      ],
+      "limit": "Matching a county check copy establishes the recorded payment, not that the check cleared the bank or the work met specifications. This is the supplied packet, not a complete county ledger."
+    },
+    {
+      "id": "baldwin-surface-authority",
+      "county_id": "13009",
+      "record_id": "research-03",
+      "title": "Surface Masters — contract and final billing",
+      "status": "Contract-to-payment difference needs explanation",
+      "period": "2024 LMIG project; payment records through October 24, 2025",
+      "result": "Recorded payments exceed the last supplied change-order contract total by $173,537.06. Unit-price quantity changes may explain some or all of this; the supplied packet does not provide a final approved reconciliation.",
+      "original_contract_cents": 365818585,
+      "change_orders_cents": 63340350,
+      "revised_contract_cents": 429158935,
+      "paid_cents": 446512641,
+      "difference_cents": 17353706,
+      "documents": [
+        "source-001",
+        "source-016",
+        "source-020",
+        "source-021",
+        "source-023",
+        "source-013"
+      ],
+      "limit": "This is a difference requiring a quantity and authorization explanation, not a finding of theft or overpayment. The final quantity schedule plus lump sums is $4,451,701.42; separately billed Wright Street work is $15,000 gross. That combined $4,466,701.42 is $1,575.01 above recorded checks. The retainage schedule excludes the $15,000 from its lump-sum column, although invoice 1077 includes it. Obtain the final quantity certificate, all revisions, credits and retainage ledger."
+    },
+    {
+      "id": "baldwin-pittman-2025",
+      "county_id": "13009",
+      "record_id": "research-02",
+      "title": "Pittman — 2025 payment gap",
+      "status": "2025 payment records not supplied",
+      "period": "2025 LMIG contract",
+      "result": "The supplied 109-page invoice/check packet contains older LMIG projects. The three identified 2023 LMIG checks total $1,138,983.74 and cannot be used as payments against the 2025 contract.",
+      "older_project_checks": [
+        {
+          "number": "1154714",
+          "date": "09/15/2023",
+          "cents": 21484295,
+          "source": {
+            "document_id": "source-002",
+            "page": 107
+          }
+        },
+        {
+          "number": "1156323",
+          "date": "01/26/2024",
+          "cents": 32327489,
+          "source": {
+            "document_id": "source-002",
+            "page": 108
+          }
+        },
+        {
+          "number": "1156539",
+          "date": "02/16/2024",
+          "cents": 60086590,
+          "source": {
+            "document_id": "source-002",
+            "page": 109
+          }
+        }
+      ],
+      "documents": [
+        "source-002",
+        "source-008",
+        "source-009"
+      ],
+      "limit": "The older check total is partial history, not a final project cost or a 2025 spending total. Obtain the 2025 project/job number, vendor ledger and corresponding invoices and checks."
+    },
+    {
+      "id": "baldwin-pittman-authority",
+      "county_id": "13009",
+      "record_id": "research-02",
+      "title": "Pittman — approval question identified in county-published report",
+      "status": "Published finding; underlying approvals needed",
+      "period": "Sawyer report dated April 22, 2026",
+      "result": "The county-published investigator report identifies $1,396,172.95 of changes and $666,245.00 of Board-approved changes, leaving $729,927.95 identified by the investigator as lacking Board approval.",
+      "change_orders_cents": 139617295,
+      "approved_changes_cents": 66624500,
+      "difference_cents": 72992795,
+      "documents": [
+        "source-037"
+      ],
+      "source_url": "https://www.baldwincountyga.com/DocumentCenter/View/355/Sawyer-Forensic-Investigation-Report",
+      "source_label": "County-published Sawyer report, page 37",
+      "limit": "This is the investigator’s finding as of the report date. The underlying approvals and any later ratification must be obtained to update it; it does not establish how much of the 2025 contract was paid."
+    }
+  ],
+  "reporting_record": {
+    "county_id": "13009",
+    "document_id": "source-042",
+    "note": "County-supplied unsigned Resolution 2026-73 describes monthly cash, obligations and project-spending reports, with the first report due within 30 days of adoption. Verify adoption and request the reports; an unsigned copy does not prove a missed deadline."
+  }
+}

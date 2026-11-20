@@ -1,0 +1,55 @@
+{
+  "imported_on": "2026-11-20",
+  "source_origin": "https://bmw-legacy-consolidation-preview.otiseduncan.workers.dev",
+  "normalizer_sha256": "01e529b3bddb91791f2466c811b4a2f67facc925bbb336b05d2e471013bbcf50",
+  "files": [
+    {
+      "path": "/project-evidence.json",
+      "bytes": 171465,
+      "sha256": "94e63995d21cd66d882de6fd768c4a35375039debea2f0603c8fbcf01b6e83c1",
+      "live_sha256": "94e63995d21cd66d882de6fd768c4a35375039debea2f0603c8fbcf01b6e83c1"
+    },
+    {
+      "path": "/projects.json",
+      "bytes": 14589,
+      "sha256": "bf7ca2a591a77fd06ea4f6709a4f76562726ecb94fff13834efb1e217a97e300",
+      "live_sha256": "bf7ca2a591a77fd06ea4f6709a4f76562726ecb94fff13834efb1e217a97e300"
+    },
+    {
+      "path": "/roads.json",
+      "bytes": 18188,
+      "sha256": "0f2ef8e694b4e04878a251f4c9ed9c1f887fe1f0cd47eb49848c5b4f03d671ce",
+      "live_sha256": "0f2ef8e694b4e04878a251f4c9ed9c1f887fe1f0cd47eb49848c5b4f03d671ce"
+    },
+    {
+      "path": "/geo/tiger/project-roads.geojson",
+      "bytes": 230418,
+      "sha256": "4c0abfa5437bf0d340a09dc77be7dde643a48b960aac61ebb23bd0f1c118bcc6",
+      "live_sha256": "4c0abfa5437bf0d340a09dc77be7dde643a48b960aac61ebb23bd0f1c118bcc6"
+    },
+    {
+      "path": "/jones-projects.json",
+      "bytes": 15521,
+      "sha256": "52c3fd66c0a55de075219833bbb74c3b581a02231a3cf17b8995c7cf245d4b14",
+      "live_sha256": "52c3fd66c0a55de075219833bbb74c3b581a02231a3cf17b8995c7cf245d4b14"
+    },
+    {
+      "path": "/regional-projects.json",
+      "bytes": 43096,
+      "sha256": "d1977757f521052e50854df7b9a74d1a2c896a716db428839573cc89e04562f7",
+      "live_sha256": "d1977757f521052e50854df7b9a74d1a2c896a716db428839573cc89e04562f7"
+    },
+    {
+      "path": "/coverage-projects.json",
+      "bytes": 91029,
+      "sha256": "3ab6867ef8bda68dc40833da97cd7e5fd4306bbbb949a336b1cd3bac5add53fa",
+      "live_sha256": "3ab6867ef8bda68dc40833da97cd7e5fd4306bbbb949a336b1cd3bac5add53fa"
+    },
+    {
+      "path": "/ga-county-coverage.json",
+      "bytes": 952391,
+      "sha256": "7464b89c8f51c1a27a262d2da29b7f4b50987ba73b9a429fc640dbdc97dea420",
+      "live_sha256": "7464b89c8f51c1a27a262d2da29b7f4b50987ba73b9a429fc640dbdc97dea420"
+    }
+  ]
+}

@@ -54,6 +54,7 @@ export async function searchPage({ view, query }) {
           r.verification_state ? verificationBadge(r.verification_state) : null, id === "community" ? h("span.badge", "Community opinion") : null),
         r.excerpt ? h("p", highlight(r.excerpt, q)) : null)),
       id === 'archive' ? h('p', h('a', { href: '/legacy/records' + qs({ q, jurisdiction: 'all' }) }, `Browse all ${n(data.archiveTotal)} archive matches`)) :
+      id === 'map' ? h('p',h('a',{href:'/map'+qs({q})},'Explore all matching map records')) :
       !type && items.length >= 8 ? h("p", h("a", { href: "/search" + qs({ q, type: id }) }, `More ${title.toLowerCase()} `, icon("arrow", 14))) : null));
   }
 }

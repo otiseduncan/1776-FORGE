@@ -8,7 +8,9 @@ describe("interactive map data", () => {
   test("no fabricated features; condition ratings must cite a source", async () => {
     const app = createApp();
     const fc = await app.call("GET", "/api/map/features");
-    assert.deepEqual(fc.body, { type: "FeatureCollection", features: [] });
+    assert.equal(fc.body.type, 'FeatureCollection');
+    assert.equal(fc.body.features.length,127,'the preserved published catalogue is included');
+    assert.ok(fc.body.features.every((f: any)=>f.properties.origin==='preserved_map'));
     const r = await app.user("researcher");
     const member = await app.user("member");
     assert.equal((await app.call("POST", "/api/map/features", { user: member, body: { kind: "road", title: "Main St", geometry: LINE } })).status, 403);
@@ -19,9 +21,9 @@ describe("interactive map data", () => {
     const gray = await app.call("POST", "/api/map/features", { user: r, body: { kind: "project", title: "Unrated project", geometry: { type: "Point", coordinates: [-83.23, 33.08] }, condition_state: "gray" } });
     assert.equal(gray.status, 201, "gray = no rating, needs no source");
     const all = await app.call("GET", "/api/map/features");
-    assert.equal(all.body.features.length, 2);
-    assert.equal((await app.call("GET", "/api/map/features?kind=road")).body.features.length, 1);
-    assert.equal((await app.call("GET", "/api/map/features?jurisdiction=ga-baldwin")).body.features.length, 1, "county filter includes its cities");
+    assert.equal(all.body.features.filter((f: any)=>!f.properties.origin).length, 2);
+    assert.equal((await app.call("GET", "/api/map/features?kind=road")).body.features.filter((f: any)=>!f.properties.origin).length, 1);
+    assert.equal((await app.call("GET", "/api/map/features?jurisdiction=ga-baldwin")).body.features.filter((f: any)=>!f.properties.origin).length, 1, "county filter includes its cities");
     const detail = await app.call("GET", `/api/map/features/${ok.body.id}`);
     assert.equal(detail.body.citations[0].url, "https://example.gov/roads-report.pdf");
     assert.equal(detail.body.feature.created_by, undefined);

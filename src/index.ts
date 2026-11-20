@@ -91,7 +91,7 @@ export default {
     if (url.pathname.startsWith("/api/")) return handleApi(request, env, exec);
     if (url.pathname === "/sitemap.xml") return sitemap(env, url.origin);
     if (url.pathname === "/robots.txt") return robots(url.origin, env);
-    if (!url.pathname.startsWith("/assets/") && !url.pathname.startsWith("/js/") && !url.pathname.startsWith("/css/") && !url.pathname.startsWith("/vendor/") && (request.method === "GET" || request.method === "HEAD")) return renderShell(request, env, url);
+    if (!url.pathname.startsWith("/assets/") && !url.pathname.startsWith("/data/") && !url.pathname.startsWith("/js/") && !url.pathname.startsWith("/css/") && !url.pathname.startsWith("/vendor/") && (request.method === "GET" || request.method === "HEAD")) return renderShell(request, env, url);
     return env.ASSETS.fetch(request);
   },
 

@@ -1,0 +1,293 @@
+[
+  {
+    "id": "research-01",
+    "name": "Aquatic Center",
+    "category": "Facility",
+    "stage": "Construction previously tracked; current site status unverified",
+    "financial": "Revised Aquatic Center contract: $6,998,909.17, according to the April 22, 2026 county-published report, page 38. Paid-to-date total not collected.",
+    "source": "Prior Baldwin Minute Watch capital-project research, 2025–2026",
+    "url": null,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.27707529067995,
+        33.093465090502214
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "59 GA Highway 22 West, Milledgeville, GA 31061",
+    "location_note": "Confirmed facility address; pin should be placed on aquatic center itself, not merely at street-address geocode.",
+    "location_source": "https://www.splashbaldwin.com/"
+  },
+  {
+    "id": "research-02",
+    "name": "Pittman Construction Road Resurfacing",
+    "category": "Road program",
+    "stage": "Multiple roads; review contract and inspection phases",
+    "financial": "2025 original contract $4,614,179.69; original plus report-listed changes $6,010,352.64. 2025 payments not supplied; the acquired check packet concerns older LMIG jobs.",
+    "source": "Prior Baldwin Minute Watch project comparison; 2023 and 2025 contract packets",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple roads in 2023/2025 contract packets",
+    "location_note": "Umbrella resurfacing contract; individual roads should be mapped separately.",
+    "location_source": ""
+  },
+  {
+    "id": "research-03",
+    "name": "Surface Masters Resurfacing",
+    "category": "Road program",
+    "stage": "2024 LMIG resurfacing contract; several roads separately mapped",
+    "financial": "County checks total $4,465,126.41 through October 24, 2025 and match eleven supplied invoice dues. Last supplied revised contract $4,291,589.35; $173,537.06 difference needs final quantity and approval reconciliation.",
+    "source": "Baldwin road-contract audit findings, October 15, 2026",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple roads in 2024 LMIG contract",
+    "location_note": "Umbrella resurfacing contract; individual inspected roads are already on the map.",
+    "location_source": ""
+  },
+  {
+    "id": "research-04",
+    "name": "Roberts Land Management",
+    "category": "Contract / site work",
+    "stage": "Earlier project tracking; work location and status require verification",
+    "financial": "The county-published April 22, 2026 investigator report, page 33, identifies $2,031,998.32 in expenditures for Roberts Land Management.",
+    "source": "Prior Baldwin Minute Watch project dashboard",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Address not confirmed in records reviewed",
+    "location_note": "Do not pin until site/parcel verified.",
+    "location_source": ""
+  },
+  {
+    "id": "research-05",
+    "name": "Little Fishing Creek Golf Course",
+    "category": "Recreation",
+    "stage": "Course improvements and related work; site review pending",
+    "financial": "The county-published April 22, 2026 investigator report, page 34, identifies $475,574 in 2025 golf-course expenditures and separately $673,852 encumbered/unpaid for 2026. Earlier $6,998,714 figure is unsupported for this scope.",
+    "source": "Prior Baldwin Minute Watch project research",
+    "url": null,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.28327655792238,
+        33.099451171056074
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "65 Highway 22 West, Milledgeville, GA 31061",
+    "location_note": "Confirmed golf course mailing/site address; pinpoint course work during visit.",
+    "location_source": "https://www.littlefishingcreek.com/contact-us"
+  },
+  {
+    "id": "research-06",
+    "name": "Trackman Golf Facility",
+    "category": "Recreation",
+    "stage": "Trackman installation and covered practice bays; site inspection pending",
+    "financial": "Earlier reporting referenced $1,800,000 as an estimate or proposal, NOT confirmed payment or authorized final project cost. Earlier plans discussed 14 bays; later publicity described 13.",
+    "source": "Baldwin County 2025 meetings; December 2025 electrical/fiber procurement; Visit Milledgeville June 2026",
+    "url": null,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.28404903411867,
+        33.09344711367042
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "65 Highway 22 West, Milledgeville, GA 31061",
+    "location_note": "At driving range within Little Fishing Creek golf course. Exact bay position needs map click.",
+    "location_source": "https://www.visitmilledgeville.org/listings/trackman-at-little-fishing-creek-golf-course/42252/"
+  },
+  {
+    "id": "research-07",
+    "name": "Sibley Place Industrial Park",
+    "category": "Economic development",
+    "stage": "Site preparation, entrance road and infrastructure",
+    "financial": "Resolution R-2025-68 describes a $2,000,000 OneGeorgia award for site work. Earlier project estimate $2,194,000 not confirmed as final expenditure.",
+    "source": "Baldwin County meeting packet, Resolution R-2025-68",
+    "url": "https://mccmeetings.blob.core.usgovcloudapi.net/baldwincga-pubu/MEET-Packet-e001f68f929f4fce8b85ca721842499b.pdf",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.25688362121583,
+        33.04493224086592
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Milledgeville Road, Milledgeville, GA 31061; published parcel area center 33.0381, -83.2722",
+    "location_note": "Published parcel location (approximately 1,643 acres); not a verified entrance or building location.",
+    "location_source": "https://properties.zoomprospector.com/ecg/property/Milledgeville-Road-Milledgeville-Georgia/DFDA550A-7F91-4D0A-BE1E-12ACCBF8FD37"
+  },
+  {
+    "id": "research-08",
+    "name": "County Facilities and Buildings",
+    "category": "Capital program",
+    "stage": "Multiple locations — program entry rather than one construction site",
+    "financial": "Costs vary; need location-specific authorizations and spending.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple sites throughout Baldwin County",
+    "location_note": "Umbrella program, not a single property.",
+    "location_source": ""
+  },
+  {
+    "id": "research-09",
+    "name": "Solid Waste Collection",
+    "category": "Procurement / services",
+    "stage": "RFP and service activity — not necessarily a capital construction project",
+    "financial": "Contract price not confirmed.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Countywide service; convenience center sites vary",
+    "location_note": "RFP is service procurement, not one project location.",
+    "location_source": ""
+  },
+  {
+    "id": "research-10",
+    "name": "SPLOST Road Projects (Various)",
+    "category": "Program",
+    "stage": "Umbrella program; may overlap the individual resurfacing records",
+    "financial": "No separate total assigned to avoid double counting.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple road locations throughout Baldwin County",
+    "location_note": "Umbrella program, avoid single-location pin and duplication of road inspections.",
+    "location_source": ""
+  },
+  {
+    "id": "research-11",
+    "name": "T-SPLOST Projects (Various)",
+    "category": "Program",
+    "stage": "Umbrella program; may overlap road/infrastructure records",
+    "financial": "No separate total assigned to avoid double counting.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple road locations throughout Baldwin County",
+    "location_note": "Umbrella program, avoid single-location pin and duplication of road inspections.",
+    "location_source": ""
+  },
+  {
+    "id": "research-12",
+    "name": "Water / Wastewater Infrastructure",
+    "category": "Infrastructure",
+    "stage": "Sibley Place utility systems and other work; exact project sites pending",
+    "financial": "Amounts not verified.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.25860023498537,
+        33.04496821435387
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Sibley Place infrastructure area and potentially other sites",
+    "location_note": "Linear utility/infrastructure work; no single verified pin.",
+    "location_source": ""
+  },
+  {
+    "id": "research-13",
+    "name": "Public Safety Improvements",
+    "category": "Capital program",
+    "stage": "Facilities and equipment; individual location pending",
+    "financial": "Amounts not verified.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Various facilities and equipment",
+    "location_note": "Umbrella program; location unconfirmed.",
+    "location_source": ""
+  },
+  {
+    "id": "research-14",
+    "name": "Park and Recreation Improvements",
+    "category": "Capital program",
+    "stage": "Broad group of parks work; may overlap golf and aquatic projects",
+    "financial": "Amounts not verified.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple parks; program-level entry",
+    "location_note": "Umbrella program; specific locations must be split.",
+    "location_source": ""
+  },
+  {
+    "id": "research-15",
+    "name": "Other SPLOST / T-SPLOST Projects",
+    "category": "Program",
+    "stage": "Placeholder for remaining program work; NOT one site",
+    "financial": "Amounts not verified; should be split into specific documented projects.",
+    "source": "Previous 15-item capital project tracking list",
+    "url": null,
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Original capital-project tracking list",
+    "address": "Multiple sites; specific contracts not yet separated",
+    "location_note": "Umbrella program, no one street address.",
+    "location_source": ""
+  },
+  {
+    "id": "research-16",
+    "name": "Development Authority — Sibley Place Property Disposition",
+    "category": "Property / development authority",
+    "stage": "September 28, 2026 authority agenda included an intergovernmental agreement regarding Sibley Place and executive session item 'Disposition of Real Estate.' This does NOT prove a sale, closing, buyer, or sale price.",
+    "financial": "A property sale was discussed as a research lead; no verified purchaser, completed transfer, price, or deed yet.",
+    "source": "Development Authority September 28, 2026 public meeting agenda",
+    "url": "https://developmilledgeville.com/news-announcements/",
+    "geometry": null,
+    "verification": "Site visit and document verification pending",
+    "type": "Additional research",
+    "address": "Milledgeville Road, Milledgeville, GA 31061; published site center 33.0381, -83.2722",
+    "location_note": "Related Sibley Place site. Public advertisement for sale does not establish completed sale.",
+    "location_source": "https://properties.zoomprospector.com/ecg/property/Milledgeville-Road-Milledgeville-Georgia/DFDA550A-7F91-4D0A-BE1E-12ACCBF8FD37"
+  },
+  {
+    "id": "research-17",
+    "name": "Beaver Creek Solar I",
+    "category": "Energy / development authority",
+    "stage": "Bond validation notice described an approximately 183 MW solar facility and 91.5 MW battery system on approximately 1,574 acres near Gordon Highway and JF Hall Road; site boundary and build status pending survey.",
+    "financial": "Public notice described *up to $497,000,000* in taxable industrial development revenue bonds — a maximum principal authorization, NOT county spending, a project payment, or taxpayer liability. Notice states special limited obligation payable from company funds.",
+    "source": "Union Recorder bond-validation legal notice August 25, 2026",
+    "url": "https://marketplace.unionrecorder.com/midgeville-ga/public-notices/notice-to-the-public-you-are-h/AC1E044E1425e2BF3FOhmK4B9A9C",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.29107642173769,
+        32.968410396925876
+      ]
+    },
+    "verification": "Site visit and document verification pending",
+    "type": "Additional research",
+    "address": "Vicinity of Gordon Highway and JF Hall Road, southern Baldwin County, Georgia",
+    "location_note": "Legal notice describes approximately 1,574 acres. No verified center, entrance, or site boundary.",
+    "location_source": "https://marketplace.unionrecorder.com/midgeville-ga/public-notices/notice-to-the-public-you-are-h/AC1E044E1425e2BF3FOhmK4B9A9C"
+  }
+]

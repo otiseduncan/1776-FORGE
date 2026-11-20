@@ -5,6 +5,7 @@ import { can } from "../auth/permissions.ts";
 import { geometry, httpsUrl, isoDate, num, oneOf, reqStr, str } from "../lib/validate.ts";
 import { audit, citationsFor, discussionsFor, moderationEvent, notify, now, relatedContent, verifyTurnstile } from "../lib/store.ts";
 import { readUpload } from "./records.ts";
+import { filteredImportedMap, importedFeature, findImportedMap } from '../lib/imported-map.ts';
 
 export const FEATURE_KINDS = ["road", "project", "facility", "boundary"] as const;
 export const CONDITIONS = ["green", "yellow", "red", "gray"] as const;
@@ -31,6 +32,16 @@ export function registerMap(r: Router): void {
     if (kinds.length) { where.push(`f.kind IN (${kinds.map(() => "?").join(",")})`); args.push(...kinds); }
     const j = c.url.searchParams.get("jurisdiction");
     if (j) { where.push("(f.jurisdiction_id = ? OR f.jurisdiction_id IN (SELECT id FROM jurisdictions WHERE parent_id = ?))"); args.push(j, j); }
+    const county = c.url.searchParams.get('county');
+    if (county) {
+      if (county === '13009') { where.push("(f.jurisdiction_id='ga-baldwin' OR f.jurisdiction_id='ga-milledgeville')"); }
+      else where.push('0=1');
+    }
+    const q = (c.url.searchParams.get('q') || '').trim().slice(0,160);
+    for (const term of q.split(/\s+/).filter(Boolean)) {
+      where.push("(f.title LIKE ? ESCAPE '\\' OR f.description LIKE ? ESCAPE '\\' OR f.properties_json LIKE ? ESCAPE '\\')");
+      const p = '%' + term.replace(/[\\%_]/g, '\\$&') + '%'; args.push(p,p,p);
+    }
     const cond = c.url.searchParams.get("condition");
     if (cond && (CONDITIONS as readonly string[]).includes(cond)) { where.push("f.condition_state = ?"); args.push(cond); }
     const rows = await c.db.prepare(
@@ -38,10 +49,17 @@ export function registerMap(r: Router): void {
               f.verification_state, f.jurisdiction_id, j.name AS jurisdiction_name, f.updated_at
          FROM map_features f LEFT JOIN jurisdictions j ON j.id = f.jurisdiction_id WHERE ${where.join(" AND ")} ORDER BY f.kind, f.title LIMIT 2000`,
     ).bind(...args).all<Record<string, unknown>>();
-    return json({ type: "FeatureCollection", features: rows.results.map(featureToGeoJSON) }, 200, { "cache-control": "public, max-age=60" });
+    const imported = filteredImportedMap(c.url.searchParams).map(importedFeature);
+    return json({ type: "FeatureCollection", features: [...rows.results.map(featureToGeoJSON), ...imported] }, 200, { "cache-control": "public, max-age=60" });
   });
 
   r.get("/api/map/features/:id", async (c) => {
+    const imported = findImportedMap(c.params.id);
+    if (imported) {
+      const f = importedFeature(imported);
+      return json({ feature: {...f.properties,geometry_geojson:JSON.stringify(f.geometry),properties:{legacy:imported}},
+        citations:[],related:[],discussions:[],reports:[],attachments:[] });
+    }
     const user = await c.user();
     const row = await c.db.prepare("SELECT f.*, j.name AS jurisdiction_name FROM map_features f LEFT JOIN jurisdictions j ON j.id = f.jurisdiction_id WHERE f.id = ?").bind(c.params.id).first<Record<string, unknown>>();
     if (!row) throw new HttpError(404, "Map feature not found");

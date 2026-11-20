@@ -1,0 +1,22 @@
+{
+  "id": "source-013",
+  "title": "TSM Invoice #1330 - Baldwin Co. 2024.pdf",
+  "sha256": "9157ed62c8d074e40a76dbc647e97ee82740f23ca2429100826f7cbd20bbd625",
+  "page_count": 1,
+  "pages": [
+    {
+      "number": 1,
+      "text": "  The Surface Masters, Inc.\n  1393 Cobb Industrial Way\n  Marietta, GA 30066\n   770 250-6392\n\n\n\n\n                                                       Invoice 1330\n       Bill to:                                                Job:     24422\n       Baldwin County Board of Commis                          Baldwin County\n       1601 N Columbia Street\n       Suite 230\n       Milledgeville, GA 31061\n\n\n\n\n Invoice #:       1330                      Date:   08/26/25   Customer P.O. #:\n Payment Terms:         Due on Receipt                         Salesperson:\n Customer Code:         BALWI001\n\nRemarks:\n\n       Quantity        Description                                    U/M                Unit Price                 Extension\n\n                       Remaining Contract                                                                         59,749.99\n                                                                              Total:                              59,749.99\n                                                                              Current Due:                        59,749.99\n\n\n\n\nPrint Date: 08/26/25                                                                                  Page:   1",
+      "method": "embedded PDF text"
+    }
+  ],
+  "source_url": null,
+  "issuing_body": "Baldwin County records response, October 15, 2026",
+  "retrieved_on": "2026-10-20",
+  "full_page_coverage": true,
+  "unreadable_pages": [],
+  "review_status": "Extracted text; proofreading required",
+  "verbatim_verified": false,
+  "redactions": [],
+  "text_available": true
+}

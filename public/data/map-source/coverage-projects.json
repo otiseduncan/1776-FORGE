@@ -1,0 +1,2521 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-21",
+  "scope": "Capital projects and infrastructure spending in the 33 counties of the Baldwin County 50-mile coverage area, verified against the cited source on the review date. Supplements projects.json, jones-projects.json, regional-projects.json and project-evidence.json; it does not change them.",
+  "money_rules": [
+    "Amounts are copied exactly as printed in the cited source (dollars). Rounded amounts reported in news are marked approximate.",
+    "paid = documented payments; reported = officially reported spending, not independently confirmed as paid; contract = executed or awarded contract; budget = approved budget, allocation or grant award; estimate = projected or estimated cost.",
+    "School SPLOST schedules: 'original estimated cost' (the referendum resolution) is shown as the approved allocation and 'current estimated cost' as an estimate. Where a schedule prints only current-year and prior-year spending, the to-date figure is their sum and is labeled that way.",
+    "Shared multi-county contracts and estimates are one record listed under each county. They are never divided or repeated as county amounts."
+  ],
+  "sources": {
+    "gdot-awards-mgceo": {
+      "title": "Projects Awarded in East-Central Georgia (GDOT contract awards)",
+      "publisher": "Middle Georgia CEO, reporting a Georgia Department of Transportation announcement",
+      "date": "2026-03-26",
+      "url": "https://middlegeorgiaceo.com/news/2026/03/projects-awarded-east-central-georgia/",
+      "kind": "news"
+    },
+    "gdot-awards-wrdw": {
+      "title": "GDOT approves millions of dollars for road projects in local counties",
+      "publisher": "WRDW-TV",
+      "date": "2026-03-25",
+      "url": "https://www.wrdw.com/2026/03/25/gdot-approves-millions-dollars-road-projects-local-counties",
+      "kind": "news"
+    },
+    "gdot-m006715": {
+      "title": "GDOT GeoPI project M006715: SR 26 from W of Jessup Street/Bleckley to W of SR 19/Laurens",
+      "publisher": "Georgia Department of Transportation",
+      "date": "2026-10-21",
+      "url": "https://www.dot.ga.gov/applications/geopi/Pages/Dashboard.aspx?ProjectID=M006715",
+      "kind": "official"
+    },
+    "opb-cpf": {
+      "title": "Capital Projects Fund awards",
+      "publisher": "Georgia Governor's Office of Planning and Budget",
+      "date": "2026-10-21",
+      "url": "https://opb.georgia.gov/capital-projects-fund-0",
+      "kind": "official"
+    },
+    "bibb-paving": {
+      "title": "Contractor, funding identified for next groups of Paving the Way roads",
+      "publisher": "Macon-Bibb County",
+      "date": "2026-03-19",
+      "url": "https://www.maconbibb.us/contractor-funding-identified-for-next-groups-of-paving-the-way-roads/",
+      "kind": "official"
+    },
+    "houston-splost-fy25": {
+      "title": "FY2025 Report on Projects Funded Through SPLOST, fiscal year ending June 30, 2025",
+      "publisher": "Houston County",
+      "date": "2025-06-30",
+      "url": "https://www.houstoncountyga.gov/skins/userfiles/files/FY25%20SPLOST%20AD.pdf",
+      "kind": "official",
+      "page": 1
+    },
+    "houston-st-patricks": {
+      "title": "SPLOST project: St. Patrick's Drive Extension",
+      "publisher": "Houston County SPLOST",
+      "date": "2025-07-30",
+      "url": "https://splost.houstoncountyga.gov/project/st-patricks-drive-extension/",
+      "kind": "official"
+    },
+    "houston-commodore": {
+      "title": "SPLOST project: Commodore Drive Design and Engineering",
+      "publisher": "Houston County SPLOST",
+      "date": "2025-06-04",
+      "url": "https://splost.houstoncountyga.gov/project/commodore-drive-design-and-engineering/",
+      "kind": "official"
+    },
+    "houston-northlake": {
+      "title": "SPLOST project: N. Houston Lake Road and Dunbar Road Improvements",
+      "publisher": "Houston County SPLOST",
+      "date": "2025-07-30",
+      "url": "https://splost.houstoncountyga.gov/project/n-houston-lake-road-and-dunbar-road-improvements/",
+      "kind": "official"
+    },
+    "houston-thompson": {
+      "title": "SPLOST project: Thompson Mill Road Extension",
+      "publisher": "Houston County SPLOST",
+      "date": "2025-07-30",
+      "url": "https://splost.houstoncountyga.gov/project/thompson-mill-road-extension/",
+      "kind": "official"
+    },
+    "gpr-hancock": {
+      "title": "Hancock County FY 2025 LRA, FY 2026 LRA and FY 2026 LMIG projects (invitation for bids)",
+      "publisher": "Georgia Procurement Registry",
+      "date": "2026-07",
+      "url": "https://pur.doas.ga.gov/gpr/eventDetails?eSourceNumber=PE-67090-NONST-2026-000000011&sourceSystemType=gpr20",
+      "kind": "official"
+    },
+    "gpr-crawford": {
+      "title": "Crawford Co. 2027 LMIG (invitation for bids)",
+      "publisher": "Georgia Procurement Registry",
+      "date": "2026",
+      "url": "https://pur.doas.ga.gov/gpr/eventDetails?eSourceNumber=PE-77725-NONST-2027-000000013&sourceSystemType=gpr20",
+      "kind": "official"
+    },
+    "pulaski-rfp": {
+      "title": "Request for Proposals: Pulaski County 2024/2025/2026 LMIG/LRA T-SPLOST Road Paving Project",
+      "publisher": "City of Hawkinsville-Pulaski County",
+      "date": "2026-08-18",
+      "url": "https://hawkinsville-pulaski.org/2026/08/18/request-for-proposals-rfp-pulaski-county-2024-2025-2026-lmig-lra-t-splost-road-paving-project/",
+      "kind": "official"
+    },
+    "walton-public-works": {
+      "title": "Public Works: Road Closures & Current Projects",
+      "publisher": "Walton County",
+      "date": "2026-10-21",
+      "url": "https://www.waltoncountyga.gov/239/Public-Works",
+      "kind": "official"
+    },
+    "boe-butts": {
+      "title": "Butts County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33305",
+      "kind": "official"
+    },
+    "boe-bleckley": {
+      "title": "Bleckley County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33477",
+      "kind": "official"
+    },
+    "boe-dodge": {
+      "title": "Dodge County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33325",
+      "kind": "official"
+    },
+    "boe-henry": {
+      "title": "Henry County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33349",
+      "kind": "official"
+    },
+    "boe-jasper": {
+      "title": "Jasper County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33353",
+      "kind": "official"
+    },
+    "boe-johnson": {
+      "title": "Johnson County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33357",
+      "kind": "official"
+    },
+    "boe-lamar": {
+      "title": "Lamar County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33359",
+      "kind": "official"
+    },
+    "boe-laurens": {
+      "title": "Laurens County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33361",
+      "kind": "official"
+    },
+    "boe-mcduffie": {
+      "title": "McDuffie County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33371",
+      "kind": "official"
+    },
+    "boe-monroe": {
+      "title": "Monroe County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33376",
+      "kind": "official"
+    },
+    "boe-morgan": {
+      "title": "Morgan County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33378",
+      "kind": "official"
+    },
+    "boe-newton": {
+      "title": "Newton County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33381",
+      "kind": "official"
+    },
+    "boe-oconee": {
+      "title": "Oconee County School District FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33382",
+      "kind": "official"
+    },
+    "boe-taliaferro": {
+      "title": "Taliaferro County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33398",
+      "kind": "official"
+    },
+    "boe-warren": {
+      "title": "Warren County Board of Education FYE 2025 SPLOST Schedule (scanned document)",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33454",
+      "kind": "official"
+    },
+    "boe-wilkes": {
+      "title": "Wilkes County Board of Education FYE 2025 SPLOST Schedule",
+      "publisher": "School district report posted by the Georgia Department of Audits and Accounts (open.ga.gov)",
+      "date": "2025-06-30",
+      "url": "https://open.ga.gov/openga/report/downloadFile?rid=33417",
+      "kind": "official"
+    },
+    "milledgeville-water-bond": {
+      "title": "Milledgeville water-system bond financing announcement",
+      "publisher": "41NBC",
+      "url": "https://www.41nbc.com/city-of-milledgeville-approves-55-million-in-bonds-for-water-system-upgrade/",
+      "kind": "news",
+      "date": null
+    },
+    "milledgeville-city-bids": {
+      "title": "City of Milledgeville procurement notices",
+      "publisher": "City of Milledgeville",
+      "url": "https://www.milledgevillega.us/",
+      "kind": "government",
+      "date": "2026-10"
+    },
+    "wr-fy26-budget": {
+      "title": "City of Warner Robins adopts FY2026 budget",
+      "publisher": "City of Warner Robins",
+      "date": "2025-07-17",
+      "url": "https://www.wrga.gov/article/2313526",
+      "kind": "government"
+    },
+    "eatonton-bids": {
+      "title": "City of Eatonton bids and solicitations",
+      "publisher": "City of Eatonton",
+      "date": "2026-09-30",
+      "url": "https://www.eatontonga.us/bids-solicitations/",
+      "kind": "government"
+    },
+    "gdot-eatonton-2026": {
+      "title": "GDOT January 2026 awarded projects including Eatonton business route",
+      "publisher": "Georgia Department of Transportation",
+      "date": "2026-01-28",
+      "url": "https://ebs.publicnow.com/view/47CA1D29CE88A300385358EBADBB9970B50BA1C4",
+      "kind": "government"
+    },
+    "perry-finance": {
+      "title": "City of Perry finance and FY2026 recommended budget",
+      "publisher": "City of Perry",
+      "url": "https://perry-ga.gov/business-services/finance",
+      "kind": "government"
+    },
+    "covington-downtown-2026": {
+      "title": "2026 Downtown Square Utility Improvement Project",
+      "publisher": "City of Covington",
+      "date": "2026-10-10",
+      "url": "https://cityofcovington.org/index.php?project=126&projectsection=14&section=projects-module",
+      "kind": "government"
+    },
+    "covington-stormwater-bid": {
+      "title": "Newton Drive Storm Drainage Improvements procurement",
+      "publisher": "City of Covington",
+      "date": "2026-10",
+      "url": "https://www.cityofcovington.org/index.php?docid=451&section=purchasing3",
+      "kind": "government"
+    },
+    "sandersville-agenda-2026": {
+      "title": "Sandersville 2026 council agenda and minutes",
+      "publisher": "City of Sandersville",
+      "url": "https://www.sandersvillega.org/agenda-center",
+      "kind": "government",
+      "date": "2026"
+    },
+    "gdot-madison-streetscape": {
+      "title": "GDOT project 0019583 Madison streetscape",
+      "publisher": "Georgia Department of Transportation",
+      "url": "https://www.dot.ga.gov/applications/geopi/Pages/Dashboard.aspx?ProjectID=0019583",
+      "kind": "government"
+    },
+    "gdot-social-circle-roundabout": {
+      "title": "GDOT project 0020211 SR 11 at Social Circle Fairplay Road",
+      "publisher": "Georgia Department of Transportation",
+      "url": "https://www.dot.ga.gov/applications/geopi/Pages/Dashboard.aspx?ProjectID=0020211",
+      "kind": "government"
+    },
+    "cochran-airport-2026": {
+      "title": "Georgia General Assembly announcement Cochran Airport state investment",
+      "publisher": "Georgia General Assembly",
+      "url": "https://ebs.publicnow.com/view/DE8F2CA34747F5A7082D0F99CA4885DE94D456A4",
+      "kind": "government",
+      "date": "2026-09-23"
+    },
+    "dublin-resolutions-2026": {
+      "title": "City of Dublin 2026 ordinances and resolutions",
+      "publisher": "City of Dublin",
+      "url": "https://www.cityofdublin.org/government/ordinances-and-resolution",
+      "kind": "government",
+      "date": "2026"
+    },
+    "east-dublin-sewer-2026": {
+      "title": "East Dublin CDBG sanitary sewer improvements solicitation",
+      "publisher": "ConstructConnect procurement listing",
+      "url": "https://projects.constructconnect.com/details/7683761-2025-cdbg-sanitary-sewer-system-improvements-cdbg%26find_loc%3Dgeorgia-31027",
+      "kind": "procurement",
+      "date": "2026-09-21"
+    }
+  },
+  "projects": [
+    {
+      "id": "gdot-i20-concrete-greene-taliaferro",
+      "counties": [
+        "13133",
+        "13265"
+      ],
+      "name": "I-20 concrete rehabilitation, SR 15 (Milepost 136) to SR 22 (Exit 148)",
+      "category": "State highway",
+      "owner": "Georgia Department of Transportation",
+      "description": "Concrete rehabilitation on Interstate 20 in Greene and Taliaferro counties, from near SR 15/Milepost 136 to SR 22/Exit 148.",
+      "status": "Contract awarded March 2026; completion date January 31, 2027",
+      "contractor": "Pittman Construction Company",
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Interstate segment between two named points; exact work limits are not published as map geometry here."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "9.99 million",
+            "approx": true,
+            "label": "Awarded contract value as reported (one contract for both counties; not divided by county)",
+            "source": "gdot-awards-mgceo"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-awards-mgceo",
+        "gdot-awards-wrdw"
+      ]
+    },
+    {
+      "id": "gdot-sr12-us278-mcduffie",
+      "counties": [
+        "13189"
+      ],
+      "name": "SR 12/US 278 resurfacing, Ansley Road/Mt Pleasant Road to Thomson Bypass",
+      "category": "State highway",
+      "owner": "Georgia Department of Transportation",
+      "description": "About two miles of SR 12/US 278 resurfaced from near Ansley Road/Mt Pleasant Road to the Thomson Bypass.",
+      "status": "Contract awarded March 2026; completion date January 31, 2027",
+      "contractor": "All Star Concrete, Inc.",
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named highway segment; exact limits not published as map geometry here."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "858 thousand",
+            "approx": true,
+            "label": "Awarded contract value as reported",
+            "source": "gdot-awards-mgceo"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-awards-mgceo"
+      ]
+    },
+    {
+      "id": "gdot-rail-crossing-markings-6-counties",
+      "counties": [
+        "13009",
+        "13159",
+        "13211",
+        "13237",
+        "13303",
+        "13319"
+      ],
+      "name": "Railroad crossing signage and pavement marking upgrades (six counties)",
+      "category": "Safety improvements",
+      "owner": "Georgia Department of Transportation",
+      "description": "Railroad signage and pavement markings upgraded at various crossings in Baldwin, Jasper, Morgan, Putnam, Washington and Wilkinson counties.",
+      "status": "Contract awarded March 2026; completion date February 28, 2027",
+      "contractor": "Peek Pavement Marking, LLC",
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Various crossings in six counties; individual crossing locations are not published."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "781 thousand",
+            "approx": true,
+            "label": "Awarded contract value as reported for all six counties together; no county share is published, so none is shown",
+            "source": "gdot-awards-mgceo"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-awards-mgceo"
+      ]
+    },
+    {
+      "id": "gdot-m006715-sr26-bleckley-laurens",
+      "counties": [
+        "13023",
+        "13175"
+      ],
+      "name": "SR 26 resurfacing, west of Jessup Street (Bleckley) to west of SR 19 (Laurens)",
+      "category": "State highway",
+      "owner": "Georgia Department of Transportation",
+      "description": "Resurfacing of SR 26 selected by the GDOT District Maintenance Office to improve a low pavement condition (OCI) score. GDOT project M006715.",
+      "status": "Under construction (GDOT project dashboard, viewed October 21, 2026)",
+      "contractor": null,
+      "funding": "GDOT maintenance construction (MCST), program year 2026",
+      "location": {
+        "kind": "listing",
+        "note": "Named state route between two points; exact limits not published as map geometry here."
+      },
+      "finance": {
+        "estimate": [
+          {
+            "amount": "6,635,558.66",
+            "label": "GDOT construction cost estimate for the whole project in both counties; not a contract or payment",
+            "source": "gdot-m006715"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-m006715"
+      ]
+    },
+    {
+      "id": "bibb-2025-splost-paving-clinton-upper-river",
+      "counties": [
+        "13021"
+      ],
+      "name": "Paving the Way resurfacing: Clinton Rd, Upper River Rd, Riggins Mill Rd and Millerfield Rd",
+      "category": "Road resurfacing",
+      "owner": "Macon-Bibb County",
+      "description": "Repaving of 1.01 miles of Clinton Road, 1.84 miles of Upper River Road, 1.67 miles of Riggins Mill Road and 0.97 miles of Millerfield Road (5.49 miles in all).",
+      "status": "Contract approved by the Commission (announced March 19, 2026)",
+      "contractor": "Professional Paving",
+      "funding": "Voter-approved 2025 SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Named roads with lengths, but the repaved segments are not identified, so whole roads are not drawn."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "1,231,636.36",
+            "label": "Approved contract",
+            "source": "bibb-paving"
+          }
+        ]
+      },
+      "sources": [
+        "bibb-paving"
+      ]
+    },
+    {
+      "id": "houston-st-patricks-drive-extension",
+      "counties": [
+        "13153"
+      ],
+      "name": "St. Patrick's Drive Extension",
+      "category": "Road extension",
+      "owner": "Houston County",
+      "description": "Extension connecting Perimeter Road to N. Perry Parkway alongside I-75 North in northwest Perry, to open land for development.",
+      "status": "County expects all committed SPLOST funds to be available by Q4 2026; no spending reported as of July 30, 2025",
+      "contractor": null,
+      "funding": "Houston County SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Proposed new road; no alignment is published."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "8,000,000",
+            "label": "Project budget",
+            "source": "houston-st-patricks"
+          }
+        ],
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Expenditures to date as of July 30, 2025 (assigned revenue to date $3,930,800 is not spending)",
+            "as_of": "2025-07-30",
+            "source": "houston-st-patricks"
+          }
+        ]
+      },
+      "sources": [
+        "houston-st-patricks"
+      ]
+    },
+    {
+      "id": "houston-commodore-drive-design",
+      "counties": [
+        "13153"
+      ],
+      "name": "Commodore Drive design and engineering",
+      "category": "Road design and right-of-way",
+      "owner": "Houston County",
+      "description": "Design, engineering and right-of-way for Commodore Drive in Perry toward Saddlecreek Road. Funding covers design, engineering and right-of-way, not construction.",
+      "status": "No spending reported as of June 4, 2025",
+      "contractor": null,
+      "funding": "Houston County SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Final alignment not published."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "7,000,000",
+            "label": "Project budget (design, engineering and right-of-way)",
+            "source": "houston-commodore"
+          }
+        ],
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Expenditures to date as of June 4, 2025 (assigned revenue to date $468,962 is not spending)",
+            "as_of": "2025-06-04",
+            "source": "houston-commodore"
+          }
+        ]
+      },
+      "sources": [
+        "houston-commodore"
+      ]
+    },
+    {
+      "id": "houston-2006-splost-roads",
+      "counties": [
+        "13153"
+      ],
+      "name": "2006 SPLOST: road, street and bridge improvements",
+      "category": "Countywide program",
+      "owner": "Houston County",
+      "countywide": true,
+      "description": "Countywide road, street and bridge improvements funded by the 2006 SPLOST.",
+      "status": "Ongoing (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "2006 SPLOST",
+      "location": {
+        "kind": "countywide",
+        "note": "Countywide program; no single location."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "77,129,945",
+            "label": "Total funds expended through June 30, 2025 ($76,254,939 prior years plus $875,006 in FY2025)",
+            "as_of": "2025-06-30",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "93,160,000",
+            "label": "Original estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "89,160,000",
+            "label": "Current estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ]
+      },
+      "sources": [
+        "houston-splost-fy25"
+      ]
+    },
+    {
+      "id": "houston-2012-splost-roads-countywide",
+      "counties": [
+        "13153"
+      ],
+      "name": "2012 SPLOST: road, street and bridge improvements (countywide)",
+      "category": "Countywide program",
+      "owner": "Houston County",
+      "countywide": true,
+      "description": "Countywide road, street and bridge improvements funded by the 2012 SPLOST.",
+      "status": "Ongoing (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "2012 SPLOST",
+      "location": {
+        "kind": "countywide",
+        "note": "Countywide program; no single location."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "25,790,511",
+            "label": "Total funds expended through June 30, 2025 ($24,357,462 prior years plus $1,433,048 in FY2025)",
+            "as_of": "2025-06-30",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "25,332,000",
+            "label": "Original estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "21,739,613",
+            "label": "Current estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ]
+      },
+      "sources": [
+        "houston-splost-fy25"
+      ]
+    },
+    {
+      "id": "houston-2018-splost-roads",
+      "counties": [
+        "13153"
+      ],
+      "name": "2018 SPLOST: road, street and bridge improvements",
+      "category": "Countywide program",
+      "owner": "Houston County",
+      "countywide": true,
+      "description": "Countywide road, street and bridge improvements funded by the 2018 SPLOST.",
+      "status": "Ongoing (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "2018 SPLOST",
+      "location": {
+        "kind": "countywide",
+        "note": "Countywide program; no single location."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "17,744,542",
+            "label": "Total funds expended through June 30, 2025 ($12,764,162 prior years plus $4,980,380 in FY2025)",
+            "as_of": "2025-06-30",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "29,770,000",
+            "label": "Original estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "29,770,000",
+            "label": "Current estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ]
+      },
+      "sources": [
+        "houston-splost-fy25"
+      ]
+    },
+    {
+      "id": "houston-2024-splost-roads-countywide",
+      "counties": [
+        "13153"
+      ],
+      "name": "2024 SPLOST: road, street, bridge and sidewalk projects (countywide)",
+      "category": "Countywide program",
+      "owner": "Houston County",
+      "countywide": true,
+      "description": "Countywide road, street, bridge and sidewalk projects funded by the 2024 SPLOST.",
+      "status": "Ongoing; no spending reported through June 30, 2025",
+      "contractor": null,
+      "funding": "2024 SPLOST",
+      "location": {
+        "kind": "countywide",
+        "note": "Countywide program; no single location."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "44,800,000",
+            "label": "Original estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Total funds expended through June 30, 2025",
+            "as_of": "2025-06-30",
+            "source": "houston-splost-fy25"
+          }
+        ]
+      },
+      "sources": [
+        "houston-splost-fy25"
+      ]
+    },
+    {
+      "id": "houston-2024-splost-roads-unincorporated",
+      "counties": [
+        "13153"
+      ],
+      "name": "2024 SPLOST: road, street, bridge and sidewalk projects (unincorporated)",
+      "category": "Countywide program",
+      "owner": "Houston County",
+      "countywide": true,
+      "description": "Road, street, bridge and sidewalk projects in unincorporated Houston County funded by the 2024 SPLOST.",
+      "status": "Ongoing; no spending reported through June 30, 2025",
+      "contractor": null,
+      "funding": "2024 SPLOST",
+      "location": {
+        "kind": "countywide",
+        "note": "Unincorporated-area program; no single location."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "5,500,000",
+            "label": "Original estimated cost",
+            "source": "houston-splost-fy25"
+          }
+        ],
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Total funds expended through June 30, 2025",
+            "as_of": "2025-06-30",
+            "source": "houston-splost-fy25"
+          }
+        ]
+      },
+      "sources": [
+        "houston-splost-fy25"
+      ]
+    },
+    {
+      "id": "hancock-lra-lmig-road-projects-2026",
+      "counties": [
+        "13141"
+      ],
+      "name": "FY 2025 LRA, FY 2026 LRA and FY 2026 LMIG road projects",
+      "category": "Road resurfacing",
+      "owner": "Hancock County Board of Commissioners",
+      "description": "County road construction and resurfacing advertised for sealed bids due August 24, 2026 (GDOT Local Road Assistance and Local Maintenance and Improvement Grant funds).",
+      "status": "Advertised for bids (bids due August 24, 2026); award not verified",
+      "contractor": null,
+      "funding": "GDOT LRA and LMIG",
+      "location": {
+        "kind": "listing",
+        "note": "Road list is in the bid documents; not mapped."
+      },
+      "finance": {},
+      "sources": [
+        "gpr-hancock"
+      ]
+    },
+    {
+      "id": "crawford-2027-lmig-resurfacing",
+      "counties": [
+        "13079"
+      ],
+      "name": "2027 LMIG resurfacing",
+      "category": "Road resurfacing",
+      "owner": "Crawford County",
+      "description": "About 3.55 miles of grading, resurfacing, Superpave and leveling.",
+      "status": "Advertised for bids; award not verified",
+      "contractor": null,
+      "funding": "GDOT LMIG",
+      "location": {
+        "kind": "listing",
+        "note": "Roads are named only in the bid documents; not mapped."
+      },
+      "finance": {},
+      "sources": [
+        "gpr-crawford"
+      ]
+    },
+    {
+      "id": "pulaski-lra-lmig-tsplost-paving-2026",
+      "counties": [
+        "13235"
+      ],
+      "name": "2026 LRA, 2027 LMIG and T-SPLOST paving: six county roads",
+      "category": "Road resurfacing",
+      "owner": "Pulaski County",
+      "description": "Resurfacing of Bembry Road (2.53 mi), Davis Road (2.84 mi), Fourteen Lane Road (2.06 mi), Harmony Church Road (2.25 mi), Mock Springs Road (3.75 mi) and Lenora Drive (0.19 mi), 13.62 miles in all.",
+      "status": "Request for proposals; sealed bids due October 2, 2026; award not verified",
+      "contractor": null,
+      "funding": "GDOT LRA and LMIG; T-SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Named roads; work limits within each road are not published, so whole roads are not drawn."
+      },
+      "finance": {},
+      "sources": [
+        "pulaski-rfp"
+      ]
+    },
+    {
+      "id": "walton-county-resurfacing-2026",
+      "counties": [
+        "13297"
+      ],
+      "name": "County resurfacing: Alcovy Lakes Drive, Anglin Road, Bay Creek Church Road and eight other roads",
+      "category": "Road resurfacing",
+      "owner": "Walton County Public Works",
+      "description": "Resurfacing of Alcovy Lakes Drive, Anglin Road, Bay Creek Church Road, Centerhill Church Road, Guthrie Road, HD Atha Road, Liberty Hill Church Road, Old Good Hope Road, Paul Malcom Road, Red Oak Drive and Youth Monroe Road.",
+      "status": "County page lists paving complete, with striping, signs and shoulders in progress; the same page also says no resurfacing is in progress, so status needs confirmation",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named roads; segments not published."
+      },
+      "finance": {},
+      "sources": [
+        "walton-public-works"
+      ]
+    },
+    {
+      "id": "walton-john-deere-road-culvert",
+      "counties": [
+        "13297"
+      ],
+      "name": "John Deere Road culvert replacement",
+      "category": "Drainage",
+      "owner": "Walton County Public Works",
+      "description": "Culvert replacement on the dirt-road section of John Deere Road between Walton Road and Mountain Creek Church Road, with the road closed until completion.",
+      "status": "Tentatively beginning August 24, 2026",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Road section named; culvert location not published."
+      },
+      "finance": {},
+      "sources": [
+        "walton-public-works"
+      ]
+    },
+    {
+      "id": "cpf-broadband-twiggs",
+      "counties": [
+        "13289"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Twiggs)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Twiggs County. Grantee: Cox Communications Georgia, LLC.",
+      "status": "Awarded",
+      "contractor": "Cox Communications Georgia, LLC (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "8,135,793.00",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "cpf-broadband-jefferson",
+      "counties": [
+        "13163"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Jefferson)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Jefferson County. Grantee: Spectrum Southeast LLC.",
+      "status": "Awarded",
+      "contractor": "Spectrum Southeast LLC (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "10,334,969.00",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "cpf-broadband-oglethorpe",
+      "counties": [
+        "13221"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Oglethorpe)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Oglethorpe County. Grantee: Spectrum Southeast LLC.",
+      "status": "Awarded",
+      "contractor": "Spectrum Southeast LLC (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "7,919,616.00",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "cpf-broadband-glascock",
+      "counties": [
+        "13125"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Glascock)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Glascock County. Grantee: Comcast Cable Communications, LLC.",
+      "status": "Awarded",
+      "contractor": "Comcast Cable Communications, LLC (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "7,492,243.56",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "cpf-broadband-hancock",
+      "counties": [
+        "13141"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Hancock)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Hancock County. Grantee: Comcast Cable Communications, LLC.",
+      "status": "Awarded",
+      "contractor": "Comcast Cable Communications, LLC (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "2,952,690.02",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "cpf-broadband-wilkinson",
+      "counties": [
+        "13319"
+      ],
+      "name": "Capital Projects Fund broadband infrastructure grant (Wilkinson)",
+      "category": "Broadband infrastructure",
+      "owner": "Georgia Governor's Office of Planning and Budget (grantor)",
+      "description": "Coronavirus Capital Projects Fund award for broadband infrastructure in Wilkinson County. Grantee: Oconee Electric Membership Corporation (EMC).",
+      "status": "Awarded",
+      "contractor": "Oconee Electric Membership Corporation (grantee)",
+      "funding": "Coronavirus Capital Projects Fund",
+      "location": {
+        "kind": "countywide",
+        "note": "Service area not published as map geometry."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "2,597,166.00",
+            "label": "Grant award; not a payment",
+            "source": "opb-cpf"
+          }
+        ]
+      },
+      "sources": [
+        "opb-cpf"
+      ]
+    },
+    {
+      "id": "boe-butts-performing-arts-center",
+      "counties": [
+        "13035"
+      ],
+      "name": "Butts County Schools: new performing arts center",
+      "category": "School construction",
+      "owner": "Butts County Board of Education",
+      "description": "Acquiring, constructing, furnishing and equipping a new performing arts center (school SPLOST).",
+      "status": "Completed",
+      "contractor": null,
+      "funding": "Education SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Site not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "14,401,183.14",
+            "label": "Total completion cost reported in the SPLOST schedule",
+            "as_of": "2025-06-30",
+            "source": "boe-butts"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "15,165,687.60",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-butts"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "15,103,100.05",
+            "label": "Current estimated cost",
+            "source": "boe-butts"
+          }
+        ]
+      },
+      "sources": [
+        "boe-butts"
+      ]
+    },
+    {
+      "id": "boe-butts-maintenance-warehouse",
+      "counties": [
+        "13035"
+      ],
+      "name": "Butts County Schools: maintenance, transportation and school nutrition warehouse",
+      "category": "School construction",
+      "owner": "Butts County Board of Education",
+      "description": "Acquiring, constructing, furnishing and equipping a new maintenance/transportation and school nutrition warehouse facility (school SPLOST).",
+      "status": "Estimated completion fiscal year 2026",
+      "contractor": null,
+      "funding": "Education SPLOST",
+      "location": {
+        "kind": "listing",
+        "note": "Site not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "2,992,334.70",
+            "derived_from": [
+              "2,934,067.51",
+              "58,267.19"
+            ],
+            "label": "Reported spending through June 30, 2025: $2,934,067.51 in FY2025 plus $58,267.19 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-butts"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "1,637,994.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-butts"
+          }
+        ]
+      },
+      "sources": [
+        "boe-butts"
+      ]
+    },
+    {
+      "id": "boe-bleckley-new-school-buildings",
+      "counties": [
+        "13023"
+      ],
+      "name": "Bleckley County Schools: new school buildings including a Primary School",
+      "category": "School construction",
+      "owner": "Bleckley County Board of Education",
+      "description": "Acquiring, constructing, equipping and furnishing new school buildings and facilities, including a Primary School building, bus maintenance and storage facilities and athletic/physical education facilities (general obligation bonds up to $16,000,000 repaid with SPLOST).",
+      "status": "Complete",
+      "contractor": null,
+      "funding": "Education SPLOST and general obligation bonds",
+      "location": {
+        "kind": "listing",
+        "note": "Sites not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "31,890,850.72",
+            "label": "Amount expended in prior years (project complete)",
+            "as_of": "2025-06-30",
+            "source": "boe-bleckley"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "3,391,111.67",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-bleckley"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "31,890,850.72",
+            "label": "Current estimated cost",
+            "source": "boe-bleckley"
+          }
+        ]
+      },
+      "sources": [
+        "boe-bleckley"
+      ]
+    },
+    {
+      "id": "boe-dodge-new-auditorium",
+      "counties": [
+        "13091"
+      ],
+      "name": "Dodge County Schools: new auditorium and school facilities (SPLOST V)",
+      "category": "School construction",
+      "owner": "Dodge County Board of Education",
+      "description": "Acquiring, constructing and equipping new school facilities, including a new auditorium (SPLOST V).",
+      "status": "Estimated completion June 30, 2027",
+      "contractor": null,
+      "funding": "Education SPLOST V",
+      "location": {
+        "kind": "listing",
+        "note": "Site not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "3,910,905",
+            "label": "Spending to date reported in the schedule's total column ($666,409 in FY2025 plus $3,244,497 in prior years)",
+            "as_of": "2025-06-30",
+            "source": "boe-dodge"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "2,000,000",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-dodge"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "4,000,000",
+            "label": "Current estimated cost",
+            "source": "boe-dodge"
+          }
+        ]
+      },
+      "sources": [
+        "boe-dodge"
+      ]
+    },
+    {
+      "id": "boe-henry-splost-vi",
+      "counties": [
+        "13151"
+      ],
+      "name": "Henry County Schools: SPLOST VI capital projects",
+      "category": "School construction",
+      "owner": "Henry County Board of Education",
+      "countywide": true,
+      "description": "Two new elementary schools, a STEM high school, a secondary transportation facility, an administrative office facility, renovations and additions at existing schools, technology, buses and safety equipment (2021 SPLOST referendum).",
+      "status": "Ongoing (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "countywide",
+        "note": "District-wide program across several sites."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "215,023,922.43",
+            "derived_from": [
+              "72,441,381.01",
+              "142,582,541.42"
+            ],
+            "label": "Reported spending through June 30, 2025: $72,441,381.01 in FY2025 plus $142,582,541.42 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-henry"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "325,000,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-henry"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "409,548,707.00",
+            "label": "Current estimated cost",
+            "source": "boe-henry"
+          }
+        ]
+      },
+      "sources": [
+        "boe-henry"
+      ]
+    },
+    {
+      "id": "boe-jasper-athletic-complex",
+      "counties": [
+        "13159"
+      ],
+      "name": "Jasper County Schools: new athletic complex at Jasper County High School",
+      "category": "School construction",
+      "owner": "Jasper County Board of Education",
+      "description": "Acquisition and construction of a new athletic complex at Jasper County High School (SPLOST 2020).",
+      "status": "Completed",
+      "contractor": null,
+      "funding": "Education SPLOST 2020",
+      "location": {
+        "kind": "listing",
+        "note": "At Jasper County High School; not pinned because the school's coordinates are not in the cited record."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "11,409,400.20",
+            "label": "Total completion cost reported in the SPLOST schedule",
+            "as_of": "2025-06-30",
+            "source": "boe-jasper"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "8,000,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-jasper"
+          }
+        ]
+      },
+      "sources": [
+        "boe-jasper"
+      ]
+    },
+    {
+      "id": "boe-johnson-athletic-complex",
+      "counties": [
+        "13167"
+      ],
+      "name": "Johnson County Schools: athletic complex at Johnson County High School",
+      "category": "School construction",
+      "owner": "Johnson County Board of Education",
+      "description": "Acquiring, constructing and equipping an athletic complex at Johnson County High School (SPLOST 5).",
+      "status": "Estimated completion December 31, 2028",
+      "contractor": null,
+      "funding": "Education SPLOST 5",
+      "location": {
+        "kind": "listing",
+        "note": "At Johnson County High School; not pinned because the school's coordinates are not in the cited record."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "1,485,569.92",
+            "label": "Amount expended in FY2025 (no prior-year spending)",
+            "as_of": "2025-06-30",
+            "source": "boe-johnson"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "1,600,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-johnson"
+          }
+        ]
+      },
+      "sources": [
+        "boe-johnson"
+      ]
+    },
+    {
+      "id": "boe-lamar-athletic-upgrades",
+      "counties": [
+        "13171"
+      ],
+      "name": "Lamar County Schools: athletic facility upgrades and physical education equipment",
+      "category": "School facilities",
+      "owner": "Lamar County Board of Education",
+      "description": "Upgrades and renovations to athletic facilities and physical education equipment (SPLOST VI).",
+      "status": "In progress (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "listing",
+        "note": "Sites not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "1,998,754.06",
+            "label": "Total expenditures to date reported in the schedule",
+            "as_of": "2025-06-30",
+            "source": "boe-lamar"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "2,000,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-lamar"
+          }
+        ]
+      },
+      "sources": [
+        "boe-lamar"
+      ]
+    },
+    {
+      "id": "boe-laurens-splost-iv-capital",
+      "counties": [
+        "13175"
+      ],
+      "name": "Laurens County Schools: SPLOST IV school renovation and capital program",
+      "category": "School facilities",
+      "owner": "Laurens County Board of Education",
+      "countywide": true,
+      "description": "Renovating and improving existing schools, administrative and maintenance facilities, buses, instructional equipment, technology and security, and athletic facilities (SPLOST IV, 2023–2027).",
+      "status": "Estimated completion December 2027",
+      "contractor": null,
+      "funding": "Education SPLOST IV",
+      "location": {
+        "kind": "countywide",
+        "note": "District-wide program."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "6,208,916",
+            "derived_from": [
+              "3,697,609",
+              "2,511,307.00"
+            ],
+            "label": "Reported spending through June 30, 2025: $3,697,609 in FY2025 plus $2,511,307.00 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-laurens"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "16,560,000",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-laurens"
+          }
+        ]
+      },
+      "sources": [
+        "boe-laurens"
+      ]
+    },
+    {
+      "id": "boe-mcduffie-new-elementary",
+      "counties": [
+        "13189"
+      ],
+      "name": "McDuffie County Schools: new elementary school consolidating Maxwell and Thomson Elementary",
+      "category": "School construction",
+      "owner": "McDuffie County Board of Education",
+      "description": "Constructing and equipping a new elementary school to consolidate Maxwell Elementary and Thomson Elementary schools (SPLOST VII).",
+      "status": "Estimated completion December 31, 2027",
+      "contractor": null,
+      "funding": "Education SPLOST VII",
+      "location": {
+        "kind": "listing",
+        "note": "Site not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "38,934,306.51",
+            "derived_from": [
+              "23,853,879.74",
+              "15,080,426.77"
+            ],
+            "label": "Reported spending through June 30, 2025: $23,853,879.74 in FY2025 plus $15,080,426.77 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-mcduffie"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "17,390,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-mcduffie"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "38,950,000.00",
+            "label": "Current estimated cost",
+            "source": "boe-mcduffie"
+          }
+        ]
+      },
+      "sources": [
+        "boe-mcduffie"
+      ]
+    },
+    {
+      "id": "boe-mcduffie-thomson-high-renovations",
+      "counties": [
+        "13189"
+      ],
+      "name": "McDuffie County Schools: Thomson High School renovations including auditorium",
+      "category": "School renovation",
+      "owner": "McDuffie County Board of Education",
+      "description": "Thomson High School renovations including auditorium renovations and improvements (SPLOST VI).",
+      "status": "Completed",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "listing",
+        "note": "At Thomson High School; not pinned because the school's coordinates are not in the cited record."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "10,904,182.65",
+            "label": "Total completion cost reported in the SPLOST schedule",
+            "as_of": "2025-06-30",
+            "source": "boe-mcduffie"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "10,250,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-mcduffie"
+          }
+        ]
+      },
+      "sources": [
+        "boe-mcduffie"
+      ]
+    },
+    {
+      "id": "boe-monroe-ninth-grade-campus",
+      "counties": [
+        "13207"
+      ],
+      "name": "Monroe County Schools: new school facilities including a ninth-grade campus, field house and stadium improvements",
+      "category": "School construction",
+      "owner": "Monroe County Board of Education",
+      "description": "Constructing and equipping new school facilities, including a ninth-grade campus, field house and stadium improvements (2023 SPLOST).",
+      "status": "Estimated completion July 31, 2029",
+      "contractor": null,
+      "funding": "Education SPLOST (2023)",
+      "location": {
+        "kind": "listing",
+        "note": "Sites not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "34,291,834.52",
+            "derived_from": [
+              "29,382,768.01",
+              "4,909,066.51"
+            ],
+            "label": "Reported spending through June 30, 2025: $29,382,768.01 in FY2025 plus $4,909,066.51 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-monroe"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "30,000,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-monroe"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "42,500,000.00",
+            "label": "Current estimated cost",
+            "source": "boe-monroe"
+          }
+        ]
+      },
+      "sources": [
+        "boe-monroe"
+      ]
+    },
+    {
+      "id": "boe-morgan-splost-vi-renovations",
+      "counties": [
+        "13211"
+      ],
+      "name": "Morgan County Schools: renovating and improving existing school buildings (SPLOST VI)",
+      "category": "School renovation",
+      "owner": "Morgan County Board of Education",
+      "countywide": true,
+      "description": "Adding to, renovating, repairing, improving and equipping existing school buildings and other facilities (SPLOST VI).",
+      "status": "Estimated completion April 30, 2026",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "countywide",
+        "note": "District-wide program."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "11,871,039",
+            "derived_from": [
+              "2,011,885",
+              "9,859,154"
+            ],
+            "label": "Reported spending through June 30, 2025: $2,011,885 in FY2025 plus $9,859,154 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-morgan"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "4,000,000",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-morgan"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "11,871,100",
+            "label": "Current estimated cost",
+            "source": "boe-morgan"
+          }
+        ]
+      },
+      "sources": [
+        "boe-morgan"
+      ]
+    },
+    {
+      "id": "boe-newton-new-high-school",
+      "counties": [
+        "13217"
+      ],
+      "name": "Newton County Schools: new high school and land for future schools (SPLOST V)",
+      "category": "School construction",
+      "owner": "Newton County Board of Education",
+      "description": "Acquiring, constructing and equipping one new high school, and acquiring land for future schools (SPLOST V).",
+      "status": "Completed",
+      "contractor": null,
+      "funding": "Education SPLOST V",
+      "location": {
+        "kind": "listing",
+        "note": "Site not stated in the schedule."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "77,908,713",
+            "label": "Total completion cost reported in the SPLOST schedule",
+            "as_of": "2025-06-30",
+            "source": "boe-newton"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "30,185,017",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-newton"
+          }
+        ]
+      },
+      "sources": [
+        "boe-newton"
+      ]
+    },
+    {
+      "id": "boe-newton-splost-vi-renovations",
+      "counties": [
+        "13217"
+      ],
+      "name": "Newton County Schools: renovations and athletic facility improvements (SPLOST VI)",
+      "category": "School renovation",
+      "owner": "Newton County Board of Education",
+      "countywide": true,
+      "description": "Adding to, renovating and improving existing school buildings and athletic facilities at high and middle schools (SPLOST VI).",
+      "status": "Estimated completion December 31, 2028",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "countywide",
+        "note": "District-wide program."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "11,523,187",
+            "label": "Amount expended in FY2025 (no prior-year spending)",
+            "as_of": "2025-06-30",
+            "source": "boe-newton"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "65,000,000",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-newton"
+          }
+        ]
+      },
+      "sources": [
+        "boe-newton"
+      ]
+    },
+    {
+      "id": "boe-oconee-esplost-vi",
+      "counties": [
+        "13219"
+      ],
+      "name": "Oconee County Schools: ESPLOST VI new schools, additions and renovations",
+      "category": "School construction",
+      "owner": "Oconee County School District",
+      "countywide": true,
+      "description": "Acquiring, constructing and equipping new schools, administrative and service facilities, and additions and renovations to existing school facilities (2021 ESPLOST VI referendum).",
+      "status": "Ongoing (as of June 30, 2025)",
+      "contractor": null,
+      "funding": "Education SPLOST VI",
+      "location": {
+        "kind": "countywide",
+        "note": "District-wide program."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "56,858,585",
+            "label": "Total completion cost reported in the schedule ($3,864,542 in FY2025 plus $52,994,043 in prior years)",
+            "as_of": "2025-06-30",
+            "source": "boe-oconee"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "41,000,000",
+            "label": "Original estimated cost in the ESPLOST resolution",
+            "source": "boe-oconee"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "56,858,585",
+            "label": "Current estimated cost",
+            "source": "boe-oconee"
+          }
+        ]
+      },
+      "sources": [
+        "boe-oconee"
+      ]
+    },
+    {
+      "id": "boe-taliaferro-gym-paving",
+      "counties": [
+        "13265"
+      ],
+      "name": "Taliaferro County Schools: gymnasium renovations and main-campus paving",
+      "category": "School renovation",
+      "owner": "Taliaferro County Board of Education",
+      "description": "Adding to, renovating and improving existing school buildings and facilities, including the gymnasium and paving at the main campus (SPLOST V, 2020).",
+      "status": "Estimated completion September 30, 2026",
+      "contractor": null,
+      "funding": "Education SPLOST V",
+      "location": {
+        "kind": "listing",
+        "note": "Main campus; not pinned because the campus coordinates are not in the cited record."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "149,216.05",
+            "derived_from": [
+              "77,905.07",
+              "71,310.98"
+            ],
+            "label": "Reported spending through June 30, 2025: $77,905.07 in FY2025 plus $71,310.98 in prior years",
+            "as_of": "2025-06-30",
+            "source": "boe-taliaferro"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "350,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-taliaferro"
+          }
+        ]
+      },
+      "sources": [
+        "boe-taliaferro"
+      ]
+    },
+    {
+      "id": "boe-warren-2019-school-buildings",
+      "counties": [
+        "13301"
+      ],
+      "name": "Warren County Schools: school buildings and support facilities (2019 SPLOST)",
+      "category": "School facilities",
+      "owner": "Warren County Board of Education",
+      "countywide": true,
+      "description": "Acquiring, constructing, repairing, improving, renovating and equipping school buildings, support facilities and infrastructure (2019 SPLOST).",
+      "status": "Estimated completion June 30, 2026",
+      "contractor": null,
+      "funding": "Education SPLOST (2019)",
+      "location": {
+        "kind": "countywide",
+        "note": "District facilities; sites not stated."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "3,068,314.17",
+            "derived_from": [
+              "27,054.52",
+              "3,041,259.65"
+            ],
+            "label": "Reported spending through June 30, 2025: $27,054.52 in FY2025 plus $3,041,259.65 in prior years (transcribed from a scanned schedule)",
+            "as_of": "2025-06-30",
+            "source": "boe-warren"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "1,000,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-warren"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "3,070,000.00",
+            "label": "Current estimated cost",
+            "source": "boe-warren"
+          }
+        ]
+      },
+      "sources": [
+        "boe-warren"
+      ],
+      "transcribed_from_scan": true
+    },
+    {
+      "id": "boe-warren-hvac-replacement",
+      "counties": [
+        "13301"
+      ],
+      "name": "Warren County Schools: HVAC repair and replacement (2019 SPLOST)",
+      "category": "School facilities",
+      "owner": "Warren County Board of Education",
+      "description": "Repairing and/or replacing HVAC and related equipment (2019 SPLOST).",
+      "status": "Estimated completion June 30, 2026",
+      "contractor": null,
+      "funding": "Education SPLOST (2019)",
+      "location": {
+        "kind": "listing",
+        "note": "Sites not stated."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "1,225,062.82",
+            "label": "Amount expended in prior years (transcribed from a scanned schedule)",
+            "as_of": "2025-06-30",
+            "source": "boe-warren"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "900,000.00",
+            "label": "Original estimated cost in the SPLOST resolution",
+            "source": "boe-warren"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "1,226,000.00",
+            "label": "Current estimated cost",
+            "source": "boe-warren"
+          }
+        ]
+      },
+      "sources": [
+        "boe-warren"
+      ],
+      "transcribed_from_scan": true
+    },
+    {
+      "id": "boe-wilkes-splost-iv-renovations",
+      "counties": [
+        "13317"
+      ],
+      "name": "Wilkes County Schools: renovating and improving existing school buildings (SPLOST IV)",
+      "category": "School renovation",
+      "owner": "Wilkes County Board of Education",
+      "description": "Adding to, renovating, repairing, improving and equipping existing school buildings and facilities (SPLOST IV, 2019–2023).",
+      "status": "Completed",
+      "contractor": null,
+      "funding": "Education SPLOST IV",
+      "location": {
+        "kind": "listing",
+        "note": "Sites not stated."
+      },
+      "finance": {
+        "reported": [
+          {
+            "amount": "31,667.57",
+            "label": "Total completion cost reported in the SPLOST schedule ($9,600.00 in FY2025 plus $22,067.57 in prior years)",
+            "as_of": "2025-06-30",
+            "source": "boe-wilkes"
+          }
+        ],
+        "estimate": [
+          {
+            "amount": "31,667.57",
+            "label": "Current estimated cost",
+            "source": "boe-wilkes"
+          }
+        ]
+      },
+      "sources": [
+        "boe-wilkes"
+      ]
+    },
+    {
+      "id": "city-milledgeville-water-modernization",
+      "counties": [
+        "13009"
+      ],
+      "name": "Milledgeville City — Water System Modernization and Lamar Hamm Treatment Plant",
+      "category": "Water infrastructure",
+      "owner": "City of Milledgeville",
+      "issuing_government": "City of Milledgeville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Milledgeville",
+      "description": "Municipal water system modernization. $55 million in approved bond financing was announced before 2026; this is not 2026 spending or a verified amount paid.",
+      "status": "Financing authorized before 2026; 2026 expenditures not verified",
+      "contractor": null,
+      "funding": "City of Milledgeville water-system bond financing",
+      "location": {
+        "kind": "listing",
+        "note": "Municipal project; exact verified geometry unavailable. Listed within Baldwin County without an invented map pin."
+      },
+      "finance": {
+        "budget": [
+          {
+            "amount": "55 million",
+            "label": "Approved bond financing (historical authorization; not taxpayer payments or FY2026 spending)",
+            "source": "milledgeville-water-bond"
+          }
+        ]
+      },
+      "sources": [
+        "milledgeville-water-bond"
+      ]
+    },
+    {
+      "id": "city-milledgeville-fire-station-ramp",
+      "counties": [
+        "13009"
+      ],
+      "name": "Milledgeville City — Fire Station 1 Ramp Repair",
+      "category": "Public buildings",
+      "owner": "City of Milledgeville",
+      "issuing_government": "City of Milledgeville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Milledgeville",
+      "description": "Municipal procurement identified as bid 60550-2027-0003, advertised October 2026. Bid attachment must be checked because notice description conflicts with title.",
+      "status": "Bid notice; award, cost and payment unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Municipal project; exact verified geometry unavailable. Listed within Baldwin County without an invented map pin."
+      },
+      "finance": {},
+      "sources": [
+        "milledgeville-city-bids"
+      ]
+    },
+    {
+      "id": "city-milledgeville-fire-station-siding",
+      "counties": [
+        "13009"
+      ],
+      "name": "Milledgeville City — Fire Station 1 Metal Siding Repair",
+      "category": "Public buildings",
+      "owner": "City of Milledgeville",
+      "issuing_government": "City of Milledgeville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Milledgeville",
+      "description": "Municipal procurement identified as bid 60550-2027-0002, advertised October 2026. Contract and payment not verified.",
+      "status": "Bid notice; award, cost and payment unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Municipal project; exact verified geometry unavailable. Listed within Baldwin County without an invented map pin."
+      },
+      "finance": {},
+      "sources": [
+        "milledgeville-city-bids"
+      ]
+    },
+    {
+      "id": "city-warner-robins-fy26-immediate-infrastructure",
+      "counties": [
+        "13153"
+      ],
+      "name": "Warner Robins — FY2026 roads, sidewalks and utilities improvements",
+      "owner": "City of Warner Robins",
+      "category": "Municipal infrastructure",
+      "description": "City's adopted FY2026 budget describes $6.7 million toward immediate infrastructure improvements including roads, sidewalks and utilities. This is a grouped budget program, not one paid project.",
+      "status": "FY2026 budget approved; individual contracts and payments not verified",
+      "finance": {
+        "budget": [
+          {
+            "amount": "6.7 million",
+            "label": "FY2026 budgeted immediate infrastructure improvements; not payments",
+            "source": "wr-fy26-budget"
+          }
+        ]
+      },
+      "sources": [
+        "wr-fy26-budget"
+      ],
+      "issuing_government": "City of Warner Robins",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Warner Robins",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "city-warner-robins-fy26-future-capital",
+      "counties": [
+        "13153"
+      ],
+      "name": "Warner Robins — FY2026 future capital projects reserve",
+      "owner": "City of Warner Robins",
+      "category": "Municipal capital program",
+      "description": "City's adopted FY2026 budget reserves $25.3 million for future capital projects including parks, public facilities and equipment. A reserve is not money spent; individual projects need extraction.",
+      "status": "FY2026 budget reserve; individual projects and payments not verified",
+      "finance": {
+        "budget": [
+          {
+            "amount": "25.3 million",
+            "label": "FY2026 future capital reserve; not paid expenditures",
+            "source": "wr-fy26-budget"
+          }
+        ]
+      },
+      "sources": [
+        "wr-fy26-budget"
+      ],
+      "issuing_government": "City of Warner Robins",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Warner Robins",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "city-eatonton-lower-harmony-road-2026",
+      "counties": [
+        "13237"
+      ],
+      "name": "Eatonton — Lower Harmony Road Paving Improvements",
+      "owner": "City of Eatonton",
+      "category": "Municipal roads",
+      "description": "City procurement notice posted September 30, 2026 for Lower Harmony Road paving improvements. Bids scheduled for October 29, 2026; no contract award or payment established as of October 21.",
+      "status": "Advertised for bids; amount and payments not verified",
+      "finance": {},
+      "sources": [
+        "eatonton-bids"
+      ],
+      "issuing_government": "City of Eatonton",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Eatonton",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "city-eatonton-center-stage-2026",
+      "counties": [
+        "13237"
+      ],
+      "name": "Eatonton — City Center Stage Modification",
+      "owner": "City of Eatonton",
+      "category": "Public facilities",
+      "description": "City advertised construction bids February 2, 2026 for City Center Stage Modification, project SE #2022-213. Award and payments not established.",
+      "status": "Bid solicitation; contract and payments not verified",
+      "finance": {},
+      "sources": [
+        "eatonton-bids"
+      ],
+      "issuing_government": "City of Eatonton",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Eatonton",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "gdot-eatonton-us441-business-resurfacing-2026",
+      "counties": [
+        "13237"
+      ],
+      "name": "Eatonton — US 441 Business / US 129 Business Resurfacing",
+      "owner": "Georgia Department of Transportation",
+      "category": "State highway",
+      "description": "GDOT awarded E.R. Snell Contractor Inc. a resurfacing contract for approximately 3.7 miles of the business route through Eatonton, beginning and ending at US 441. State-managed project physically in city; not a City of Eatonton expenditure.",
+      "status": "Contract awarded January 2026; anticipated completion fall 2026; payments unverified",
+      "finance": {
+        "contract": [
+          {
+            "amount": "1.44 million",
+            "label": "GDOT awarded contract, rounded; not verified payments",
+            "source": "gdot-eatonton-2026"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-eatonton-2026"
+      ],
+      "issuing_government": "Georgia Department of Transportation",
+      "jurisdiction_type": "state",
+      "jurisdiction_name": "Eatonton",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "city-perry-fy26-capital-planning",
+      "counties": [
+        "13153"
+      ],
+      "name": "Perry — FY2026 municipal capital investment planning",
+      "owner": "City of Perry",
+      "category": "Municipal capital program",
+      "description": "City finance page links FY2026 recommended budget and describes continued infrastructure investment and vehicle replacements. The $59.4 million recommended operating budget is NOT a capital-project cost and is not displayed as such. Extract adopted project line items before attributing dollars.",
+      "status": "Recommended budget reference; individual projects and expenditures pending",
+      "finance": {},
+      "sources": [
+        "perry-finance"
+      ],
+      "issuing_government": "City of Perry",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Perry",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Exact project footprint not verified against TIGER road geometry; no arbitrary point assigned."
+      }
+    },
+    {
+      "id": "city-covington-downtown-square-utilities-2026",
+      "name": "Covington — Downtown Square Utility Improvement Project",
+      "category": "Water, sewer and utilities",
+      "description": "Nine-block downtown utility project replacing water, sewer and gas lines and installing power and telecom duct banks. Official October 10, 2026 update reports sanitary sewer work substantially complete on Floyd Street between Pace and Elm; water main work followed. City says guaranteed maximum price approved May 4, 2026 but amount not yet extracted.",
+      "status": "Construction underway October 2026; approved contract amount and payments not yet extracted",
+      "sources": [
+        "covington-downtown-2026"
+      ],
+      "counties": [
+        "13217"
+      ],
+      "owner": "City of Covington",
+      "issuing_government": "City of Covington",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Covington",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named street or district documented; precise construction geometry has not been verified using TIGER; no invented point."
+      },
+      "finance": {}
+    },
+    {
+      "id": "city-covington-newton-drive-drainage-2026",
+      "name": "Covington — Newton Drive Storm Drainage Improvements",
+      "category": "Stormwater",
+      "description": "City procurement 2026-21 for Newton Drive storm drainage improvements; bids due October 13, 2026. Award and payments not established.",
+      "status": "Bid stage; award and payments unverified",
+      "sources": [
+        "covington-stormwater-bid"
+      ],
+      "counties": [
+        "13217"
+      ],
+      "owner": "City of Covington",
+      "issuing_government": "City of Covington",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Covington",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named street or district documented; precise construction geometry has not been verified using TIGER; no invented point."
+      },
+      "finance": {}
+    },
+    {
+      "id": "city-sandersville-deepstep-pump-2026",
+      "counties": [
+        "13303"
+      ],
+      "name": "Sandersville — Deepstep Road Pump Station and Force Main",
+      "category": "Water and sewer",
+      "owner": "City of Sandersville",
+      "issuing_government": "City of Sandersville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Sandersville",
+      "description": "City council agenda reports award to Popco Inc. for construction ($1,970,148.25) and Turnipseed Engineering ($352,772.53), totaling $2,302,920.78. Not verified paid.",
+      "status": "Council award recorded; payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "2302920.78",
+            "label": "Council-approved construction and engineering awards combined; not paid",
+            "source": "sandersville-agenda-2026"
+          }
+        ]
+      },
+      "sources": [
+        "sandersville-agenda-2026"
+      ]
+    },
+    {
+      "id": "city-sandersville-water-breakroom-2026",
+      "counties": [
+        "13303"
+      ],
+      "name": "Sandersville — Water Department Breakroom and Restroom",
+      "category": "Public buildings",
+      "owner": "City of Sandersville",
+      "issuing_government": "City of Sandersville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Sandersville",
+      "description": "Council agenda reports construction bid awarded to E. Turner Construction.",
+      "status": "Council award recorded; payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "77950",
+            "label": "Awarded construction bid; not paid",
+            "source": "sandersville-agenda-2026"
+          }
+        ]
+      },
+      "sources": [
+        "sandersville-agenda-2026"
+      ]
+    },
+    {
+      "id": "city-sandersville-pavement-rating-2026",
+      "counties": [
+        "13303"
+      ],
+      "name": "Sandersville — Pavement Management and Sidewalk Rating",
+      "category": "Municipal roads",
+      "owner": "City of Sandersville",
+      "issuing_government": "City of Sandersville",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Sandersville",
+      "description": "Council agenda reports bid award to StreetScan USA Inc. / Citylogix for pavement management and sidewalk rating; professional survey service, not physical road paving.",
+      "status": "Council award recorded; payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "contract": [
+          {
+            "amount": "64495",
+            "label": "Awarded pavement and sidewalk assessment contract; not paid",
+            "source": "sandersville-agenda-2026"
+          }
+        ]
+      },
+      "sources": [
+        "sandersville-agenda-2026"
+      ]
+    },
+    {
+      "id": "city-madison-streetscape-0019583",
+      "counties": [
+        "13211"
+      ],
+      "name": "Madison — East Washington, Vine, Foster and Maxey Lane Streetscape",
+      "category": "Streetscape",
+      "owner": "Georgia Department of Transportation",
+      "issuing_government": "Georgia Department of Transportation",
+      "jurisdiction_type": "state",
+      "jurisdiction_name": "Madison",
+      "description": "GDOT project 0019583 proposes approximately 1.2 miles of streetscape improvements within Madison. $3,000,000 construction estimate as of October 2024, not 2026 paid spending.",
+      "status": "Construction work program; payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "estimate": [
+          {
+            "amount": "3000000",
+            "label": "GDOT construction cost estimate dated 2024-10-30; not paid",
+            "source": "gdot-madison-streetscape"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-madison-streetscape"
+      ]
+    },
+    {
+      "id": "city-social-circle-roundabout-0020211",
+      "counties": [
+        "13297"
+      ],
+      "name": "Social Circle — SR 11 at Social Circle Fairplay Road Roundabout",
+      "category": "State highway",
+      "owner": "Georgia Department of Transportation",
+      "issuing_government": "Georgia Department of Transportation",
+      "jurisdiction_type": "state",
+      "jurisdiction_name": "Social Circle",
+      "description": "GDOT project 0020211 proposes a single-lane roundabout. Construction estimate dated April 27, 2026; this is not a municipal payment.",
+      "status": "Construction work program; payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "estimate": [
+          {
+            "amount": "2626364.93",
+            "label": "GDOT construction estimate dated 2026-04-27; not paid",
+            "source": "gdot-social-circle-roundabout"
+          }
+        ]
+      },
+      "sources": [
+        "gdot-social-circle-roundabout"
+      ]
+    },
+    {
+      "id": "city-cochran-airport-hangars-2026",
+      "counties": [
+        "13023"
+      ],
+      "name": "Cochran — Cochran Airport Hangar Construction",
+      "category": "Airport infrastructure",
+      "owner": "City of Cochran",
+      "issuing_government": "City of Cochran",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Cochran",
+      "description": "September 2026 state announcement describes estimated $800,000 project: up to $600,000 state Airport Aid Program contribution and $200,000 local match. Contract preparation underway; no payment verified.",
+      "status": "State funding announced; contract and payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Named road/facility; no certified footprint or independently verified TIGER segment. Do not create a point at city center."
+      },
+      "finance": {
+        "estimate": [
+          {
+            "amount": "800000",
+            "label": "Estimated total project cost; not paid",
+            "source": "cochran-airport-2026"
+          }
+        ],
+        "budget": [
+          {
+            "amount": "600000",
+            "label": "State funding commitment up to this amount; not paid",
+            "source": "cochran-airport-2026"
+          }
+        ]
+      },
+      "sources": [
+        "cochran-airport-2026"
+      ]
+    },
+    {
+      "id": "city-dublin-west-mary-moore-drainage-2026",
+      "counties": [
+        "13175"
+      ],
+      "name": "Dublin — West Mary Street and West Moore Street Road and Drainage Improvements",
+      "category": "Municipal roads",
+      "owner": "City of Dublin",
+      "issuing_government": "City of Dublin",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Dublin",
+      "description": "City Resolution 26-26 awarded a bid to Total Earth Services LLC for West Mary Street and West Moore Street road and drainage projects. Award value and payments not extracted.",
+      "status": "Council resolution approving bid award; amount unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Project street or facility described; exact construction geometry not certified. Do not invent point."
+      },
+      "finance": {},
+      "sources": [
+        "dublin-resolutions-2026"
+      ]
+    },
+    {
+      "id": "city-dublin-stubbs-park-stage-bridge-2026",
+      "counties": [
+        "13175"
+      ],
+      "name": "Dublin — Stubbs Park Amphitheater Stage and Walking Bridge Renovation",
+      "category": "Public facilities",
+      "owner": "City of Dublin",
+      "issuing_government": "City of Dublin",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Dublin",
+      "description": "Resolution 26-15 awarded a bid to Dublin Construction Company for the Stubbs Park amphitheater stage and walking bridge renovation.",
+      "status": "Council resolution approving bid award; amount unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Project street or facility described; exact construction geometry not certified. Do not invent point."
+      },
+      "finance": {},
+      "sources": [
+        "dublin-resolutions-2026"
+      ]
+    },
+    {
+      "id": "city-dublin-waterworks-building-2026",
+      "counties": [
+        "13175"
+      ],
+      "name": "Dublin — Water Works Building Renovation and Repair",
+      "category": "Water infrastructure",
+      "owner": "City of Dublin",
+      "issuing_government": "City of Dublin",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "Dublin",
+      "description": "Resolution 26-16 engaged Garbutt Construction as construction manager at risk for renovation and repair of the City Water Works Building.",
+      "status": "Construction manager engaged; cost and payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Project street or facility described; exact construction geometry not certified. Do not invent point."
+      },
+      "finance": {},
+      "sources": [
+        "dublin-resolutions-2026"
+      ]
+    },
+    {
+      "id": "city-east-dublin-cdbg-sewer-2026",
+      "counties": [
+        "13175"
+      ],
+      "name": "East Dublin — CDBG Sanitary Sewer System Improvements",
+      "category": "Water and sewer",
+      "owner": "City of East Dublin",
+      "issuing_government": "City of East Dublin",
+      "jurisdiction_type": "city",
+      "jurisdiction_name": "East Dublin",
+      "description": "2026 construction solicitation describes 2,266 linear feet of gravity sewer, 11 new manholes, 21 new sanitary services, and 21 septic abandonments. Award and paid amounts not verified.",
+      "status": "Construction solicitation; award and payments unverified",
+      "contractor": null,
+      "funding": null,
+      "location": {
+        "kind": "listing",
+        "note": "Project street or facility described; exact construction geometry not certified. Do not invent point."
+      },
+      "finance": {},
+      "sources": [
+        "east-dublin-sewer-2026"
+      ]
+    }
+  ],
+  "updates": {
+    "houston-northlake-dunbar": {
+      "finance": {
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Expenditures to date as of July 30, 2025 (assigned revenue to date $593,639 is not spending)",
+            "as_of": "2025-07-30",
+            "source": "houston-northlake"
+          }
+        ]
+      },
+      "sources": [
+        "houston-northlake"
+      ]
+    },
+    "houston-thompson-extension": {
+      "finance": {
+        "budget": [
+          {
+            "amount": "13,900,000",
+            "label": "Project budget",
+            "source": "houston-thompson"
+          }
+        ],
+        "reported": [
+          {
+            "amount": "0",
+            "label": "Expenditures to date as of July 30, 2025 (assigned revenue to date $1,649,813 is not spending)",
+            "as_of": "2025-07-30",
+            "source": "houston-thompson"
+          }
+        ]
+      },
+      "sources": [
+        "houston-thompson"
+      ]
+    }
+  }
+}

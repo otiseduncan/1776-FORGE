@@ -4,6 +4,7 @@ import { cleanQuery, likePattern } from "../lib/validate.ts";
 import { LIST_FIELDS, FROM, shape } from "./news.ts";
 import { searchArchive } from "../lib/archive-search.ts";
 import { meetingVideos } from '../data/meeting-videos.ts';
+import { importedSearch } from '../lib/imported-map.ts';
 
 const SEARCH_TYPES = ["records", "archive", "videos", "news", "law", "resources", "community", "map", "meetings"] as const;
 
@@ -31,7 +32,7 @@ export function registerDiscovery(r: Router): void {
       types.has('archive') ? searchArchive(c.env, q, lim) : Promise.resolve({ items: [], total: 0, available: true }),
     ]);
     const videos = types.has('videos') ? meetingVideos.filter(v => terms.every(t => (v.title + ' ' + v.original_title + ' ' + v.excerpt).toLowerCase().includes(t.toLowerCase()))) : [];
-    const groups = { records, news, law, resources, community, map, meetings, archive: archive.items, videos };
+    const groups = { records, news, law, resources, community, map: [...map,...(types.has('map') ? importedSearch(q) : [])].slice(0,lim), meetings, archive: archive.items, videos };
     const total = Object.values(groups).reduce((n, g) => n + g.length, 0);
     return json({ q, total, groups, archiveTotal: archive.total, archiveAvailable: archive.available });
   });
